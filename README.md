@@ -1238,3 +1238,582 @@ END OF GUIDE
 
 NOTE TO AI AGENTS:
 This document is a compatibility policy, not a claim that every listed feature is universally identical across every iOS 15.x device. When a feature is critical, verify it with feature detection and a real iOS 15.3 device. Browser support data changes over time; the project's declared minimum browser version must always be treated as an explicit engineering constraint.
+
+
+# UI STACK & ENGINEERING RULES
+
+## 1. Core Stack
+
+This project is a modern restaurant menu built with strict support for:
+
+* Next.js 15
+* React 19
+* TypeScript
+* Tailwind CSS 3.4
+* Lucide React
+* shadcn-style components
+* Radix UI primitives only when needed
+
+The minimum supported device is:
+
+* iPhone 8 / 8 Plus
+* iOS 15.3
+* Safari/WebKit equivalent
+
+**iOS 15.3 is a hard compatibility requirement, not an optional optimization target.**
+
+---
+
+## 2. Framework Versions
+
+DO:
+
+* Stay on Next.js 15.
+* Stay on React 19.
+* Pin exact versions in `package.json` when practical.
+* Check browser compatibility before adding or upgrading dependencies.
+* Verify the generated production build, not only development mode.
+
+DO NOT:
+
+* Upgrade to Next.js 16.
+* Use `next@latest` blindly.
+* Upgrade major dependencies without checking iOS 15.3 compatibility.
+* Introduce a dependency simply because it is popular or modern.
+
+---
+
+## 3. Tailwind CSS
+
+Use:
+
+* Tailwind CSS 3.4.x
+* PostCSS
+* Autoprefixer
+
+Tailwind v4 is NOT allowed.
+
+Do not assume that every Tailwind 3.4 utility is safe for iOS 15.3.
+
+Before using a modern utility, verify that the generated CSS is supported by iOS 15.3.
+
+Avoid relying on:
+
+* `dvh`
+* `svh`
+* `lvh`
+* `:has()`
+* CSS nesting
+* modern CSS features unavailable in Safari 15.3
+
+When an older-compatible CSS solution exists, prefer it.
+
+---
+
+## 4. UI Architecture
+
+Do NOT install a large UI framework by default.
+
+The project uses a:
+
+**shadcn-style component architecture.**
+
+Components should live inside the project and remain fully editable.
+
+Preferred structure:
+
+```text
+components/
+├── ui/
+│   ├── button.tsx
+│   ├── dialog.tsx
+│   ├── dropdown-menu.tsx
+│   ├── sheet.tsx
+│   ├── tabs.tsx
+│   └── ...
+│
+├── menu/
+│   ├── MenuCard.tsx
+│   ├── MenuGrid.tsx
+│   ├── CategoryNav.tsx
+│   └── ProductModal.tsx
+│
+└── layout/
+    ├── Header.tsx
+    └── Footer.tsx
+```
+
+Do not hide important UI behavior inside large external abstractions.
+
+The AI agent must prefer small, understandable, reusable components.
+
+---
+
+## 5. Radix UI
+
+Radix UI is allowed and encouraged for complex interactive behavior where accessibility and interaction logic would otherwise require significant custom code.
+
+Use Radix for things such as:
+
+* Dialog
+* Dropdown Menu
+* Popover
+* Tooltip
+* Tabs
+* Accordion
+* Context Menu
+* Select
+* Checkbox
+* Radio Group
+
+However:
+
+**Do not install Radix primitives unnecessarily.**
+
+Only add the primitive required by the component.
+
+Example:
+
+```text
+Need Dialog
+    ↓
+Install/use Dialog primitive
+    ↓
+Build project-owned Dialog component
+```
+
+Do NOT install the entire Radix ecosystem just because one primitive is needed.
+
+---
+
+## 6. Component Ownership
+
+Every reusable UI component should be understandable and editable by the project.
+
+Prefer:
+
+```tsx
+components/ui/button.tsx
+```
+
+over:
+
+```tsx
+<ExternalLibraryButton />
+```
+
+The AI agent must be able to inspect and modify the actual component implementation.
+
+Do not introduce opaque UI abstractions when a small local component is sufficient.
+
+---
+
+## 7. Icons
+
+Use:
+
+**Phosphor Icons**
+
+as the project's primary icon system.
+
+Use Phosphor for:
+
+* Navigation icons
+* Search
+* Menu
+* Chevron / Arrow
+* Shopping cart
+* Plus / Minus
+* Close
+* Info
+* User
+* Heart
+* Location
+* Phone
+* Social icons
+* Other interface icons
+
+Prefer the React package:
+
+```bash
+npm install @phosphor-icons/react
+```
+
+Example:
+
+```tsx
+import { MagnifyingGlass, ShoppingCart } from "@phosphor-icons/react";
+
+<MagnifyingGlass size={20} />
+<ShoppingCart size={20} />
+```
+
+### Icon Rules
+
+* Use Phosphor consistently throughout the project.
+* Do not mix Phosphor with Lucide or other icon libraries.
+* Do not use image assets for simple interface icons.
+* Do not manually create SVG icons when an appropriate Phosphor icon exists.
+* Choose icon weights intentionally: `regular`, `bold`, `fill`, `duotone`, etc.
+* Prefer `regular` or `bold` for standard UI unless the design requires another weight.
+* Keep icon sizes consistent with the surrounding typography and interaction target.
+* Icons must remain readable and touch-friendly on small screens.
+* Do not use icons purely for decoration when they reduce clarity.
+
+### Dependency Rule
+
+Phosphor is the only approved general-purpose icon library for this project.
+
+Do not install another icon library unless there is a specific icon that Phosphor genuinely cannot provide.
+
+If an additional icon library appears necessary, the AI agent must explain why before adding it.
+
+## 8. Animation
+
+Animation must follow this priority:
+
+```text
+1. CSS transition
+       ↓
+2. CSS keyframes
+       ↓
+3. Motion / Framer Motion
+       ↓
+4. Complex animation only when genuinely necessary
+```
+
+Do not use Framer Motion for simple animations that CSS can handle.
+
+Framer Motion/Motion should only be added when the project genuinely requires:
+
+* Complex entrance animations
+* Layout animations
+* Gesture interactions
+* Scroll-linked animation
+* Coordinated animation sequences
+
+Animations must never be required for content visibility.
+
+---
+
+## 9. Progressive Enhancement
+
+The baseline UI must work without advanced browser features.
+
+Structure features as:
+
+```text
+BASE EXPERIENCE
+      ↓
+Works on iOS 15.3
+      ↓
+Optional enhancement
+      ↓
+Modern browsers receive additional effects
+```
+
+Never do:
+
+```text
+Modern feature required
+      ↓
+Feature unsupported
+      ↓
+Content disappears
+```
+
+If an enhancement fails, the content and primary functionality must remain usable.
+
+---
+
+## 10. Modern CSS
+
+Do not use modern CSS simply because it is available in current browsers.
+
+Before introducing a CSS feature, ask:
+
+1. Is it supported by iOS 15.3?
+2. Is there a simple fallback?
+3. Does the feature provide meaningful value?
+4. Can the same visual result be achieved with older CSS?
+
+Prefer:
+
+* Flexbox
+* Grid
+* CSS variables
+* `calc()`
+* `clamp()`
+* transforms
+* opacity
+* transitions
+* keyframes
+* `position: sticky`
+* standard media queries
+
+Avoid unnecessary dependency on experimental or modern-only CSS.
+
+---
+
+## 11. JavaScript Compatibility
+
+Do not introduce browser APIs without verifying iOS 15.3 support.
+
+Avoid making core functionality depend on newer browser APIs.
+
+Use progressive enhancement and fallbacks when necessary.
+
+Never assume:
+
+```text
+"If Chrome supports it, Safari 15.3 supports it."
+```
+
+Browser support must be verified independently.
+
+---
+
+## 12. Performance Rules
+
+The restaurant menu must feel fast on an iPhone 8 Plus.
+
+Prioritize:
+
+* Small JavaScript payloads
+* Optimized images
+* Proper image dimensions
+* Lazy loading where appropriate
+* Minimal client-side JavaScript
+* Server Components by default
+* Small client components
+* Stable layouts
+* Limited animation
+* Efficient rendering
+
+Avoid:
+
+* Huge dependencies
+* Unnecessary client components
+* Large JavaScript bundles
+* WebGL for ordinary UI
+* Three.js unless absolutely necessary
+* Heavy visual effects
+* Excessive blur
+* Continuous animation
+* Large unoptimized images
+
+---
+
+## 13. Server vs Client Components
+
+Use React Server Components by default.
+
+Only use:
+
+```tsx
+"use client";
+```
+
+when the component genuinely requires:
+
+* State
+* Event handlers
+* Browser APIs
+* Client-side interaction
+* Animation requiring client execution
+
+Do not convert entire pages to Client Components just to make one small interactive element work.
+
+Prefer:
+
+```text
+Server Page
+   │
+   ├── Server UI
+   │
+   └── Small Client Component
+```
+
+instead of:
+
+```text
+Entire Page
+      ↓
+"use client"
+```
+
+---
+
+## 14. Dependency Policy
+
+Before installing any package, the AI agent must evaluate:
+
+1. Why is it needed?
+2. Can the requirement be solved with existing dependencies?
+3. Does it support Next.js 15?
+4. Does it support React 19?
+5. Does it introduce modern browser requirements?
+6. Does it affect iOS 15.3?
+7. What is its approximate bundle/runtime cost?
+8. Is it actively maintained?
+
+Do not add dependencies automatically.
+
+Every dependency must have a clear purpose.
+
+---
+
+## 15. Forbidden UI Frameworks
+
+Do NOT introduce the following as project-wide UI frameworks:
+
+* HeroUI v3
+* Tailwind CSS v4
+* Mantine
+* Material UI
+* Chakra UI
+
+This does not mean these libraries are bad.
+
+They are excluded from this project because the architecture prioritizes:
+
+**iOS 15.3 compatibility + performance + ownership of UI code + controlled dependencies.**
+
+If the AI agent believes one of these is absolutely necessary, it must stop and explain the reason before introducing it.
+
+---
+
+## 16. UI Design Philosophy
+
+The interface must be:
+
+* Modern
+* Minimal
+* Fast
+* Mobile-first
+* Touch-friendly
+* Visually polished
+* Accessible
+* Stable on older devices
+
+Do not make the design look old simply because iOS 15.3 is supported.
+
+Use progressive enhancement:
+
+```text
+Same content
+Same functionality
+Same visual language
+
+Older browser:
+Stable + lightweight experience
+
+Modern browser:
+Additional visual enhancements
+```
+
+---
+
+## 17. Restaurant Menu Priorities
+
+The menu is primarily a content and ordering interface.
+
+Prioritize:
+
+1. Food discovery
+2. Category navigation
+3. Product readability
+4. Product imagery
+5. Price visibility
+6. Fast navigation
+7. Touch interaction
+8. Search/filtering where useful
+9. Accessibility
+10. Visual polish
+
+Do not sacrifice usability for decorative effects.
+
+A beautiful animation that makes the menu slower is a bad tradeoff.
+
+---
+
+## 18. AI Agent Rules
+
+Before implementing a new feature, the AI agent must:
+
+1. Inspect the existing architecture.
+2. Reuse existing components.
+3. Avoid duplicate components.
+4. Check browser compatibility.
+5. Check whether the feature requires `"use client"`.
+6. Check performance implications.
+7. Prefer native HTML/CSS when sufficient.
+8. Use Radix only when complex interaction/accessibility behavior is needed.
+9. Keep components small and composable.
+10. Preserve iOS 15.3 compatibility.
+
+The AI agent must NOT silently change:
+
+* Next.js major version
+* React major version
+* Tailwind major version
+* Browser support target
+* UI architecture
+
+without explicitly reporting the change.
+
+---
+
+## 19. Testing Requirement
+
+Every major UI feature must be tested in:
+
+### Primary compatibility device
+
+```text
+iPhone 8 Plus
+iOS 15.3
+Safari
+```
+
+### Modern browser
+
+```text
+Current Chrome / Edge / Safari
+```
+
+The feature must:
+
+* Render correctly
+* Remain usable
+* Preserve content
+* Avoid layout breaking
+* Avoid excessive animation
+* Avoid console/runtime errors
+
+A feature is not considered complete merely because it works on a modern desktop browser.
+
+---
+
+## 20. Golden Rule
+
+When choosing between:
+
+```text
+Modern + heavy + dependency-heavy
+```
+
+and:
+
+```text
+Simple + compatible + performant + maintainable
+```
+
+prefer the second option unless the additional complexity provides meaningful user value.
+
+**Build for modern browsers.**
+**Never require a modern browser.**
+
+**Performance is a feature.**
+**Compatibility is a requirement.**
+**Simplicity is an architectural advantage.**
