@@ -1,0 +1,13 @@
+{
+  "name": "menu-rest",
+  "version": "1.0.0",
+  "description": "Xi'an Famous Foods - Pure HTML, CSS, JavaScript",
+  "scripts": {
+    "start": "npx serve -l 3000 .",
+    "dev": "npx tailwindcss -i ./css/input.css -o ./css/style.css --watch",
+    "build": "npx tailwindcss -i ./css/input.css -o ./css/style.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

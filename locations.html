@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="فروع مأكولات شيآن الشهيرة في نيويورك - مانهاتن، كوينز، وبروكلين. العناوين، أوقات العمل، والاتجاهات">
+  <meta name="theme-color" content="#ba121a">
+  <title>XI'AN FAMOUS FOODS | الفروع وساعات العمل</title>
+
+  <!-- Fonts: Barlow Condensed & Noto Sans SC -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Noto+Sans+SC:wght@500;700;900&family=SF+Mono&display=swap" rel="stylesheet">
+
+  <!-- Phosphor Icons Web -->
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+
+  <!-- Modular Stylesheets -->
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/menu.css">
+  <link rel="stylesheet" href="./css/pages.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Ticker -->
+  <div class="xff-ticker">
+    <span class="xff-ticker-flame">🔥</span>
+    <span>FIND YOUR NEAREST XFF • NYC LOCATIONS • فروعنا في مانهاتن وكوينز وبروكلين</span>
+    <span class="xff-ticker-flame">🔥</span>
+  </div>
+
+  <!-- Global Header Navigation -->
+  <header class="xff-header">
+    <div class="container xff-nav-container">
+      <a href="index.html" class="xff-logo-link">
+        <span class="chinese-seal">西安<br>名吃</span>
+        <div>
+          <div class="xff-logo-title">XI'AN FAMOUS FOODS</div>
+          <div class="xff-logo-sub">الفروع وساعات العمل • نيويورك</div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="xff-desktop-nav" aria-label="القائمة الرئيسية">
+        <a href="index.html" class="nav-link">الرئيسية</a>
+        <a href="menu.html" class="nav-link">قائمة الطعام</a>
+        <a href="story.html" class="nav-link">قصتنا</a>
+        <a href="locations.html" class="nav-link active">الفروع والأوقات</a>
+        <a href="contact.html" class="nav-link">التواصل والتموين</a>
+        <a href="menu.html" class="btn-xff-primary" style="padding: 0.45rem 1rem; font-size: 0.92rem; min-height: 38px;">
+          اطلب الآن <i class="ph-bold ph-arrow-left"></i>
+        </a>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="فتح القائمة">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-content">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; border-bottom: 2px solid var(--xff-border-heavy); padding-bottom: 1rem;">
+        <span class="chinese-seal">西安名吃</span>
+        <button id="closeMobileDrawer" class="touch-target" aria-label="إغلاق" style="font-size: 1.4rem; color: var(--xff-coal);">
+          <i class="ph-bold ph-x"></i>
+        </button>
+      </div>
+
+      <nav style="display: flex; flex-direction: column; gap: 0.5rem; flex: 1;">
+        <a href="index.html" class="mobile-nav-link">الرئيسية <i class="ph-bold ph-caret-left"></i></a>
+        <a href="menu.html" class="mobile-nav-link">قائمة الطعام <i class="ph-bold ph-caret-left"></i></a>
+        <a href="story.html" class="mobile-nav-link">قصتنا التراثية <i class="ph-bold ph-caret-left"></i></a>
+        <a href="locations.html" class="mobile-nav-link active">الفروع وساعات العمل <i class="ph-bold ph-caret-left"></i></a>
+        <a href="contact.html" class="mobile-nav-link">التواصل والتموين <i class="ph-bold ph-caret-left"></i></a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="container" style="padding-top: 3rem; padding-bottom: 4rem;">
+    <!-- Page Header -->
+    <div style="text-align: center; max-width: 680px; margin: 0 auto 2.5rem auto;">
+      <div style="display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+        <span class="chinese-seal" style="font-size: 0.85rem;">分店一览</span>
+        <span style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; color: var(--xff-red); letter-spacing: 0.08em;">
+          OUR LOCATIONS
+        </span>
+      </div>
+      <h1 style="font-size: clamp(2.2rem, 5vw, 3.2rem); margin-bottom: 1rem;">
+        فروعنا في مدينة نيويورك
+      </h1>
+      <p style="font-size: 1.05rem; color: #475569; line-height: 1.7;">
+        تفضل بزيارة أحد فروعنا المنتشرة في مانهاتن، كوينز، وبروكلين للاستمتاع برائحة الكمون وزيت الفلفل والنودلز المسحوبة مباشرة من مقلاة الوك إلى صحنك.
+      </p>
+    </div>
+
+    <!-- Takeout & Delivery Advisory -->
+    <div style="background-color: #ffffff; border: 2px solid var(--xff-border-heavy); box-shadow: 4px 4px 0px var(--xff-coal); border-radius: 8px; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <div style="width: 46px; height: 46px; border-radius: 6px; background-color: var(--xff-red-light); color: var(--xff-red); border: 1.5px solid var(--xff-red); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+          <i class="ph-bold ph-package"></i>
+        </div>
+        <div>
+          <h3 style="font-size: 1.15rem; margin-bottom: 2px;">تجهيز مسبق واستلام سريع (Pickup)</h3>
+          <p style="font-size: 0.85rem; color: #64748b;">وفر وقتك واطلب مسبقاً عبر قائمتنا الرقمية لتستلم طلبك ساخناً وجاهزاً فور وصولك.</p>
+        </div>
+      </div>
+      <a href="menu.html" class="btn-xff-primary" style="padding: 0.5rem 1.15rem; font-size: 0.95rem; min-height: 40px;">
+        ابدأ طلب الاستلام
+      </a>
+    </div>
+
+    <!-- Dynamic Locations Grid -->
+    <div class="locations-grid" id="locationsGrid">
+      <!-- Populated dynamically by js/main.js from js/data/menu-data.js -->
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="xff-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+            <span class="chinese-seal" style="border-color: #ffffff; color: #ffffff; background: transparent;">西安名吃</span>
+            <div style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 900; letter-spacing: 0.05em; text-transform: uppercase;">
+              XI'AN FAMOUS FOODS
+            </div>
+          </div>
+          <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.7; margin-bottom: 1.25rem;">
+            المطعم الصيني التراثي الأول المتخصص في نودلز بيانغ بيانغ المسحوبة يدوياً وفطائر روجيامو المقرمشة بخلطات التوابل الأصلية من مدينة شيآن بمقاطعة شنشي.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-title">صفحات الموقع</div>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">الصفحة الرئيسية</a></li>
+            <li><a href="menu.html" class="footer-link">قائمة الطعام الكاملة</a></li>
+            <li><a href="story.html" class="footer-link">قصة التأسيس والتراث</a></li>
+            <li><a href="locations.html" class="footer-link">فروعنا وأوقات العمل</a></li>
+            <li><a href="contact.html" class="footer-link">التواصل والتموين</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-title">رموز الأصناف</div>
+          <ul class="footer-links">
+            <li><a href="menu.html" class="footer-link">[ N ] نودلز مسحوبة يدوياً</a></li>
+            <li><a href="menu.html" class="footer-link">[ B ] برجر وفطائر روجيامو</a></li>
+            <li><a href="menu.html" class="footer-link">[ A ] ليانغ بي والمقبلات</a></li>
+            <li><a href="menu.html" class="footer-link">[ F ] زلابية وشوربات حارة</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-title">المقر الرئيسي</div>
+          <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.6; margin-bottom: 0.75rem;">
+            41-10 Main St, Flushing, NY 11355<br>
+            هاتف: +1 (212) 786-2068
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Xi'an Famous Foods LLC. جميع الحقوق محفوظة.</div>
+        <div>تصميم متوافق هندسياً مع كافة معايير الويب ومتصفحات iOS 15.3.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./js/data/menu-data.js"></script>
+  <script src="./js/modules/cart.js"></script>
+  <script src="./js/modules/navigation.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>

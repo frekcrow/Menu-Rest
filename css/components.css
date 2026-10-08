@@ -1,0 +1,406 @@
+/* ==================================================
+   Xi'an Famous Foods - Global Components
+   Header, Navigation, Buttons, Badges, Footer, Ticker
+   ================================================== */
+
+/* Top Announcement Ticker */
+.xff-ticker {
+  background-color: var(--xff-coal);
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.45rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  border-bottom: 2px solid var(--xff-red);
+}
+
+.xff-ticker-flame {
+  color: #ef4444;
+}
+
+/* Global Header & Nav */
+.xff-header {
+  background-color: rgba(250, 246, 240, 0.96);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border-bottom: 2px solid var(--xff-border-heavy);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.xff-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.xff-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.xff-logo-title {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--xff-coal);
+}
+
+.xff-logo-sub {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--xff-red);
+  margin-top: 2px;
+}
+
+/* Chinese Seal Stamp (印章) */
+.chinese-seal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--xff-red);
+  background-color: var(--xff-red-light);
+  color: var(--xff-red);
+  font-family: var(--font-chinese);
+  font-weight: 900;
+  font-size: 0.95rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  line-height: 1.1;
+  letter-spacing: 0.05em;
+  transform: rotate(-2deg);
+}
+
+/* Desktop Navigation Links */
+.xff-desktop-nav {
+  display: none;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+@media (min-width: 860px) {
+  .xff-desktop-nav {
+    display: flex;
+  }
+  .mobile-menu-toggle {
+    display: none !important;
+  }
+}
+
+.nav-link {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--xff-slate);
+  position: relative;
+  transition: color 0.15s ease;
+  padding: 0.35rem 0.1rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--xff-red);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--xff-red);
+}
+
+/* Mobile Hamburger Button */
+.mobile-menu-toggle {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: #ffffff;
+  border: 2px solid var(--xff-border-heavy);
+  border-radius: 6px;
+  box-shadow: 2px 2px 0px var(--xff-border-heavy);
+  cursor: pointer;
+}
+
+.hamburger-line {
+  width: 22px;
+  height: 2.5px;
+  background-color: var(--xff-coal);
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+/* Mobile Navigation Drawer */
+.mobile-drawer {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(20, 20, 20, 0.7);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 60;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.mobile-drawer.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-drawer-content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 82%;
+  max-width: 320px;
+  background-color: var(--xff-warm-bg);
+  border-left: 3px solid var(--xff-border-heavy);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-drawer.open .mobile-drawer-content {
+  transform: translateX(0);
+}
+
+.mobile-nav-link {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--xff-coal);
+  padding: 0.75rem 0;
+  border-bottom: 1.5px solid var(--xff-border-warm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+  color: var(--xff-red);
+}
+
+/* Buttons - Brutalist Pop */
+.btn-xff-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--xff-red);
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.65rem 1.35rem;
+  border-radius: 6px;
+  border: 2px solid var(--xff-border-heavy);
+  box-shadow: 3px 3px 0px var(--xff-border-heavy);
+  transition: all 0.12s ease;
+  min-height: 44px;
+  cursor: pointer;
+}
+
+.btn-xff-primary:hover {
+  background-color: var(--xff-red-hover);
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px var(--xff-border-heavy);
+}
+
+.btn-xff-primary:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px var(--xff-border-heavy);
+}
+
+.btn-xff-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #ffffff;
+  color: var(--xff-coal);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.65rem 1.35rem;
+  border-radius: 6px;
+  border: 2px solid var(--xff-border-heavy);
+  box-shadow: 3px 3px 0px var(--xff-border-heavy);
+  transition: all 0.12s ease;
+  min-height: 44px;
+  cursor: pointer;
+}
+
+.btn-xff-secondary:hover {
+  background-color: #f1ede4;
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px var(--xff-border-heavy);
+}
+
+.btn-xff-secondary:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px var(--xff-border-heavy);
+}
+
+/* Badges */
+.sku-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-weight: 900;
+  font-size: 0.85rem;
+  padding: 0.18rem 0.5rem;
+  background-color: var(--xff-coal);
+  color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid var(--xff-coal);
+  letter-spacing: 0.05em;
+}
+
+.spice-meter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--xff-chili);
+  background-color: #fff1f2;
+  border: 1px solid #ffe4e6;
+  padding: 0.15rem 0.45rem;
+  border-radius: 9999px;
+}
+
+/* Toast */
+.toast-notice {
+  position: fixed;
+  top: calc(1rem + var(--sat));
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px);
+  background-color: var(--xff-coal);
+  color: #ffffff;
+  border: 2px solid var(--xff-red);
+  padding: 0.65rem 1.35rem;
+  border-radius: 6px;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 3px 3px 0px var(--xff-red);
+  z-index: 70;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toast-notice.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* Global Footer */
+.xff-footer {
+  background-color: var(--xff-coal);
+  color: #ffffff;
+  border-top: 4px solid var(--xff-red);
+  padding-top: 3.5rem;
+  padding-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  }
+}
+
+.footer-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--xff-red);
+  padding-bottom: 0.35rem;
+  display: inline-block;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer-link {
+  color: #a3a3a3;
+  font-size: 0.92rem;
+  transition: color 0.15s ease;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+  padding-right: 4px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #2d2d2d;
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.82rem;
+  color: #737373;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

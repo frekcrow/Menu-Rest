@@ -1,0 +1,464 @@
+/* ==================================================
+   Xi'an Famous Foods - Pages Specific Styles
+   Landing Hero, Press Section, Story Timeline, Locations & Contact
+   ================================================== */
+
+/* Masking Tape Accents (Vintage XFF Aesthetic) */
+.tape-frame {
+  position: relative;
+  border: 3px solid var(--xff-border-heavy);
+  box-shadow: 6px 6px 0px var(--xff-coal);
+  background-color: #ffffff;
+}
+
+.tape-frame::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  width: 60px;
+  height: 22px;
+  background-color: rgba(234, 218, 185, 0.85);
+  border: 1px dashed rgba(180, 160, 120, 0.6);
+  transform: rotate(-3deg);
+  z-index: 5;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.tape-frame::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  right: 20px;
+  width: 60px;
+  height: 22px;
+  background-color: rgba(234, 218, 185, 0.85);
+  border: 1px dashed rgba(180, 160, 120, 0.6);
+  transform: rotate(2deg);
+  z-index: 5;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Greek Key Fret Pattern Divider */
+.pattern-divider-red {
+  height: 12px;
+  background-color: var(--xff-red);
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0, 0, 0, 0.15) 10px, rgba(0, 0, 0, 0.15) 20px);
+  width: 100%;
+}
+
+.pattern-divider-coal {
+  height: 12px;
+  background-color: var(--xff-coal);
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 255, 255, 0.1) 10px, rgba(255, 255, 255, 0.1) 20px);
+  width: 100%;
+}
+
+/* -------------------------------------------------------------
+   LANDING HERO SECTION
+   ------------------------------------------------------------- */
+.hero-section {
+  padding-top: 3rem;
+  padding-bottom: 3.5rem;
+  position: relative;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1.15fr 1fr;
+  }
+}
+
+.hero-chinese-sub {
+  font-family: var(--font-chinese);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--xff-red);
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4.2rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--xff-coal);
+  line-height: 1.05;
+  letter-spacing: 0.03em;
+  margin-bottom: 1.25rem;
+}
+
+.hero-lead {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #475569;
+  margin-bottom: 2rem;
+  max-width: 540px;
+}
+
+.hero-ctas {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* -------------------------------------------------------------
+   PRESS & ANTHONY BOURDAIN SECTION
+   ------------------------------------------------------------- */
+.press-section {
+  background-color: #ffffff;
+  border-top: 3px solid var(--xff-border-heavy);
+  border-bottom: 3px solid var(--xff-border-heavy);
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.quote-box {
+  background-color: var(--xff-warm-bg);
+  border: 3px solid var(--xff-border-heavy);
+  box-shadow: 6px 6px 0px var(--xff-coal);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.quote-text {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 3.5vw, 1.9rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--xff-coal);
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+  margin-bottom: 1rem;
+}
+
+.quote-author {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--xff-red);
+  text-transform: uppercase;
+}
+
+.press-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .press-logos-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.press-card {
+  background-color: #ffffff;
+  border: 2px solid var(--xff-border-warm);
+  border-radius: 6px;
+  padding: 1.25rem 1rem;
+  text-align: center;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.press-card:hover {
+  border-color: var(--xff-red);
+  transform: translateY(-2px);
+}
+
+.press-name {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--xff-coal);
+  margin-bottom: 0.35rem;
+}
+
+.press-snippet {
+  font-size: 0.8rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* -------------------------------------------------------------
+   FEATURED DISHES BENTO
+   ------------------------------------------------------------- */
+.bento-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 680px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 980px) {
+  .bento-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.bento-card {
+  background-color: #ffffff;
+  border: 2px solid var(--xff-border-heavy);
+  box-shadow: 4px 4px 0px var(--xff-coal);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.15s ease;
+}
+
+.bento-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--xff-red);
+  border-color: var(--xff-red);
+}
+
+.bento-img {
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  object-fit: cover;
+  background-color: #f1ede4;
+  border-bottom: 2px solid var(--xff-border-heavy);
+}
+
+.bento-content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+/* -------------------------------------------------------------
+   STORY TIMELINE (our-story.html)
+   ------------------------------------------------------------- */
+.story-header {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.story-lead {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #334155;
+  margin-top: 1rem;
+}
+
+.timeline-container {
+  position: relative;
+  padding: 2rem 0;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+  align-items: center;
+}
+
+@media (min-width: 720px) {
+  .timeline-item {
+    grid-template-columns: 1.2fr 1fr;
+  }
+  .timeline-item:nth-child(even) {
+    grid-template-columns: 1fr 1.2fr;
+  }
+}
+
+.timeline-year-badge {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 900;
+  background-color: var(--xff-red);
+  color: #ffffff;
+  padding: 0.25rem 0.85rem;
+  border-radius: 4px;
+  border: 2px solid var(--xff-coal);
+  box-shadow: 2px 2px 0px var(--xff-coal);
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+/* -------------------------------------------------------------
+   LOCATIONS GRID (locations.html)
+   ------------------------------------------------------------- */
+.locations-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 720px) {
+  .locations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1040px) {
+  .locations-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.location-card {
+  background-color: #ffffff;
+  border: 2px solid var(--xff-border-heavy);
+  box-shadow: 4px 4px 0px var(--xff-coal);
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.15s ease;
+}
+
+.location-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--xff-red);
+  border-color: var(--xff-red);
+}
+
+.location-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.status-open {
+  background-color: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.status-wait {
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+/* -------------------------------------------------------------
+   CONTACT & FAQ (contact.html)
+   ------------------------------------------------------------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 860px) {
+  .contact-grid {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+.form-card {
+  background-color: #ffffff;
+  border: 3px solid var(--xff-border-heavy);
+  box-shadow: 6px 6px 0px var(--xff-coal);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--xff-coal);
+  margin-bottom: 0.4rem;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--xff-border-heavy);
+  border-radius: 6px;
+  background-color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: var(--xff-red);
+  box-shadow: 3px 3px 0px var(--xff-red);
+}
+
+.faq-item {
+  background-color: #ffffff;
+  border: 2px solid var(--xff-border-heavy);
+  box-shadow: 3px 3px 0px var(--xff-coal);
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 1.15rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--xff-coal);
+  text-align: right;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.faq-answer {
+  padding: 0 1.25rem 1.25rem 1.25rem;
+  color: #475569;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 0.85rem;
+}

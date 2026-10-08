@@ -1,0 +1,268 @@
+/* ==================================================
+   Xi'an Famous Foods - Digital Menu Styles
+   Card layout, category navigation, modals & cart
+   ================================================== */
+
+/* Category Navigation Bar */
+.category-nav-wrap {
+  background-color: rgba(250, 246, 240, 0.98);
+  border-bottom: 1.5px solid var(--xff-border-warm);
+  position: sticky;
+  top: 72px;
+  z-index: 35;
+}
+
+.category-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.95rem;
+  border-radius: 6px;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  color: var(--xff-slate);
+  background-color: #eee8dc;
+  border: 1.5px solid var(--xff-border-warm);
+  transition: all 0.15s ease-in-out;
+  min-height: 38px;
+  cursor: pointer;
+}
+
+.category-tab.active {
+  color: #ffffff;
+  background-color: var(--xff-red);
+  border-color: var(--xff-border-heavy);
+  box-shadow: 2px 2px 0px var(--xff-coal);
+}
+
+.category-tab:hover:not(.active) {
+  background-color: #e3dcce;
+  color: var(--xff-coal);
+}
+
+/* Product Card */
+.product-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  border: 2px solid var(--xff-border-warm);
+  overflow: hidden;
+  box-shadow: 3px 3px 0px rgba(20, 20, 20, 0.06);
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 1rem;
+  padding: 0.95rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.product-card:hover {
+  border-color: var(--xff-coal);
+  box-shadow: 4px 4px 0px var(--xff-coal);
+  transform: translate(-1px, -1px);
+}
+
+.product-card:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px var(--xff-coal);
+}
+
+.product-card-thumb-wrap {
+  width: 110px;
+  min-width: 110px;
+  height: 110px;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  background-color: #f5ede1;
+  position: relative;
+  border: 1.5px solid var(--xff-border-warm);
+}
+
+.product-card-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+/* Add Mini Button */
+.btn-add-mini {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 6px;
+  background-color: var(--xff-coal);
+  color: #ffffff;
+  border: 1.5px solid var(--xff-coal);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  font-weight: 800;
+  transition: all 0.12s ease;
+  cursor: pointer;
+}
+
+.btn-add-mini:hover {
+  background-color: var(--xff-red);
+  border-color: var(--xff-red);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px var(--xff-coal);
+}
+
+.btn-add-mini:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px;
+}
+
+/* Floating Bottom Cart Bar */
+.cart-floating-bar {
+  position: fixed;
+  bottom: calc(0.85rem + var(--sab));
+  left: 1rem;
+  right: 1rem;
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--xff-coal);
+  color: #ffffff;
+  border-radius: 0.85rem;
+  border: 2px solid #ffffff;
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35), 4px 4px 0px rgba(186, 18, 26, 0.7);
+  z-index: 45;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.cart-floating-bar.hidden {
+  transform: translateY(130%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Modal Bottom Sheet */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(20, 20, 20, 0.65);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 55;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.bottom-sheet {
+  background-color: var(--xff-warm-bg);
+  width: 100%;
+  max-width: 768px;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  border-top: 3px solid var(--xff-border-heavy);
+  padding: 1.25rem;
+  padding-bottom: calc(1.75rem + var(--sab));
+  max-height: 88vh;
+  max-height: 88dvh;
+  overflow-y: auto;
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-overlay.active .bottom-sheet {
+  transform: translateY(0);
+}
+
+.sheet-handle {
+  width: 44px;
+  height: 5px;
+  background-color: #cbd5e1;
+  border-radius: 9999px;
+  margin: 0 auto 1.25rem auto;
+}
+
+/* Quantity Control */
+.qty-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background-color: #ffffff;
+  border: 2px solid var(--xff-border-heavy);
+  border-radius: 6px;
+  padding: 0.2rem 0.45rem;
+  box-shadow: 2px 2px 0px var(--xff-border-heavy);
+}
+
+.qty-btn {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #f1ede4;
+  color: var(--xff-coal);
+  font-family: var(--font-mono);
+  font-weight: 900;
+  font-size: 1.1rem;
+  border: 1px solid var(--xff-border-warm);
+  cursor: pointer;
+}
+
+.qty-btn:active {
+  background-color: var(--xff-coal);
+  color: #ffffff;
+}
+
+/* Search Bar */
+.search-input-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 2.75rem 0.75rem 1rem;
+  border-radius: 6px;
+  border: 2px solid var(--xff-border-heavy);
+  background-color: #ffffff;
+  color: var(--xff-coal);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  outline: none;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.08);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-input:focus {
+  border-color: var(--xff-red);
+  box-shadow: 3px 3px 0px var(--xff-red);
+}
+
+.search-icon {
+  position: absolute;
+  right: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--xff-muted);
+  font-size: 1.25rem;
+  pointer-events: none;
+}
