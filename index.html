@@ -7,6 +7,10 @@
   <meta name="theme-color" content="#ba121a">
   <title>XI'AN FAMOUS FOODS | مأكولات شيآن الشهيرة - الصفحة الرئيسية</title>
 
+  <!-- Brand Custom Fonts: Cordale Arabic (Regular & Bold) -->
+  <link rel="preload" href="./public/Cordale_Arabic_Trial_Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="./public/Cordale_Arabic_Trial_Bold.ttf" as="font" type="font/ttf" crossorigin>
+
   <!-- Fonts: Barlow Condensed & Noto Sans SC -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,13 +29,6 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-
-  <!-- Top Announcement Ticker -->
-  <div class="xff-ticker">
-    <span class="xff-ticker-flame">🔥</span>
-    <span>EAT WHILE HOT • HAND-PULLED TO ORDER • تُسحب النودلز يدوياً فور طلبها</span>
-    <span class="xff-ticker-flame">🔥</span>
-  </div>
 
   <!-- Global Header Navigation -->
   <header class="xff-header">
@@ -161,8 +158,8 @@
       </div>
     </section>
 
-    <!-- Fret Pattern Divider -->
-    <div class="pattern-divider-red"></div>
+    <!-- Wavy Red Border (Top) -->
+    <div class="pattern-container is-red-top"></div>
 
     <!-- ==========================================
          PRESS & ANTHONY BOURDAIN REVIEWS
@@ -203,7 +200,8 @@
       </div>
     </section>
 
-    <div class="pattern-divider-coal"></div>
+    <!-- Wavy Red Border (Bottom) -->
+    <div class="pattern-container is-red-bottom"></div>
 
     <!-- ==========================================
          FEATURED CLASSICS (Bento Showcase)
@@ -245,9 +243,9 @@
             </div>
           </div>
 
-          <!-- Dish 2: B1 Burger -->
+          <!-- Dish 2: B1 Burger (Authentic Chinese Flatbread Roujiamo) -->
           <div class="bento-card">
-            <img class="bento-img" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" alt="B1 Roujiamo Burger">
+            <img class="bento-img" src="https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=600&q=80" alt="B1 Roujiamo Burger">
             <div class="bento-content">
               <div>
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
@@ -288,10 +286,13 @@
       </div>
     </section>
 
+    <!-- Wavy Dark Border (Top) -->
+    <div class="pattern-container is-dark-top"></div>
+
     <!-- ==========================================
          STORY TEASER BANNER (Father & Son)
          ========================================== -->
-    <section style="background-color: var(--xff-coal); color: #ffffff; padding: 4rem 0; border-top: 4px solid var(--xff-red); border-bottom: 4px solid var(--xff-red);">
+    <section class="story-teaser-section">
       <div class="container" style="display: grid; grid-template-columns: 1fr; gap: 2.5rem; align-items: center;">
         <div style="max-width: 680px;">
           <span class="chinese-seal" style="border-color: #ffffff; color: #ffffff; background-color: transparent; margin-bottom: 0.75rem;">父子传承 • FOUNDERS</span>
@@ -307,7 +308,13 @@
         </div>
       </div>
     </section>
+
+    <!-- Wavy Dark Border (Bottom) -->
+    <div class="pattern-container is-dark-bottom"></div>
   </main>
+
+  <!-- Wavy Black Border (Above Footer) -->
+  <div class="pattern-container wavy-black-top" style="margin-top: 3.5rem;"></div>
 
   <!-- Global Footer -->
   <footer class="xff-footer">

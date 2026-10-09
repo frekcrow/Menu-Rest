@@ -7,6 +7,10 @@
   <meta name="theme-color" content="#ba121a">
   <title>XI'AN FAMOUS FOODS | قائمة الطعام الكاملة</title>
 
+  <!-- Brand Custom Fonts: Cordale Arabic (Regular & Bold) -->
+  <link rel="preload" href="./public/Cordale_Arabic_Trial_Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="./public/Cordale_Arabic_Trial_Bold.ttf" as="font" type="font/ttf" crossorigin>
+
   <!-- Fonts: Barlow Condensed & Noto Sans SC -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,13 +29,6 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body style="padding-bottom: calc(95px + var(--sab));">
-
-  <!-- Top Announcement Ticker -->
-  <div class="xff-ticker">
-    <span class="xff-ticker-flame">🔥</span>
-    <span>EAT WHILE HOT • HAND-PULLED TO ORDER • تُسحب النودلز يدوياً فور طلبها</span>
-    <span class="xff-ticker-flame">🔥</span>
-  </div>
 
   <!-- Global Header Navigation -->
   <header class="xff-header">
@@ -190,6 +187,70 @@
       </section>
     </div>
   </main>
+
+  <!-- Wavy Black Border (Above Footer) -->
+  <div class="pattern-container wavy-black-top" style="margin-top: 4rem;"></div>
+
+  <!-- Global Footer -->
+  <footer class="xff-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Info -->
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+            <span class="chinese-seal" style="border-color: #ffffff; color: #ffffff; background: transparent;">西安名吃</span>
+            <div style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 900; letter-spacing: 0.05em; text-transform: uppercase;">
+              XI'AN FAMOUS FOODS
+            </div>
+          </div>
+          <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.7; margin-bottom: 1.25rem;">
+            المطعم الصيني التراثي الأول المتخصص في نودلز بيانغ بيانغ المسحوبة يدوياً وفطائر روجيامو المقرمشة بخلطات التوابل الأصلية من مدينة شيآن بمقاطعة شنشي.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <div class="footer-title">صفحات الموقع</div>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">الصفحة الرئيسية</a></li>
+            <li><a href="menu.html" class="footer-link">قائمة الطعام الكاملة</a></li>
+            <li><a href="story.html" class="footer-link">قصة التأسيس والتراث</a></li>
+            <li><a href="locations.html" class="footer-link">فروعنا وأوقات العمل</a></li>
+            <li><a href="contact.html" class="footer-link">التواصل والتموين</a></li>
+          </ul>
+        </div>
+
+        <!-- Series Codes -->
+        <div>
+          <div class="footer-title">رموز الأصناف</div>
+          <ul class="footer-links">
+            <li><a href="menu.html" class="footer-link">[ N ] نودلز مسحوبة يدوياً</a></li>
+            <li><a href="menu.html" class="footer-link">[ B ] برجر وفطائر روجيامو</a></li>
+            <li><a href="menu.html" class="footer-link">[ A ] ليانغ بي والمقبلات</a></li>
+            <li><a href="menu.html" class="footer-link">[ F ] زلابية وشوربات حارة</a></li>
+            <li><a href="menu.html" class="footer-link">[ D ] مشروبات الشاي والباشن</a></li>
+          </ul>
+        </div>
+
+        <!-- Hours & Location -->
+        <div>
+          <div class="footer-title">المقر الرئيسي</div>
+          <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.6; margin-bottom: 0.75rem;">
+            41-10 Main St, Flushing, NY 11355<br>
+            هاتف: +1 (212) 786-2068
+          </p>
+          <p style="font-size: 0.82rem; color: #a3a3a3;">
+            ساعات العمل: 11:00 AM – 9:00 PM يومياً
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Xi'an Famous Foods LLC. جميع الحقوق محفوظة.</div>
+        <div>تصميم متوافق هندسياً مع كافة معايير الويب ومتصفحات iOS 15.3.</div>
+      </div>
+    </div>
+  </footer>
 
   <!-- ==========================================
        FLOATING BOTTOM ORDER BAR

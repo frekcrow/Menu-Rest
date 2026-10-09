@@ -83,7 +83,7 @@ window.XFF_DATA = (function () {
       calories: 450,
       spiceLevel: "🚫 غير حار",
       badge: "الأصل منذ 2005",
-      image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80"
+      image: "https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=600&q=80"
     },
     {
       id: "B2",
@@ -98,7 +98,7 @@ window.XFF_DATA = (function () {
       calories: 480,
       spiceLevel: "🌶️🌶️ حار كلاسيكي",
       badge: "الأكثر طلباً",
-      image: "https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=600&q=80"
+      image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80"
     },
 
     // [ A Series ] LIANG PI & COLD DISHES (凉皮凉菜)

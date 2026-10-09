@@ -7,6 +7,10 @@
   <meta name="theme-color" content="#ba121a">
   <title>XI'AN FAMOUS FOODS | الفروع وساعات العمل</title>
 
+  <!-- Brand Custom Fonts: Cordale Arabic (Regular & Bold) -->
+  <link rel="preload" href="./public/Cordale_Arabic_Trial_Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="./public/Cordale_Arabic_Trial_Bold.ttf" as="font" type="font/ttf" crossorigin>
+
   <!-- Fonts: Barlow Condensed & Noto Sans SC -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,13 +29,6 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-
-  <!-- Top Announcement Ticker -->
-  <div class="xff-ticker">
-    <span class="xff-ticker-flame">🔥</span>
-    <span>FIND YOUR NEAREST XFF • NYC LOCATIONS • فروعنا في مانهاتن وكوينز وبروكلين</span>
-    <span class="xff-ticker-flame">🔥</span>
-  </div>
 
   <!-- Global Header Navigation -->
   <header class="xff-header">
@@ -102,6 +99,9 @@
       </p>
     </div>
 
+    <!-- Wavy Ribbon Divider -->
+    <div class="wavy-divider" style="max-width: 480px; margin: 0 auto 2.5rem auto;"></div>
+
     <!-- Takeout & Delivery Advisory -->
     <div style="background-color: #ffffff; border: 2px solid var(--xff-border-heavy); box-shadow: 4px 4px 0px var(--xff-coal); border-radius: 8px; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
       <div style="display: flex; align-items: center; gap: 1rem;">
@@ -123,6 +123,9 @@
       <!-- Populated dynamically by js/main.js from js/data/menu-data.js -->
     </div>
   </main>
+
+  <!-- Wavy Black Border (Above Footer) -->
+  <div class="pattern-container wavy-black-top" style="margin-top: 3.5rem;"></div>
 
   <!-- Global Footer -->
   <footer class="xff-footer">

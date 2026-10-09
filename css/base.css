@@ -5,6 +5,87 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Noto+Sans+SC:wght@500;700;900&family=SF+Mono&display=swap');
 
+/* ==================================================
+   Custom Brand Font: Cordale Arabic
+   - Bold: Titles, Branch Names, and Large Text
+   - Regular: Smaller Text, Subtext, and Body
+   - English: Reverts to Original Barlow Condensed & System Fonts
+   ================================================== */
+
+/* Cordale Arabic Regular (Weights 300 - 500) */
+@font-face {
+  font-family: 'Cordale Arabic';
+  src: url('../public/Cordale_Arabic_Trial_Regular.ttf') format('truetype');
+  font-weight: 300 500;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
+}
+
+@font-face {
+  font-family: 'Cordale Arabic';
+  src: url('../public/Cordale_Arabic_Trial_Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
+}
+
+@font-face {
+  font-family: 'Cordale Arabic Regular';
+  src: url('../public/Cordale_Arabic_Trial_Regular.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
+}
+
+/* Cordale Arabic Bold (Weights 600 - 900) */
+@font-face {
+  font-family: 'Cordale Arabic';
+  src: url('../public/Cordale_Arabic_Trial_Bold.ttf') format('truetype');
+  font-weight: 600 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
+}
+
+@font-face {
+  font-family: 'Cordale Arabic';
+  src: url('../public/Cordale_Arabic_Trial_Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
+}
+
+@font-face {
+  font-family: 'Cordale Arabic';
+  src: url('../public/Cordale_Arabic_Trial_Bold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
+}
+
+@font-face {
+  font-family: 'Cordale Arabic';
+  src: url('../public/Cordale_Arabic_Trial_Bold.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
+}
+
+@font-face {
+  font-family: 'Cordale Arabic Bold';
+  src: url('../public/Cordale_Arabic_Trial_Bold.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
+}
+
 :root {
   /* XFF Color Palette */
   --xff-red: #ba121a;
@@ -28,16 +109,22 @@
   --sar: env(safe-area-inset-right, 0px);
 
   /* Fonts */
-  --font-display: 'Barlow Condensed', 'Impact', 'Arial Narrow', sans-serif;
+  --font-brand: 'Cordale Arabic Bold', 'Cordale Arabic', 'Barlow Condensed', sans-serif;
+  --font-display: 'Cordale Arabic Bold', 'Cordale Arabic', 'Barlow Condensed', 'Impact', sans-serif;
+  --font-body: 'Cordale Arabic', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --font-chinese: 'Noto Sans SC', 'PingFang SC', sans-serif;
   --font-mono: 'SF Mono', 'Roboto Mono', 'Courier New', monospace;
-  --font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  /* Dedicated English font fallbacks */
+  --font-en-display: 'Barlow Condensed', 'Impact', 'Arial Narrow', sans-serif;
+  --font-en-body: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: inherit;
 }
 
 html {
@@ -45,6 +132,7 @@ html {
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
   background-color: var(--xff-warm-bg);
+  font-family: var(--font-body);
 }
 
 body {
@@ -53,37 +141,88 @@ body {
   color: var(--xff-coal);
   min-height: 100vh;
   min-height: 100dvh;
-  line-height: 1.5;
+  line-height: 1.6;
   overflow-x: hidden;
 }
 
-/* Typography Defaults */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display);
+/* Titles, Branch/Floor Names & Large Text (Cordale Bold) */
+h1, h2, h3, h4, h5, h6,
+.hero-title,
+.location-card h3,
+.footer-title,
+.quote-text,
+.quote-author,
+.category-tab,
+.timeline-year-badge,
+.btn-xff-primary,
+.btn-xff-secondary {
+  font-family: var(--font-display) !important;
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   color: var(--xff-coal);
-  line-height: 1.15;
+  line-height: 1.25;
+}
+
+/* Subtext, Small Text, Paragraphs & Form Controls (Cordale Regular) */
+p,
+span,
+li,
+input,
+select,
+textarea,
+.hero-lead,
+.faq-answer,
+.press-snippet,
+.location-card p,
+.form-label,
+.footer-links a,
+.footer-bottom {
+  font-family: var(--font-body);
+  font-weight: 400;
 }
 
 p {
   color: #404040;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 a {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
+  font-family: inherit;
 }
 
 button {
   background: none;
   border: none;
   outline: none;
-  font-family: inherit;
   cursor: pointer;
+}
+
+input, select, textarea {
+  font-family: var(--font-body);
+}
+
+/* English Text Reverts to Original Fonts */
+:lang(en),
+[lang="en"],
+.font-en,
+.en-sub,
+.xff-logo-title,
+.press-name,
+.sku-badge,
+.sku-code {
+  font-family: var(--font-en-display) !important;
+}
+
+.en-body {
+  font-family: var(--font-en-body) !important;
+}
+
+.chinese-seal, [lang="zh"], .hero-chinese-sub {
+  font-family: var(--font-chinese) !important;
 }
 
 /* Container */

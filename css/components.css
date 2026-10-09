@@ -3,26 +3,6 @@
    Header, Navigation, Buttons, Badges, Footer, Ticker
    ================================================== */
 
-/* Top Announcement Ticker */
-.xff-ticker {
-  background-color: var(--xff-coal);
-  color: #ffffff;
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 0.82rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 0.45rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.85rem;
-  border-bottom: 2px solid var(--xff-red);
-}
-
-.xff-ticker-flame {
-  color: #ef4444;
-}
 
 /* Global Header & Nav */
 .xff-header {
@@ -336,10 +316,9 @@
 .xff-footer {
   background-color: var(--xff-coal);
   color: #ffffff;
-  border-top: 4px solid var(--xff-red);
   padding-top: 3.5rem;
   padding-bottom: 2rem;
-  margin-top: 4rem;
+  position: relative;
 }
 
 .footer-grid {
