@@ -205,7 +205,7 @@ window.XFF_DATA = (function () {
       id: "loc-1",
       name: "Flushing Original (المقر الأصلي فلاشينغ)",
       city: "Queens, NY",
-      address: "41-10 Main St, Flushing, NY 11355",
+      address: "الانبار - الرمادي - شارع الاسكان القديمة",
       phone: "+1 (212) 786-2068",
       hours: "11:00 AM – 9:00 PM يومياً",
       status: "مفتوح الآن",

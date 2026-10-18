@@ -3,6 +3,119 @@
    Landing Hero, Press Section, Story Timeline, Locations & Contact
    ================================================== */
 
+/* Minimalist Overlaid KUDO KUDO Header (Directly over the image) */
+.hero-top-overlay {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  padding: 1rem 1.25rem 0 1.25rem;
+}
+
+.hero-controls-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 0.85rem !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  direction: ltr !important;
+}
+
+.kudo-raw-hamburger {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 4px !important;
+  background: transparent !important;
+  border: none !important;
+  cursor: pointer !important;
+  padding: 4px 2px !important;
+  box-shadow: none !important;
+  flex-shrink: 0 !important;
+  transition: opacity 0.15s ease !important;
+}
+
+.kudo-raw-hamburger:hover {
+  opacity: 0.75;
+}
+
+.kudo-raw-hamburger span {
+  display: block !important;
+  width: 22px !important;
+  height: 2.5px !important;
+  background-color: var(--xff-coal) !important;
+  border-radius: 2px !important;
+  box-shadow: 0 1px 2px rgba(255, 255, 255, 0.7) !important;
+}
+
+.kudo-inline-red-lines,
+.kudo-inline-lines {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 3px !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.kudo-inline-red-lines .red-line,
+.kudo-inline-lines .red-line {
+  height: 1px !important;
+  background-color: var(--xff-red, #ba121a) !important;
+  box-shadow: 0 0.5px 1px rgba(255, 255, 255, 0.5) !important;
+}
+
+.kudo-inline-red-lines .red-line.line-top,
+.kudo-inline-lines .red-line.line-top {
+  width: 100% !important;
+}
+
+.kudo-inline-red-lines .red-line.line-bottom,
+.kudo-inline-lines .red-line.line-bottom {
+  width: 60% !important;
+}
+
+.kudo-raw-lang-btn {
+  font-family: var(--font-display), sans-serif !important;
+  font-size: 0.95rem !important;
+  font-weight: 900 !important;
+  color: var(--xff-coal) !important;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85) !important;
+  background: transparent !important;
+  border: none !important;
+  cursor: pointer !important;
+  padding: 4px 2px !important;
+  box-shadow: none !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  letter-spacing: 0.05em !important;
+  transition: opacity 0.15s ease !important;
+}
+
+.kudo-raw-lang-btn:hover {
+  opacity: 0.75;
+}
+
+.hero-brand-title {
+  text-align: center !important;
+  width: 100% !important;
+  margin-top: 0.35rem !important;
+}
+
+.hero-brand-title span {
+  font-family: var(--font-display) !important;
+  font-size: clamp(1.4rem, 4vw, 1.85rem) !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.16em !important;
+  color: var(--xff-coal) !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9) !important;
+  text-transform: uppercase !important;
+  display: inline-block !important;
+  line-height: 1.1 !important;
+}
+
 /* Masking Tape Accents (Vintage XFF Aesthetic) */
 .tape-frame {
   position: relative;
@@ -146,14 +259,87 @@
 .hero-section {
   background-color: var(--xff-red);
   color: #ffffff;
-  min-height: 520px;
-  padding-top: 3.5rem;
-  padding-bottom: 3.5rem;
+  min-height: 420px;
+  padding-top: 0;
+  padding-bottom: 2.5rem;
   margin-bottom: 0;
   position: relative;
   overflow: hidden;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+}
+
+/* Hero Full Ad Banner with Red Fade Overlay & Overlaid Buttons */
+.hero-ad-banner {
+  position: relative;
+  width: 100%;
+  min-height: 330px;
+  height: 360px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--xff-red);
+}
+
+.hero-ad-banner-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  z-index: 1;
+}
+
+.hero-ad-banner-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(255, 255, 255, 0.1) 18%,
+    rgba(186, 18, 26, 0) 32%,
+    rgba(186, 18, 26, 0.45) 60%,
+    rgba(186, 18, 26, 0.9) 85%,
+    var(--xff-red) 100%
+  );
+}
+
+.hero-ad-banner-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  padding-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 769px) {
+  .hero-ad-banner {
+    height: 480px;
+  }
+  .hero-ad-banner-content {
+    padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-ad-banner {
+    height: 350px;
+  }
+  .hero-ad-banner-content {
+    padding-bottom: 1.25rem;
+  }
 }
 
 .hero-content-col {
@@ -161,18 +347,22 @@
   max-width: 640px;
   position: relative;
   z-index: 2;
+  margin: 3.25rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 @media (min-width: 900px) {
   .hero-content-col {
-    margin-left: calc(min(450px, 42vh) + 2rem);
-    margin-right: auto;
+    margin: 3.75rem auto 0 auto;
   }
 }
 
 @media (max-width: 899px) {
   .hero-content-col {
-    margin: 0 auto;
+    margin: 3rem auto 0 auto;
   }
 }
 
@@ -246,9 +436,29 @@
 
 .hero-ctas {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.hero-btn-compact {
+  font-size: 0.92rem !important;
+  padding: 0.55rem 1.15rem !important;
+  white-space: nowrap;
+  letter-spacing: normal;
+}
+
+@media (max-width: 480px) {
+  .hero-ctas {
+    gap: 0.5rem;
+  }
+  .hero-btn-compact {
+    font-size: 0.85rem !important;
+    padding: 0.5rem 0.85rem !important;
+  }
 }
 
 /* -------------------------------------------------------------
@@ -398,13 +608,13 @@
   scroll-snap-align: start;
   text-decoration: none;
   cursor: pointer;
-  width: 140px;
+  width: 170px;
   transition: transform 0.2s ease;
 }
 
 .dish-circle-frame {
-  width: 130px;
-  height: 130px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
@@ -434,12 +644,12 @@
 
 .dish-circle-name {
   font-family: var(--font-display);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 800;
   color: var(--xff-coal);
-  margin-top: 0.7rem;
+  margin-top: 0.85rem;
   line-height: 1.35;
-  max-width: 140px;
+  max-width: 165px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -513,15 +723,16 @@
     scroll-padding: 0 1.25rem;
   }
   .dish-circle-item {
-    width: 110px;
+    width: 140px;
   }
   .dish-circle-frame {
-    width: 105px;
-    height: 105px;
+    width: 135px;
+    height: 135px;
   }
   .dish-circle-name {
-    font-size: 0.85rem;
-    max-width: 110px;
+    font-size: 0.92rem;
+    max-width: 140px;
+    margin-top: 0.65rem;
   }
 }
 
@@ -579,12 +790,12 @@
 
 .map-pulse-ring-outer {
   animation: mapPulse 2.4s ease-out infinite;
-  transform-origin: 260px 135px;
+  transform-origin: 220px 214px;
 }
 
 .map-pulse-ring-inner {
   animation: mapPulse 2.4s ease-out 0.8s infinite;
-  transform-origin: 260px 135px;
+  transform-origin: 220px 214px;
 }
 
 @keyframes mapPulse {
@@ -784,12 +995,13 @@
   justify-content: center;
   margin: 2rem auto 1.5rem auto; /* Moved downwards towards center */
   overflow: visible;
-  transform: translateX(-24px);
+  transform: none;
 }
 
 @media (max-width: 768px) {
   .delivery-img-wrapper {
-    transform: translateX(-10px);
+    margin: 1.75rem auto 1.25rem auto;
+    transform: none;
   }
 }
 
@@ -902,6 +1114,18 @@
   transition: all 0.2s ease;
 }
 
+.delivery-btn-wrap {
+  width: 100%;
+  text-align: right;
+  margin-top: 2.25rem;
+}
+
+@media (max-width: 768px) {
+  .delivery-btn-wrap {
+    margin-top: 2rem;
+  }
+}
+
 .delivery-details-btn:hover,
 .map-details-btn:hover {
   color: var(--xff-red);
@@ -911,9 +1135,10 @@
 .restaurant-about-text-col {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
-  text-align: center;
+  text-align: right;
+  direction: rtl;
   align-self: start; /* Placed UP at the top */
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
@@ -929,7 +1154,8 @@
   margin-top: 0;
   margin-bottom: 0.85rem;
   letter-spacing: -0.01em;
-  text-align: center;
+  text-align: right;
+  width: 100%;
 }
 
 .restaurant-about-desc {
@@ -937,10 +1163,12 @@
   line-height: 1.8;
   color: #f8fafc;
   margin-bottom: 0;
-  text-align: center;
+  text-align: right;
+  direction: rtl;
   max-width: 620px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
 }
 
 .restaurant-about-desc strong {
@@ -954,10 +1182,18 @@
   .restaurant-about-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    text-align: center;
+    text-align: right;
   }
   .restaurant-about-text-col {
     padding-bottom: 0;
+    text-align: right;
+    align-items: flex-start;
+  }
+  .restaurant-about-title {
+    text-align: right;
+  }
+  .restaurant-about-desc {
+    text-align: right;
   }
   .restaurant-about-img-col {
     order: 2;

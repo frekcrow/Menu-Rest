@@ -21,41 +21,11 @@
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
 
-  <!-- Modular Stylesheets -->
-  <link rel="stylesheet" crossorigin href="/assets/index-bkdrzQr6.css">
+  <!-- Modular Stylesheets -->
+  <link rel="stylesheet" crossorigin href="/assets/index-BpGfTvVA.css">
 </head>
 <body>
 
-  <!-- Global Header Navigation -->
-  <header class="xff-header" style="border-bottom: none;">
-    <div class="container xff-nav-container">
-      <a href="index.html" class="xff-logo-link">
-        <span class="chinese-seal" style="font-family: var(--font-display); font-size: 0.85rem; font-weight: 900;">KUDO</span>
-        <div>
-          <div class="xff-logo-title">KUDO KUDO</div>
-          <div class="xff-logo-sub">كودو كودو • KUDO KUDO</div>
-        </div>
-      </a>
-
-      <!-- Desktop Navigation Links -->
-      <nav class="xff-desktop-nav" aria-label="القائمة الرئيسية">
-        <a href="index.html" class="nav-link active">الرئيسية</a>
-        <a href="menu.html" class="nav-link">قائمة الطعام</a>
-        <a href="delivery.html" class="nav-link">خدمة التوصيل</a>
-        <a href="contact.html" class="nav-link">التواصل والتموين</a>
-        <a href="menu.html" class="btn-xff-primary" style="padding: 0.45rem 1rem; font-size: 0.92rem; min-height: 38px;">
-          اطلب الآن <i class="ph-bold ph-arrow-left"></i>
-        </a>
-      </nav>
-
-      <!-- Mobile Hamburger Button -->
-      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="فتح القائمة">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
-    </div>
-  </header>
 
   <!-- Mobile Drawer Menu -->
   <div class="mobile-drawer" id="mobileDrawer">
@@ -86,49 +56,65 @@
     <!-- ==========================================
          HERO SECTION (Split Heritage Layout)
          ========================================== -->
-    <section class="hero-section" style="background-color: var(--xff-red); color: #ffffff; min-height: 520px; margin-bottom: 0; position: relative; overflow: hidden; display: flex; align-items: center;">
-      
-      <!-- Restaurant Logo (Left Edge, Full Height Top to Bottom) -->
-      <div class="hero-edge-logo" style="position: absolute; left: 0; top: 0; bottom: 0; height: 100%; display: flex; align-items: center; justify-content: flex-start; z-index: 1; pointer-events: none;">
-        <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 600px; max-width: 100%; background: radial-gradient(circle at left center, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05) 55%, transparent 75%); pointer-events: none;"></div>
-        <img src="/assets/logo-CBG5OmzD.PNG" 
-             alt="شعار المطعم" 
-             class="hero-edge-logo-img" 
-             style="height: 86%; width: auto; max-height: 86%; object-fit: contain; object-position: left center; display: block; filter: drop-shadow(0 16px 36px rgba(0, 0, 0, 0.4)); pointer-events: auto; padding-left: 1.5rem;"
-             onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='./public/images/logo.png';}else if(this.dataset.tried==1){this.dataset.tried=2;this.src='/images/logo.PNG';}else if(this.dataset.tried==2){this.dataset.tried=3;this.src='/images/logo.png';}">
-      </div>
+    <section class="hero-section hero-ad-section" style="background-color: var(--xff-red); color: #ffffff; margin-bottom: 0; position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 0;">
 
-      <div class="container" style="position: relative; z-index: 2; width: 100%;">
-        <!-- Hero Text Content Column (Positioned adjacent to logo with minimized gap) -->
-        <div class="hero-content-col">
+      <!-- Full Ad Banner Container with Overlaid Header Controls & CTA Buttons -->
+      <div class="hero-ad-banner" style="position: relative; width: 100%; min-height: 330px; height: 360px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; align-items: center; background-color: var(--xff-red);">
+        <!-- Full Ad Image -->
+        <img src="/assets/kudo-ad-BoT0Z1HB.webp" 
+             alt="KUDO KUDO Burger & Fried Chicken" 
+             class="hero-ad-banner-img"
+             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; z-index: 1;"
+             onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='/images/kudo-ad.webp';}else if(this.dataset.tried==1){this.dataset.tried=2;this.src='./public/kudo-ad.webp';}else if(this.dataset.tried==2){this.dataset.tried=3;this.src='kudo-ad.webp';}">
 
-          <div class="hero-ctas">
-            <a href="menu.html" class="btn-xff-secondary" style="font-size: 1.18rem; padding: 0.8rem 1.75rem;">
-              <i class="ph-bold ph-bowl-food"></i> استعرض قائمة الوجبات
-            </a>
-            <a href="contact.html" class="btn-xff-secondary" style="font-size: 1.18rem; padding: 0.8rem 1.75rem; background-color: transparent; color: #ffffff; border-color: #ffffff;">
-              تواصل معنا <i class="ph-bold ph-chat-teardrop-dots"></i>
-            </a>
+        <!-- Red Background Fade Overlay over Image -->
+        <div class="hero-ad-banner-overlay" style="position: absolute; inset: 0; z-index: 2; pointer-events: none; background: linear-gradient(to bottom, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.1) 18%, rgba(186, 18, 26, 0) 32%, rgba(186, 18, 26, 0.45) 60%, rgba(186, 18, 26, 0.9) 85%, var(--xff-red) 100%);"></div>
+
+        <!-- TOP: Controls & Lines placed directly over the image (No white rectangle!) -->
+        <div class="hero-top-overlay" style="position: relative; z-index: 10; width: 100%; padding: 1rem 1.25rem 0 1.25rem;">
+          <!-- Single row at the SAME LEVEL: Hamburger (left), Two Red Lines (middle), (EN/AR) (right) -->
+          <div class="hero-controls-row" style="display: flex; align-items: center; justify-content: space-between; gap: 0.85rem; width: 100%; max-width: 1200px; margin: 0 auto; direction: ltr;">
+            
+            <!-- Left: Menu Button (Just 3 lines directly, NO surrounding box!) -->
+            <button type="button" class="mobile-menu-toggle kudo-raw-hamburger" id="mobileMenuToggle" aria-label="القائمة" style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px; background: transparent; border: none; cursor: pointer; padding: 4px 2px; box-shadow: none; flex-shrink: 0;">
+              <span style="display: block; width: 22px; height: 2.5px; background-color: var(--xff-coal); border-radius: 2px; box-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);"></span>
+              <span style="display: block; width: 22px; height: 2.5px; background-color: var(--xff-coal); border-radius: 2px; box-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);"></span>
+              <span style="display: block; width: 22px; height: 2.5px; background-color: var(--xff-coal); border-radius: 2px; box-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);"></span>
+            </button>
+
+            <!-- Middle: Two thin horizontal red lines (bottom line shorter and thinner) -->
+            <div class="kudo-inline-red-lines kudo-inline-lines" style="flex: 1; display: flex; flex-direction: column; gap: 3px; justify-content: center; align-items: center;">
+              <div class="red-line line-top" style="width: 100%; height: 1px; background-color: var(--xff-red, #ba121a); box-shadow: 0 0.5px 1px rgba(255, 255, 255, 0.5);"></div>
+              <div class="red-line line-bottom" style="width: 60%; height: 1px; background-color: var(--xff-red, #ba121a); box-shadow: 0 0.5px 1px rgba(255, 255, 255, 0.5);"></div>
+            </div>
+
+            <!-- Right: Language Button (Just (EN/AR), NO surrounding box!) -->
+            <button type="button" class="kudo-raw-lang-btn" id="langSwitchBtn" aria-label="تغيير اللغة (EN/AR)" onclick="if(window.XFF_UI&&window.XFF_UI.showToast){window.XFF_UI.showToast('English language version coming soon / النسخة الإنجليزية قادمة قريباً');}else{alert('English language version coming soon');}" style="font-family: var(--font-display), sans-serif; font-size: 0.95rem; font-weight: 900; color: var(--xff-coal); text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85); background: transparent; border: none; cursor: pointer; padding: 4px 2px; box-shadow: none; white-space: nowrap; flex-shrink: 0; letter-spacing: 0.05em;">
+              (EN/AR)
+            </button>
           </div>
 
-          <!-- Quick Metrics -->
-          <div style="display: flex; gap: 1.75rem; margin-top: 2.25rem; border-top: 1.5px solid rgba(255, 255, 255, 0.25); padding-top: 1.35rem;">
-            <div>
-              <div style="font-family: var(--font-mono); font-size: 1.65rem; font-weight: 900; color: #ffffff;">2005</div>
-              <div style="font-size: 0.8rem; font-weight: 700; color: rgba(255, 255, 255, 0.85);">تاريخ التأسيس في فلاشينغ</div>
-            </div>
-            <div style="border-right: 1.5px solid rgba(255, 255, 255, 0.25); padding-right: 1.75rem;">
-              <div style="font-family: var(--font-mono); font-size: 1.65rem; font-weight: 900; color: #ffffff;">30+</div>
-              <div style="font-size: 0.8rem; font-weight: 700; color: rgba(255, 255, 255, 0.85);">عشبة وتوابل سرية بالزيت</div>
-            </div>
-            <div style="border-right: 1.5px solid rgba(255, 255, 255, 0.25); padding-right: 1.75rem;">
-              <div style="font-family: var(--font-mono); font-size: 1.65rem; font-weight: 900; color: #ffffff;">100%</div>
-              <div style="font-size: 0.8rem; font-weight: 700; color: rgba(255, 255, 255, 0.85);">عجين طازج يُسحب يومياً</div>
-            </div>
+          <!-- Under the lines in the middle: KUDO KUDO, nothing else -->
+          <div class="hero-brand-title" style="text-align: center; width: 100%; margin-top: 0.35rem;">
+            <span style="font-family: var(--font-display); font-size: clamp(1.4rem, 4vw, 1.85rem); font-weight: 900; letter-spacing: 0.16em; color: var(--xff-coal); text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9); text-transform: uppercase; display: inline-block; line-height: 1.1;">
+              KUDO KUDO
+            </span>
           </div>
         </div>
 
+        <!-- BOTTOM: Overlaid CTA Buttons above the image -->
+        <div class="hero-ad-banner-content" style="position: relative; z-index: 10; width: 100%; padding-bottom: 1.5rem; display: flex; flex-direction: column; align-items: center; text-align: center;">
+          <div class="hero-ctas" style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: center; gap: 0.75rem; width: 100%;">
+            <a href="menu.html" class="btn-xff-secondary hero-btn-compact" style="font-size: 0.92rem; padding: 0.55rem 1.15rem; white-space: nowrap; box-shadow: 0 4px 14px rgba(0,0,0,0.35);">
+              <i class="ph-bold ph-bowl-food"></i> استعرض قائمة الوجبات
+            </a>
+            <a href="contact.html" class="btn-xff-secondary hero-btn-compact" style="font-size: 0.92rem; padding: 0.55rem 1.15rem; background-color: rgba(0, 0, 0, 0.35); color: #ffffff; border-color: #ffffff; white-space: nowrap; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); box-shadow: 0 4px 14px rgba(0,0,0,0.25);">
+              تواصل معنا <i class="ph-bold ph-chat-teardrop-dots"></i>
+            </a>
+          </div>
+        </div>
       </div>
+
     </section>
 
     <!-- Wavy Border Transition (Hero Bottom) -->
@@ -332,56 +318,64 @@
           <!-- Column 1 (Right in RTL): Restaurant Location on the Map -->
           <div class="split-service-col is-map">
             <div>
-              <!-- Map Illustration Card -->
-              <div class="map-illustration-card" style="margin-bottom: 1.5rem; border: 2.5px solid rgba(255, 255, 255, 0.22); border-radius: 12px; overflow: hidden; background: #13141f; box-shadow: 4px 4px 0px #000000; position: relative;">
-                <svg viewBox="0 0 540 260" width="100%" height="auto" style="display: block; width: 100%; aspect-ratio: 540/260;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="رسم توضيحي لخريطة موقع كودو كودو">
+              <!-- Map Illustration Card (Square & Enhanced Size) -->
+              <div class="map-illustration-card" style="aspect-ratio: 1 / 1; width: 100%; max-width: 320px; margin: 0 auto 1.25rem auto; border: 2.5px solid rgba(255, 255, 255, 0.22); border-radius: 14px; overflow: hidden; background: #13141f; box-shadow: 5px 5px 0px #000000; position: relative;">
+                <svg viewBox="0 0 440 440" width="100%" height="100%" style="display: block; width: 100%; height: 100%; aspect-ratio: 1 / 1;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="رسم توضيحي لخريطة موقع كودو كودو">
                   <!-- City Grid Background -->
-                  <rect width="540" height="260" fill="#13141f" />
+                  <rect width="440" height="440" fill="#13141f" />
                   
-                  <!-- City Blocks -->
-                  <rect x="20" y="20" width="110" height="60" rx="6" fill="#1c1e2b" opacity="0.75" />
-                  <rect x="150" y="20" width="150" height="60" rx="6" fill="#1c1e2b" opacity="0.75" />
-                  <rect x="320" y="20" width="200" height="60" rx="6" fill="#1c1e2b" opacity="0.75" />
+                  <!-- City Blocks Row 1 -->
+                  <rect x="15" y="15" width="95" height="72" rx="6" fill="#1c1e2b" opacity="0.75" />
+                  <rect x="125" y="15" width="175" height="72" rx="6" fill="#1c1e2b" opacity="0.75" />
+                  <rect x="315" y="15" width="110" height="72" rx="6" fill="#1c1e2b" opacity="0.75" />
                   
-                  <rect x="20" y="100" width="110" height="70" rx="6" fill="#1c1e2b" opacity="0.75" />
-                  <rect x="150" y="100" width="100" height="70" rx="6" fill="#202334" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
-                  <rect x="370" y="100" width="150" height="70" rx="6" fill="#1c1e2b" opacity="0.75" />
+                  <!-- City Blocks Row 2 -->
+                  <rect x="15" y="102" width="95" height="92" rx="6" fill="#1c1e2b" opacity="0.75" />
+                  <rect x="125" y="102" width="80" height="92" rx="6" fill="#202334" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+                  <rect x="235" y="102" width="95" height="92" rx="6" fill="#202334" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+                  <rect x="345" y="102" width="80" height="92" rx="6" fill="#1c1e2b" opacity="0.75" />
                   
-                  <rect x="20" y="190" width="230" height="50" rx="6" fill="#1c1e2b" opacity="0.75" />
-                  <rect x="270" y="190" width="250" height="50" rx="6" fill="#1c1e2b" opacity="0.75" />
+                  <!-- City Blocks Row 3 -->
+                  <rect x="15" y="235" width="95" height="92" rx="6" fill="#1c1e2b" opacity="0.75" />
+                  <rect x="125" y="235" width="80" height="92" rx="6" fill="#1c1e2b" opacity="0.75" />
+                  <rect x="235" y="235" width="95" height="92" rx="6" fill="#1c1e2b" opacity="0.75" />
+                  <rect x="345" y="235" width="80" height="92" rx="6" fill="#1c1e2b" opacity="0.75" />
+                  
+                  <!-- City Blocks Row 4 -->
+                  <rect x="15" y="342" width="190" height="82" rx="6" fill="#1c1e2b" opacity="0.75" />
+                  <rect x="220" y="342" width="205" height="82" rx="6" fill="#1c1e2b" opacity="0.75" />
                   
                   <!-- Secondary Streets -->
-                  <line x1="0" y1="90" x2="540" y2="90" stroke="#292d3f" stroke-width="14" />
-                  <line x1="0" y1="180" x2="540" y2="180" stroke="#292d3f" stroke-width="14" />
-                  <line x1="140" y1="0" x2="140" y2="260" stroke="#292d3f" stroke-width="14" />
-                  <line x1="360" y1="0" x2="360" y2="260" stroke="#292d3f" stroke-width="14" />
+                  <line x1="0" y1="95" x2="440" y2="95" stroke="#292d3f" stroke-width="14" />
+                  <line x1="0" y1="335" x2="440" y2="335" stroke="#292d3f" stroke-width="14" />
+                  <line x1="117" y1="0" x2="117" y2="440" stroke="#292d3f" stroke-width="14" />
+                  <line x1="337" y1="0" x2="337" y2="440" stroke="#292d3f" stroke-width="14" />
                   
-                  <!-- Main Avenue (Roosevelt / Main St) with center lane marks -->
-                  <line x1="260" y1="0" x2="260" y2="260" stroke="#363b52" stroke-width="22" />
-                  <line x1="260" y1="0" x2="260" y2="260" stroke="#ba121a" stroke-dasharray="8 8" stroke-width="2" opacity="0.8" />
+                  <!-- Main Vertical Avenue -->
+                  <line x1="220" y1="0" x2="220" y2="440" stroke="#363b52" stroke-width="22" />
+                  <line x1="220" y1="0" x2="220" y2="440" stroke="#ba121a" stroke-dasharray="8 8" stroke-width="2.5" opacity="0.85" />
                   
-                  <line x1="0" y1="135" x2="540" y2="135" stroke="#363b52" stroke-width="20" />
-                  <line x1="0" y1="135" x2="540" y2="135" stroke="#fbbf24" stroke-dasharray="10 8" stroke-width="2" opacity="0.6" />
+                  <!-- Main Horizontal Avenue (شارع الإسكان القديمة) -->
+                  <line x1="0" y1="214" x2="440" y2="214" stroke="#363b52" stroke-width="22" />
+                  <line x1="0" y1="214" x2="440" y2="214" stroke="#fbbf24" stroke-dasharray="10 8" stroke-width="2.5" opacity="0.7" />
                   
                   <!-- Street Names -->
-                  <text x="278" y="45" font-family="'SF Mono', monospace" font-size="9" font-weight="700" fill="#94a3b8" letter-spacing="1">MAIN ST</text>
-                  <text x="278" y="225" font-family="'SF Mono', monospace" font-size="9" font-weight="700" fill="#94a3b8" letter-spacing="1">MAIN ST</text>
-                  <text x="50" y="130" font-family="'SF Mono', monospace" font-size="9" font-weight="700" fill="#94a3b8" letter-spacing="1">ROOSEVELT AVE</text>
-                  <text x="400" y="130" font-family="'SF Mono', monospace" font-size="9" font-weight="700" fill="#94a3b8" letter-spacing="1">41ST AVE</text>
+                  <text x="236" y="55" font-family="'Cordale Arabic Bold', 'Cordale Arabic', sans-serif" font-size="10" font-weight="800" fill="#94a3b8">شارع الإسكان</text>
+                  <text x="236" y="395" font-family="'Cordale Arabic Bold', 'Cordale Arabic', sans-serif" font-size="10" font-weight="800" fill="#94a3b8">الرمادي</text>
                   
-                  <!-- KUDO Radar Pulse Animation -->
-                  <circle cx="260" cy="135" r="38" fill="rgba(186, 18, 26, 0.2)" class="map-pulse-ring-outer" />
-                  <circle cx="260" cy="135" r="22" fill="rgba(186, 18, 26, 0.45)" class="map-pulse-ring-inner" />
+                  <!-- KUDO Radar Pulse Animation (Centered at 220, 214) -->
+                  <circle cx="220" cy="214" r="48" fill="rgba(186, 18, 26, 0.22)" class="map-pulse-ring-outer" />
+                  <circle cx="220" cy="214" r="28" fill="rgba(186, 18, 26, 0.45)" class="map-pulse-ring-inner" />
                   
                   <!-- Pin Marker Base Shadow -->
-                  <ellipse cx="260" cy="144" rx="8" ry="3.5" fill="#000000" opacity="0.6" />
+                  <ellipse cx="220" cy="223" rx="9" ry="4" fill="#000000" opacity="0.65" />
                   
-                  <!-- Red Teardrop Location Pin -->
-                  <path d="M260 108 C250 108 242 116 242 126 C242 137 260 146 260 146 C260 146 278 137 278 126 C278 116 270 108 260 108 Z" fill="#ba121a" stroke="#ffffff" stroke-width="2.5" />
-                  <circle cx="260" cy="124" r="5" fill="#ffffff" />
+                  <!-- Red Teardrop Location Pin (Tip at 220, 225) -->
+                  <path d="M220 187 C210 187 202 195 202 205 C202 216 220 225 220 225 C220 225 238 216 238 205 C238 195 230 187 220 187 Z" fill="#ba121a" stroke="#ffffff" stroke-width="2.5" />
+                  <circle cx="220" cy="203" r="5" fill="#ffffff" />
                   
                   <!-- Pin Tooltip Callout -->
-                  <g transform="translate(180, 52)">
+                  <g transform="translate(140, 131)">
                     <rect width="160" height="34" rx="6" fill="#141414" stroke="#ffffff" stroke-width="1.8" />
                     <text x="80" y="21" font-family="'Cordale Arabic Bold', 'Cordale Arabic', sans-serif" font-size="12" font-weight="900" fill="#ffffff" text-anchor="middle">KUDO KUDO • الفرع الرئيسي</text>
                     <polygon points="74,34 86,34 80,41" fill="#141414" stroke="#ffffff" stroke-width="1.8" />
@@ -390,17 +384,15 @@
                 </svg>
               </div>
 
-              <div style="display: flex; align-items: flex-start; gap: 0.6rem; color: #cbd5e1; font-size: 0.95rem; margin-bottom: 1.75rem;">
-                <i class="ph-bold ph-map-pin" style="color: var(--xff-red); font-size: 1.3rem; margin-top: 3px; flex-shrink: 0;"></i>
-                <div>
-                  <div style="font-weight: 800; color: #ffffff;">41-10 Main St, Flushing, NY 11355</div>
-                  <div style="color: #94a3b8; font-size: 0.85rem; margin-top: 2px;">ساعات العمل: 11:00 AM – 9:00 PM طوال أيام الأسبوع</div>
-                </div>
+              <!-- Reduced Size Address Phrase Under Map Card -->
+              <div style="display: flex; align-items: center; justify-content: flex-start; gap: 0.45rem; color: #cbd5e1; margin-bottom: 1.5rem; width: 100%; max-width: 320px; margin-left: auto; margin-right: auto;">
+                <i class="ph-bold ph-map-pin" style="color: var(--xff-red); font-size: 1.05rem; flex-shrink: 0;"></i>
+                <div style="font-size: 0.82rem; font-weight: 700; color: #ffffff; letter-spacing: -0.01em;">الانبار - الرمادي - شارع الاسكان القديمة</div>
               </div>
             </div>
 
-            <div style="width: 100%; text-align: right; margin-top: 0.5rem;">
-              <a href="https://maps.google.com/?q=41-10+Main+St,+Flushing,+NY+11355" target="_blank" rel="noopener noreferrer" class="map-details-btn" style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 800; color: #ffffff; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0; transition: all 0.2s ease;">
+            <div style="width: 100%; max-width: 320px; margin: 0.5rem auto 0 auto; text-align: right;">
+              <a href="https://maps.google.com/?q=الانبار+-+الرمادي+-+شارع+الاسكان+القديمة" target="_blank" rel="noopener noreferrer" class="map-details-btn" style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 800; color: #ffffff; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0; transition: all 0.2s ease;">
                 فتح الموقع في خرائط جوجل <i class="ph-bold ph-arrow-square-out" style="font-size: 1.05rem; color: #ffffff;"></i>
               </a>
             </div>
@@ -413,7 +405,7 @@
           <div class="split-service-col is-delivery" style="display: flex; flex-direction: column; align-items: center; justify-content: space-between;">
             <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;">
               <!-- Delivery Illustration with Black Fade Circles (Pond Rings Effect) -->
-              <div class="delivery-img-wrapper" style="position: relative; width: 100%; max-width: 400px; min-height: 250px; display: flex; align-items: center; justify-content: center; margin: 2rem auto 1.5rem auto; transform: translateX(-24px);">
+              <div class="delivery-img-wrapper" style="position: relative; width: 100%; max-width: 400px; min-height: 250px; display: flex; align-items: center; justify-content: center; margin: 2rem auto 1.5rem auto; transform: none;">
                 <!-- Concentric black ripple rings behind delivery boxes -->
                 <div class="delivery-ripples" aria-hidden="true">
                   <span class="ripple-ring ring-5"></span>
@@ -435,7 +427,7 @@
                   </text>
                 </svg>
 
-                <img src="/assets/delivery-DX-Ysvt4.png" 
+                <img src="/assets/delivery-D5HPVohS.png" 
                      alt="خدمة توصيل كودو كودو - KUDO KUDO Delivery" 
                      class="delivery-featured-img" 
                      id="deliveryFeaturedImg"
@@ -443,7 +435,7 @@
               </div>
             </div>
 
-            <div style="width: 100%; text-align: right; margin-top: 0.5rem;">
+            <div class="delivery-btn-wrap" style="width: 100%; text-align: right; margin-top: 2.25rem;">
               <a href="delivery.html" class="delivery-details-btn" style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 800; color: #ffffff; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0; transition: all 0.2s ease;">
                 تفاصيل طلب التوصيل <i class="ph-bold ph-arrow-left" style="font-size: 1.05rem; color: #ffffff;"></i>
               </a>
@@ -486,12 +478,12 @@
             </div>
 
             <!-- Left Column in RTL: Restaurant Brand Story & Description -->
-            <div class="restaurant-about-text-col">
-              <h2 class="restaurant-about-title">
+            <div class="restaurant-about-text-col" style="text-align: right; align-items: flex-start; direction: rtl;">
+              <h2 class="restaurant-about-title" style="text-align: right; width: 100%;">
                 حكاية النكهة الأصيلة في كودو كودو
               </h2>
 
-              <p class="restaurant-about-desc" style="margin-bottom: 0;">
+              <p class="restaurant-about-desc" style="text-align: right; width: 100%; margin-right: 0; margin-left: 0; margin-bottom: 0;">
                 في <strong>كودو كودو (KUDO KUDO)</strong>، نأخذكم في رحلة طهي فريدة تمزج بين عراقة الأطباق التاريخية لمدينة شيآن بمقاطعة شنشي، وابتكار أشهى برجر مقرمش وفطائر روجيامو الكلاسيكية المحضرة بأسرار التوابل العائلية المتقنة.
               </p>
             </div>
@@ -560,7 +552,7 @@
         <div>
           <div class="footer-title">المقر الرئيسي</div>
           <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.6; margin-bottom: 0.75rem;">
-            41-10 Main St, Flushing, NY 11355<br>
+            الانبار - الرمادي - شارع الاسكان القديمة<br>
             هاتف: +1 (212) 786-2068
           </p>
           <p style="font-size: 0.82rem; color: #a3a3a3;">
