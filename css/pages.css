@@ -63,44 +63,54 @@
 
 /* Wavy Red Border (Bottom of Red Section) */
 .pattern-container.is-red-bottom {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 29' width='50' height='29'%3E%3Cpath d='M0 29 V10 Q12.5 0 25 10 T50 10 V29 Z' fill='%23ba121a'/%3E%3C/svg%3E"),
-                    url('https://cdn.prod.website-files.com/64e57dd33e949526478688ea/64e58b6d0634010157a1601f_wavy_red.svg');
-  background-position: 100% 100%;
+  height: 36px;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 36' width='50' height='36' shape-rendering='geometricPrecision'%3E%3Crect width='50' height='36' fill='%23ffffff'/%3E%3Cpath d='M0 0 H50 V7 Q37.5 13 25 7 T0 7 Z' fill='%23ba121a'/%3E%3Cpath d='M-25 15 Q-12.5 21 0 15 T25 15 T50 15 T75 15' fill='none' stroke='%23ba121a' stroke-width='4'/%3E%3Cpath d='M-25 23 Q-12.5 29 0 23 T25 23 T50 23 T75 23' fill='none' stroke='%23ba121a' stroke-width='4'/%3E%3C/svg%3E");
+  background-position: 0 0;
   background-repeat: repeat-x;
-  background-size: 50px 29px;
+  background-size: 50px 36px;
   margin-top: -1px;
-  transform: rotate(180deg);
+  margin-bottom: 0;
+  transform: none;
 }
 
 /* Wavy Dark Border (Top of Dark Section) */
 .pattern-container.is-dark-top {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 29' width='50' height='29'%3E%3Cpath d='M0 29 V10 Q12.5 0 25 10 T50 10 V29 Z' fill='%23141414'/%3E%3C/svg%3E"),
-                    url('https://cdn.prod.website-files.com/64e57dd33e949526478688ea/64e58b75fc2afbe781805a1a_wavy_dark.svg');
-  background-position: 0 100%;
+  height: 36px;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 36' width='50' height='36' shape-rendering='geometricPrecision'%3E%3Crect width='50' height='36' fill='%23ffffff'/%3E%3Cpath d='M-25 13 Q-12.5 7 0 13 T25 13 T50 13 T75 13' fill='none' stroke='%23141414' stroke-width='4'/%3E%3Cpath d='M-25 21 Q-12.5 15 0 21 T25 21 T50 21 T75 21' fill='none' stroke='%23141414' stroke-width='4'/%3E%3Cpath d='M0 36 H50 V29 Q37.5 23 25 29 T0 29 Z' fill='%23141414'/%3E%3C/svg%3E");
+  background-position: 0 0;
   background-repeat: repeat-x;
-  background-size: 50px 29px;
+  background-size: 50px 36px;
+  margin-top: 0;
   margin-bottom: -1px;
+  transform: none;
 }
 
 /* Wavy Dark Border (Bottom of Dark Section) */
 .pattern-container.is-dark-bottom {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 29' width='50' height='29'%3E%3Cpath d='M0 29 V10 Q12.5 0 25 10 T50 10 V29 Z' fill='%23141414'/%3E%3C/svg%3E"),
-                    url('https://cdn.prod.website-files.com/64e57dd33e949526478688ea/64e58b75fc2afbe781805a1a_wavy_dark.svg');
-  background-position: 100% 100%;
+  height: 36px;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 36' width='50' height='36' shape-rendering='geometricPrecision'%3E%3Crect width='50' height='36' fill='%23ffffff'/%3E%3Cpath d='M0 0 H50 V7 Q37.5 13 25 7 T0 7 Z' fill='%23141414'/%3E%3Cpath d='M-25 15 Q-12.5 21 0 15 T25 15 T50 15 T75 15' fill='none' stroke='%23141414' stroke-width='4'/%3E%3Cpath d='M-25 23 Q-12.5 29 0 23 T25 23 T50 23 T75 23' fill='none' stroke='%23141414' stroke-width='4'/%3E%3C/svg%3E");
+  background-position: 0 0;
   background-repeat: repeat-x;
-  background-size: 50px 29px;
+  background-size: 50px 36px;
   margin-top: -1px;
-  transform: rotate(180deg);
+  margin-bottom: 0;
+  transform: none;
 }
 
 /* Wavy Black Border (Above Footer) */
 .pattern-container.wavy-black-top {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 29' width='50' height='29'%3E%3Cpath d='M0 29 V10 Q12.5 0 25 10 T50 10 V29 Z' fill='%23141414'/%3E%3C/svg%3E"),
-                    url('https://cdn.prod.website-files.com/64e57dd33e949526478688ea/64e58ae18e0a00053052f2a7_wavy_black.svg');
-  background-position: 0 100%;
+  height: 36px;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 36' width='50' height='36' shape-rendering='geometricPrecision'%3E%3Crect width='50' height='36' fill='%23ffffff'/%3E%3Cpath d='M-25 13 Q-12.5 7 0 13 T25 13 T50 13 T75 13' fill='none' stroke='%23141414' stroke-width='4'/%3E%3Cpath d='M-25 21 Q-12.5 15 0 21 T25 21 T50 21 T75 21' fill='none' stroke='%23141414' stroke-width='4'/%3E%3Cpath d='M0 36 H50 V29 Q37.5 23 25 29 T0 29 Z' fill='%23141414'/%3E%3C/svg%3E");
+  background-position: 0 0;
   background-repeat: repeat-x;
-  background-size: 50px 29px;
+  background-size: 50px 36px;
+  margin-top: 0;
   margin-bottom: -1px;
+  transform: none;
 }
 
 /* Standalone Wavy Ribbon Separator */
@@ -134,22 +144,73 @@
    LANDING HERO SECTION
    ------------------------------------------------------------- */
 .hero-section {
-  padding-top: 3rem;
+  background-color: var(--xff-red);
+  color: #ffffff;
+  min-height: 520px;
+  padding-top: 3.5rem;
   padding-bottom: 3.5rem;
+  margin-bottom: 0;
   position: relative;
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2.5rem;
+  overflow: hidden;
+  display: flex;
   align-items: center;
 }
 
+.hero-content-col {
+  width: 100%;
+  max-width: 640px;
+  position: relative;
+  z-index: 2;
+}
+
 @media (min-width: 900px) {
-  .hero-grid {
-    grid-template-columns: 1.15fr 1fr;
+  .hero-content-col {
+    margin-left: calc(min(450px, 42vh) + 2rem);
+    margin-right: auto;
   }
+}
+
+@media (max-width: 899px) {
+  .hero-content-col {
+    margin: 0 auto;
+  }
+}
+
+.hero-edge-logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 1;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+@media (max-width: 899px) {
+  .hero-edge-logo {
+    opacity: 0.25;
+  }
+}
+
+.hero-edge-logo-img {
+  height: 86%;
+  width: auto;
+  max-height: 86%;
+  object-fit: contain;
+  object-position: left center;
+  display: block;
+  filter: drop-shadow(0 16px 36px rgba(0, 0, 0, 0.4));
+  pointer-events: auto;
+  padding-left: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.hero-edge-logo-img:hover {
+  transform: scale(1.02);
 }
 
 .hero-chinese-sub {
@@ -194,10 +255,13 @@
    PRESS & ANTHONY BOURDAIN SECTION
    ------------------------------------------------------------- */
 .press-section {
-  background-color: var(--xff-red);
-  color: #ffffff;
+  background-color: #ffffff;
+  border-top: none;
+  border-bottom: none;
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
   position: relative;
 }
 
@@ -282,14 +346,644 @@
 }
 
 /* -------------------------------------------------------------
-   STORY TEASER BANNER (Father & Son)
+   DISHES CIRCULAR CAROUSEL
    ------------------------------------------------------------- */
-.story-teaser-section {
+.dishes-circles-section {
+  background-color: #ffffff;
+  padding: 3rem 0;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.dishes-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.dishes-carousel-track {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scroll-padding: 0 4.5rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 1.25rem 4.5rem;
+  width: 100%;
+  cursor: grab;
+  user-select: none;
+  scroll-behavior: smooth;
+}
+
+.dishes-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.dishes-carousel-track.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.dish-circle-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  text-decoration: none;
+  cursor: pointer;
+  width: 140px;
+  transition: transform 0.2s ease;
+}
+
+.dish-circle-frame {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  border: 3.5px solid var(--xff-border-heavy);
+  box-shadow: 3px 3px 0 var(--xff-coal);
+  background-color: #f1ede4;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dish-circle-item:hover .dish-circle-frame {
+  transform: translateY(-5px) scale(1.05);
+  border-color: var(--xff-red);
+  box-shadow: 4px 6px 0 var(--xff-red);
+}
+
+.dish-circle-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.dish-circle-item:hover .dish-circle-img {
+  transform: scale(1.1);
+}
+
+.dish-circle-name {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--xff-coal);
+  margin-top: 0.7rem;
+  line-height: 1.35;
+  max-width: 140px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color 0.15s ease;
+}
+
+.dish-circle-item:hover .dish-circle-name {
+  color: var(--xff-red);
+}
+
+.dish-circle-price {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--xff-red);
+  margin-top: 0.25rem;
+}
+
+.dishes-carousel-arrow {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 20;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 2px solid var(--xff-border-heavy);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 2px 2px 0 var(--xff-coal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: var(--xff-coal);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.dishes-carousel-arrow:hover {
+  background-color: var(--xff-red);
+  color: #ffffff;
+  border-color: var(--xff-coal);
+  box-shadow: 4px 4px 0 var(--xff-coal);
+  transform: translateY(-52%) scale(1.06);
+}
+
+.dishes-carousel-arrow:active {
+  transform: translateY(-48%) scale(0.96);
+  box-shadow: 1px 1px 0 var(--xff-coal);
+}
+
+.dishes-carousel-arrow.is-prev {
+  right: 1.25rem;
+}
+
+.dishes-carousel-arrow.is-next {
+  left: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .dishes-carousel-arrow {
+    display: none;
+  }
+  .dishes-carousel-track {
+    gap: 1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    scroll-padding: 0 1.25rem;
+  }
+  .dish-circle-item {
+    width: 110px;
+  }
+  .dish-circle-frame {
+    width: 105px;
+    height: 105px;
+  }
+  .dish-circle-name {
+    font-size: 0.85rem;
+    max-width: 110px;
+  }
+}
+
+/* -------------------------------------------------------------
+   SPLIT SECTION: DELIVERY & MAP LOCATION
+   ------------------------------------------------------------- */
+.split-services-section {
   background-color: var(--xff-coal);
   color: #ffffff;
-  padding: 4rem 0;
+  padding: 4.5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.split-services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  align-items: stretch;
+}
+
+.split-middle-divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.split-service-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.split-service-col.is-map {
+  padding-left: 3.5rem;
+}
+
+.split-service-col.is-delivery {
+  padding-right: 3.5rem;
+}
+
+.map-illustration-card {
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.map-illustration-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.map-pulse-ring-outer {
+  animation: mapPulse 2.4s ease-out infinite;
+  transform-origin: 260px 135px;
+}
+
+.map-pulse-ring-inner {
+  animation: mapPulse 2.4s ease-out 0.8s infinite;
+  transform-origin: 260px 135px;
+}
+
+@keyframes mapPulse {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.35;
+  }
+  100% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+}
+
+.delivery-hero-box {
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.delivery-hero-box:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.delivery-hero-icon {
+  transition: transform 0.3s ease;
+}
+
+.delivery-hero-box:hover .delivery-hero-icon {
+  transform: scale(1.06) rotate(-3deg);
+}
+
+@media (max-width: 860px) {
+  .split-services-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .split-service-col.is-map {
+    padding-left: 0;
+    padding-bottom: 3rem;
+  }
+  .split-middle-divider {
+    position: static;
+    transform: none;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.35);
+    margin: 0 0 3rem 0;
+  }
+  .split-service-col.is-delivery {
+    padding-right: 0;
+  }
+}
+
+/* -------------------------------------------------------------
+   FEATURED CLASSICS (Bento Showcase)
+   ------------------------------------------------------------- */
+.featured-classics-section {
+  background-color: var(--xff-coal);
+  color: #ffffff;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-top: none;
+  border-bottom: none;
   position: relative;
 }
+
+/* -------------------------------------------------------------
+   RESTAURANT ABOUT RED CARD (Horizontal Rectangle) & BURGER
+   ------------------------------------------------------------- */
+.restaurant-about-section {
+  background-color: #ffffff;
+  color: var(--xff-coal);
+  padding: 3.5rem 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-top: none;
+  border-bottom: none;
+  position: relative;
+}
+
+.restaurant-about-card {
+  background-color: var(--xff-red); /* Exact hero red shade #ba121a */
+  color: #ffffff;
+  border: 3px solid var(--xff-coal);
+  box-shadow: 6px 6px 0px var(--xff-coal);
+  border-radius: 16px;
+  padding: 2.25rem 3rem 0 3rem; /* 0 bottom padding so image base rests on card border */
+  position: relative;
+  overflow: hidden;
+}
+
+.restaurant-about-grid {
+  display: grid;
+  grid-template-columns: 310px 1fr; /* RTL: Column 1 (Right) is burger image, Column 2 (Left) is description */
+  gap: 2.75rem;
+  align-items: start;
+}
+
+.restaurant-about-img-col {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  align-self: end;
+  line-height: 0;
+  position: relative;
+}
+
+.restaurant-about-img-wrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  line-height: 0;
+}
+
+/* Concentric black ripple circles behind burger (pond rings effect) */
+.restaurant-about-ripples {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ripple-ring {
+  position: absolute;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.ripple-ring.ring-1 {
+  width: 130px;
+  height: 130px;
+  background-color: rgba(0, 0, 0, 0.28);
+  border: 2px solid rgba(0, 0, 0, 0.38);
+}
+
+.ripple-ring.ring-2 {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.20);
+  border: 2px solid rgba(0, 0, 0, 0.28);
+}
+
+.ripple-ring.ring-3 {
+  width: 270px;
+  height: 270px;
+  background-color: rgba(0, 0, 0, 0.13);
+  border: 2px solid rgba(0, 0, 0, 0.20);
+}
+
+.ripple-ring.ring-4 {
+  width: 340px;
+  height: 340px;
+  background-color: rgba(0, 0, 0, 0.08);
+  border: 2px solid rgba(0, 0, 0, 0.14);
+}
+
+.ripple-ring.ring-5 {
+  width: 410px;
+  height: 410px;
+  background-color: rgba(0, 0, 0, 0.04);
+  border: 2px solid rgba(0, 0, 0, 0.08);
+}
+
+.restaurant-about-img {
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+  width: auto;
+  max-height: 285px; /* Enlarged slightly from 220px */
+  object-fit: contain;
+  display: block;
+  vertical-align: bottom;
+  margin-bottom: 0;
+}
+
+/* Delivery Illustration with Black Fade Circles */
+.delivery-img-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto 1.5rem auto; /* Moved downwards towards center */
+  overflow: visible;
+  transform: translateX(-24px);
+}
+
+@media (max-width: 768px) {
+  .delivery-img-wrapper {
+    transform: translateX(-10px);
+  }
+}
+
+.delivery-curved-text-svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+  pointer-events: none;
+  z-index: 3;
+  overflow: visible;
+}
+
+.delivery-curved-text {
+  font-family: var(--font-display), 'Cordale Arabic Bold', 'Cordale Arabic', sans-serif;
+  font-size: 19px;
+  font-weight: 900;
+  fill: #ffffff;
+  letter-spacing: 0.04em;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.95));
+}
+
+.delivery-ripples {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.delivery-ripples .ripple-ring {
+  position: absolute;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.delivery-ripples .ripple-ring.ring-1 {
+  width: 110px;
+  height: 110px;
+  background-color: rgba(0, 0, 0, 0.65);
+  border: 2px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.85);
+}
+
+.delivery-ripples .ripple-ring.ring-2 {
+  width: 165px;
+  height: 165px;
+  background-color: rgba(0, 0, 0, 0.48);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.65);
+}
+
+.delivery-ripples .ripple-ring.ring-3 {
+  width: 220px;
+  height: 220px;
+  background-color: rgba(0, 0, 0, 0.35);
+  border: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+.delivery-ripples .ripple-ring.ring-4 {
+  width: 275px;
+  height: 275px;
+  background-color: rgba(0, 0, 0, 0.22);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+.delivery-ripples .ripple-ring.ring-5 {
+  width: 330px;
+  height: 330px;
+  background-color: rgba(0, 0, 0, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0.03);
+}
+
+.delivery-featured-img {
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+  width: auto;
+  max-height: 235px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 16px 30px rgba(0, 0, 0, 0.65));
+  transition: transform 0.3s ease;
+}
+
+.delivery-featured-img:hover {
+  transform: scale(1.04) rotate(-1deg);
+}
+
+.delivery-details-btn,
+.map-details-btn {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+  transition: all 0.2s ease;
+}
+
+.delivery-details-btn:hover,
+.map-details-btn:hover {
+  color: var(--xff-red);
+  transform: translateX(-3px);
+}
+
+.restaurant-about-text-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  align-self: start; /* Placed UP at the top */
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+  width: 100%;
+}
+
+.restaurant-about-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 0.85rem;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.restaurant-about-desc {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: #f8fafc;
+  margin-bottom: 0;
+  text-align: center;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.restaurant-about-desc strong {
+  color: #ffffff;
+}
+
+@media (max-width: 860px) {
+  .restaurant-about-card {
+    padding: 2rem 1.5rem 0 1.5rem;
+  }
+  .restaurant-about-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .restaurant-about-text-col {
+    padding-bottom: 0;
+  }
+  .restaurant-about-img-col {
+    order: 2;
+    margin: 0 auto;
+  }
+  .restaurant-about-img {
+    max-height: 240px;
+  }
+}
+
+@media (max-width: 580px) {
+  .restaurant-about-card {
+    padding: 1.75rem 1.25rem 0 1.25rem;
+    border-width: 2.5px;
+    box-shadow: 4px 4px 0px var(--xff-coal);
+  }
+  .restaurant-about-img {
+    max-height: 210px;
+  }
+}
+
+/* Legacy fallback class for backwards compatibility */
+.story-teaser-section {
+  display: none;
+}
+
 
 /* -------------------------------------------------------------
    FEATURED DISHES BENTO

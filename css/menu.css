@@ -5,7 +5,7 @@
 
 /* Category Navigation Bar */
 .category-nav-wrap {
-  background-color: rgba(250, 246, 240, 0.98);
+  background-color: rgba(245, 245, 247, 0.98);
   border-bottom: 1.5px solid var(--xff-border-warm);
   position: sticky;
   top: 72px;

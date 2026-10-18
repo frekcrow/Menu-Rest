@@ -1,5 +1,5 @@
 /**
- * Xi'an Famous Foods - Search Filter Module
+ * KUDO KUDO - Search Filter Module
  * Multilingual & SKU Search
  */
 
@@ -32,10 +32,9 @@ window.XFF_SEARCH = (function () {
       const matchSku = item.sku.toLowerCase().includes(query);
       const matchName = item.name.toLowerCase().includes(query);
       const matchEn = item.englishName.toLowerCase().includes(query);
-      const matchZh = item.chineseName.includes(query);
       const matchDesc = item.description.toLowerCase().includes(query);
 
-      return matchSku || matchName || matchEn || matchZh || matchDesc;
+      return matchSku || matchName || matchEn || matchDesc;
     });
   }
 

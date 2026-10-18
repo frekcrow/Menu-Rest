@@ -6,10 +6,10 @@
 
 /* Global Header & Nav */
 .xff-header {
-  background-color: rgba(250, 246, 240, 0.96);
+  background-color: rgba(245, 245, 247, 0.96);
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
-  border-bottom: 2px solid var(--xff-border-heavy);
+  border-bottom: none;
   position: sticky;
   top: 0;
   z-index: 40;
@@ -46,7 +46,7 @@
   margin-top: 2px;
 }
 
-/* Chinese Seal Stamp (印章) */
+/* Seal Stamp Badge */
 .chinese-seal {
   display: inline-flex;
   align-items: center;
@@ -54,7 +54,7 @@
   border: 2px solid var(--xff-red);
   background-color: var(--xff-red-light);
   color: var(--xff-red);
-  font-family: var(--font-chinese);
+  font-family: var(--font-display);
   font-weight: 900;
   font-size: 0.95rem;
   padding: 0.15rem 0.45rem;

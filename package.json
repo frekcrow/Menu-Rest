@@ -1,13 +1,16 @@
 {
   "name": "menu-rest",
   "version": "1.0.0",
-  "description": "Xi'an Famous Foods - Pure HTML, CSS, JavaScript",
+  "description": "KUDO KUDO - Pure HTML, CSS, JavaScript",
   "scripts": {
     "start": "npx serve -l 3000 .",
-    "dev": "npx tailwindcss -i ./css/input.css -o ./css/style.css --watch",
-    "build": "npx tailwindcss -i ./css/input.css -o ./css/style.css --minify"
+    "dev": "vite",
+    "build": "vite build"
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.19"
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.29",
+    "tailwindcss": "^3.4.19",
+    "vite": "^8.3.4"
   }
 }

@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="KUDO KUDO - الأطباق الصينية التقليدية الأصيلة ووصفات النودلز المسحوبة يدوياً">
+  <meta name="theme-color" content="#ba121a">
+  <title>KUDO KUDO | كودو كودو - الصفحة الرئيسية</title>
+
+  <!-- Brand Custom Fonts: Cordale Arabic (Regular & Bold) -->
+  <link rel="preload" href="/assets/Cordale_Arabic_Trial_Regular-CJ092ZuJ.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="/assets/Cordale_Arabic_Trial_Bold-Lt_uOJkV.ttf" as="font" type="font/ttf" crossorigin>
+
+  <!-- Fonts: Barlow Condensed & SF Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=SF+Mono&display=swap" rel="stylesheet">
+
+  <!-- Phosphor Icons Web -->
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+
+  <!-- Modular Stylesheets -->
+  <link rel="stylesheet" crossorigin href="/assets/index-bkdrzQr6.css">
+</head>
+<body>
+
+  <!-- Global Header Navigation -->
+  <header class="xff-header" style="border-bottom: none;">
+    <div class="container xff-nav-container">
+      <a href="index.html" class="xff-logo-link">
+        <span class="chinese-seal" style="font-family: var(--font-display); font-size: 0.85rem; font-weight: 900;">KUDO</span>
+        <div>
+          <div class="xff-logo-title">KUDO KUDO</div>
+          <div class="xff-logo-sub">كودو كودو • KUDO KUDO</div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="xff-desktop-nav" aria-label="القائمة الرئيسية">
+        <a href="index.html" class="nav-link active">الرئيسية</a>
+        <a href="menu.html" class="nav-link">قائمة الطعام</a>
+        <a href="delivery.html" class="nav-link">خدمة التوصيل</a>
+        <a href="contact.html" class="nav-link">التواصل والتموين</a>
+        <a href="menu.html" class="btn-xff-primary" style="padding: 0.45rem 1rem; font-size: 0.92rem; min-height: 38px;">
+          اطلب الآن <i class="ph-bold ph-arrow-left"></i>
+        </a>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="فتح القائمة">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-content">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; border-bottom: 2px solid var(--xff-border-heavy); padding-bottom: 1rem;">
+        <span class="chinese-seal" style="font-family: var(--font-display); font-size: 0.85rem; font-weight: 900;">KUDO</span>
+        <button id="closeMobileDrawer" class="touch-target" aria-label="إغلاق" style="font-size: 1.4rem; color: var(--xff-coal);">
+          <i class="ph-bold ph-x"></i>
+        </button>
+      </div>
+
+      <nav style="display: flex; flex-direction: column; gap: 0.5rem; flex: 1;">
+        <a href="index.html" class="mobile-nav-link active">الرئيسية <i class="ph-bold ph-caret-left"></i></a>
+        <a href="menu.html" class="mobile-nav-link">قائمة الطعام <i class="ph-bold ph-caret-left"></i></a>
+        <a href="delivery.html" class="mobile-nav-link">خدمة التوصيل <i class="ph-bold ph-caret-left"></i></a>
+        <a href="contact.html" class="mobile-nav-link">التواصل والتموين <i class="ph-bold ph-caret-left"></i></a>
+      </nav>
+
+      <div style="margin-top: auto; padding-top: 1.5rem; border-top: 2px solid var(--xff-border-warm);">
+        <a href="menu.html" class="btn-xff-primary" style="width: 100%; justify-content: center;">
+          <i class="ph-bold ph-shopping-bag"></i> اطلب وجبتك الآن
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================
+         HERO SECTION (Split Heritage Layout)
+         ========================================== -->
+    <section class="hero-section" style="background-color: var(--xff-red); color: #ffffff; min-height: 520px; margin-bottom: 0; position: relative; overflow: hidden; display: flex; align-items: center;">
+      
+      <!-- Restaurant Logo (Left Edge, Full Height Top to Bottom) -->
+      <div class="hero-edge-logo" style="position: absolute; left: 0; top: 0; bottom: 0; height: 100%; display: flex; align-items: center; justify-content: flex-start; z-index: 1; pointer-events: none;">
+        <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 600px; max-width: 100%; background: radial-gradient(circle at left center, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05) 55%, transparent 75%); pointer-events: none;"></div>
+        <img src="/assets/logo-CBG5OmzD.PNG" 
+             alt="شعار المطعم" 
+             class="hero-edge-logo-img" 
+             style="height: 86%; width: auto; max-height: 86%; object-fit: contain; object-position: left center; display: block; filter: drop-shadow(0 16px 36px rgba(0, 0, 0, 0.4)); pointer-events: auto; padding-left: 1.5rem;"
+             onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='./public/images/logo.png';}else if(this.dataset.tried==1){this.dataset.tried=2;this.src='/images/logo.PNG';}else if(this.dataset.tried==2){this.dataset.tried=3;this.src='/images/logo.png';}">
+      </div>
+
+      <div class="container" style="position: relative; z-index: 2; width: 100%;">
+        <!-- Hero Text Content Column (Positioned adjacent to logo with minimized gap) -->
+        <div class="hero-content-col">
+
+          <div class="hero-ctas">
+            <a href="menu.html" class="btn-xff-secondary" style="font-size: 1.18rem; padding: 0.8rem 1.75rem;">
+              <i class="ph-bold ph-bowl-food"></i> استعرض قائمة الوجبات
+            </a>
+            <a href="contact.html" class="btn-xff-secondary" style="font-size: 1.18rem; padding: 0.8rem 1.75rem; background-color: transparent; color: #ffffff; border-color: #ffffff;">
+              تواصل معنا <i class="ph-bold ph-chat-teardrop-dots"></i>
+            </a>
+          </div>
+
+          <!-- Quick Metrics -->
+          <div style="display: flex; gap: 1.75rem; margin-top: 2.25rem; border-top: 1.5px solid rgba(255, 255, 255, 0.25); padding-top: 1.35rem;">
+            <div>
+              <div style="font-family: var(--font-mono); font-size: 1.65rem; font-weight: 900; color: #ffffff;">2005</div>
+              <div style="font-size: 0.8rem; font-weight: 700; color: rgba(255, 255, 255, 0.85);">تاريخ التأسيس في فلاشينغ</div>
+            </div>
+            <div style="border-right: 1.5px solid rgba(255, 255, 255, 0.25); padding-right: 1.75rem;">
+              <div style="font-family: var(--font-mono); font-size: 1.65rem; font-weight: 900; color: #ffffff;">30+</div>
+              <div style="font-size: 0.8rem; font-weight: 700; color: rgba(255, 255, 255, 0.85);">عشبة وتوابل سرية بالزيت</div>
+            </div>
+            <div style="border-right: 1.5px solid rgba(255, 255, 255, 0.25); padding-right: 1.75rem;">
+              <div style="font-family: var(--font-mono); font-size: 1.65rem; font-weight: 900; color: #ffffff;">100%</div>
+              <div style="font-size: 0.8rem; font-weight: 700; color: rgba(255, 255, 255, 0.85);">عجين طازج يُسحب يومياً</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Wavy Border Transition (Hero Bottom) -->
+    <div class="pattern-container is-red-bottom" style="height: 36px; background-color: #ffffff; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 36' width='50' height='36' shape-rendering='geometricPrecision'%3E%3Crect width='50' height='36' fill='%23ffffff'/%3E%3Cpath d='M0 0 H50 V7 Q37.5 13 25 7 T0 7 Z' fill='%23ba121a'/%3E%3Cpath d='M-25 15 Q-12.5 21 0 15 T25 15 T50 15 T75 15' fill='none' stroke='%23ba121a' stroke-width='4'/%3E%3Cpath d='M-25 23 Q-12.5 29 0 23 T25 23 T50 23 T75 23' fill='none' stroke='%23ba121a' stroke-width='4'/%3E%3C/svg%3E&quot;); background-position: 0 0; background-repeat: repeat-x; background-size: 50px 36px; margin-top: -1px; margin-bottom: 0; transform: none;"></div>
+
+    <!-- ==========================================
+         AVAILABLE DISHES (Interactive Circular Carousel - Full Screen Width)
+         ========================================== -->
+    <section class="dishes-circles-section" style="background-color: #ffffff; padding: 2.75rem 0; position: relative; overflow: hidden; width: 100%;">
+      <div class="dishes-carousel-wrapper" style="position: relative; display: flex; align-items: center; width: 100%;">
+        <!-- Right Arrow (Scrolls Right / Previous in RTL) -->
+        <button type="button" class="dishes-carousel-arrow is-prev" aria-label="تحريك لليمين">
+          <i class="ph-bold ph-caret-right"></i>
+        </button>
+
+          <!-- Scrollable Track of Dish Circles -->
+          <div class="dishes-carousel-track" id="dishesTrack">
+            <!-- 1. N1 Noodles -->
+            <a href="menu.html" class="dish-circle-item">
+              <div class="dish-circle-frame">
+                <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80" alt="نودلز بيانغ بيانغ لحم الضأن" class="dish-circle-img">
+              </div>
+              <span class="dish-circle-name">نودلز لحم الضأن بالكمون</span>
+            </a>
+
+            <!-- 2. B1 Roujiamo Burger -->
+            <a href="menu.html" class="dish-circle-item">
+              <div class="dish-circle-frame">
+                <img src="https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=600&q=80" alt="برجر شيآن روجيامو" class="dish-circle-img">
+              </div>
+              <span class="dish-circle-name">برجر شيآن روجيامو</span>
+            </a>
+
+            <!-- 3. F4 Lamb Dumplings -->
+            <a href="menu.html" class="dish-circle-item">
+              <div class="dish-circle-frame">
+                <img src="https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?auto=format&fit=crop&w=600&q=80" alt="زلابية حارة بزيت الفلفل" class="dish-circle-img">
+              </div>
+              <span class="dish-circle-name">زلابية لحم الضأن الحارة</span>
+            </a>
+
+            <!-- 4. A1 Liang Pi Noodles -->
+            <a href="menu.html" class="dish-circle-item">
+              <div class="dish-circle-frame">
+                <img src="https://images.unsplash.com/photo-1548340748-6d2b7d7da280?auto=format&fit=crop&w=600&q=80" alt="نودلز ليانغ بي كولد-سكين" class="dish-circle-img">
+              </div>
+              <span class="dish-circle-name">نودلز ليانغ بي الباردة</span>
+            </a>
+
+            <!-- 5. N2 Beef Noodles -->
+            <a href="menu.html" class="dish-circle-item">
+              <div class="dish-circle-frame">
+                <img src="https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&fit=crop&w=600&q=80" alt="نودلز لحم البقر بالكمون" class="dish-circle-img">
+              </div>
+              <span class="dish-circle-name">نودلز لحم البقر بالكمون</span>
+            </a>
+
+            <!-- 6. N3 Mt. Qi Beef Soup -->
+            <a href="menu.html" class="dish-circle-item">
+              <div class="dish-circle-frame">
+                <img src="https://images.unsplash.com/photo-1617093727343-374698b1b08d?auto=format&fit=crop&w=600&q=80" alt="حساء نودلز جبل تشي" class="dish-circle-img">
+              </div>
+              <span class="dish-circle-name">حساء نودلز جبل تشي</span>
+            </a>
+
+            <!-- 7. B2 Spicy Lamb Roujiamo -->
+            <a href="menu.html" class="dish-circle-item">
+              <div class="dish-circle-frame">
+                <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80" alt="برجر روجيامو لحم الضأن" class="dish-circle-img">
+              </div>
+              <span class="dish-circle-name">برجر روجيامو بالكمون</span>
+            </a>
+
+            <!-- 8. A2 Tiger Salad -->
+            <a href="menu.html" class="dish-circle-item">
+              <div class="dish-circle-frame">
+                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80" alt="سلطة النمر المنعشة" class="dish-circle-img">
+              </div>
+              <span class="dish-circle-name">سلطة النمر الحارة</span>
+            </a>
+
+            <!-- 9. A3 Smashed Garlic Cucumbers -->
+            <a href="menu.html" class="dish-circle-item">
+              <div class="dish-circle-frame">
+                <img src="https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&w=600&q=80" alt="خيار مكسور بالثوم" class="dish-circle-img">
+              </div>
+              <span class="dish-circle-name">خيار مكسور بالثوم</span>
+            </a>
+
+            <!-- 10. F1 Spicy Tofu Custard -->
+            <a href="menu.html" class="dish-circle-item">
+              <div class="dish-circle-frame">
+                <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&q=80" alt="حلوى التوفو الحارة" class="dish-circle-img">
+              </div>
+              <span class="dish-circle-name">توفو تشانغ آن الحار</span>
+            </a>
+
+            <!-- 11. N9 Zha Jiang Noodles -->
+            <a href="menu.html" class="dish-circle-item">
+              <div class="dish-circle-frame">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="نودلز تشا جيانغ" class="dish-circle-img">
+              </div>
+              <span class="dish-circle-name">نودلز تشا جيانغ الشهيرة</span>
+            </a>
+
+            <!-- 12. D2 Iced Passion Fruit Tea -->
+            <a href="menu.html" class="dish-circle-item">
+              <div class="dish-circle-frame">
+                <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&q=80" alt="شاي الباشن فروت البارد" class="dish-circle-img">
+              </div>
+              <span class="dish-circle-name">شاي الباشن فروت المثلج</span>
+            </a>
+          </div>
+
+          <!-- Left Arrow (Scrolls Left / Next in RTL) -->
+          <button type="button" class="dishes-carousel-arrow is-next" aria-label="تحريك لليسار">
+            <i class="ph-bold ph-caret-left"></i>
+          </button>
+        </div>
+
+      <!-- Carousel Inline Script (Runs immediately) -->
+      <script>
+        (function() {
+          function initDishesCarousel() {
+            var track = document.getElementById('dishesTrack');
+            if (!track || track.dataset.carouselReady) return;
+            track.dataset.carouselReady = 'true';
+
+            var prevBtn = document.querySelector('.dishes-carousel-arrow.is-prev');
+            var nextBtn = document.querySelector('.dishes-carousel-arrow.is-next');
+
+            if (prevBtn) {
+              prevBtn.addEventListener('click', function() {
+                track.scrollBy({ left: 320, behavior: 'smooth' });
+              });
+            }
+            if (nextBtn) {
+              nextBtn.addEventListener('click', function() {
+                track.scrollBy({ left: -320, behavior: 'smooth' });
+              });
+            }
+
+            // Mouse Drag to Scroll
+            var isDown = false;
+            var startX = 0;
+            var scrollLeft = 0;
+            var hasDragged = false;
+
+            track.addEventListener('mousedown', function(e) {
+              isDown = true;
+              hasDragged = false;
+              track.classList.add('is-dragging');
+              startX = e.pageX - track.offsetLeft;
+              scrollLeft = track.scrollLeft;
+            });
+
+            window.addEventListener('mouseup', function() {
+              if (!isDown) return;
+              isDown = false;
+              track.classList.remove('is-dragging');
+            });
+
+            track.addEventListener('mousemove', function(e) {
+              if (!isDown) return;
+              e.preventDefault();
+              var x = e.pageX - track.offsetLeft;
+              var walk = (x - startX) * 1.4;
+              if (Math.abs(walk) > 6) hasDragged = true;
+              track.scrollLeft = scrollLeft - walk;
+            });
+
+            var items = track.querySelectorAll('.dish-circle-item');
+            for (var i = 0; i < items.length; i++) {
+              items[i].addEventListener('click', function(e) {
+                if (hasDragged) {
+                  e.preventDefault();
+                }
+              });
+            }
+          }
+
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initDishesCarousel);
+          } else {
+            initDishesCarousel();
+          }
+        })();
+      </script>
+    </section>
+
+    <!-- Wavy Border Transition (Black Section Top) -->
+    <div class="pattern-container is-dark-top" style="height: 36px; background-color: #ffffff; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 36' width='50' height='36' shape-rendering='geometricPrecision'%3E%3Crect width='50' height='36' fill='%23ffffff'/%3E%3Cpath d='M-25 13 Q-12.5 7 0 13 T25 13 T50 13 T75 13' fill='none' stroke='%23141414' stroke-width='4'/%3E%3Cpath d='M-25 21 Q-12.5 15 0 21 T25 21 T50 21 T75 21' fill='none' stroke='%23141414' stroke-width='4'/%3E%3Cpath d='M0 36 H50 V29 Q37.5 23 25 29 T0 29 Z' fill='%23141414'/%3E%3C/svg%3E&quot;); background-position: 0 0; background-repeat: repeat-x; background-size: 50px 36px; margin-top: 0; margin-bottom: -1px; transform: none;"></div>
+
+    <!-- ==========================================
+         SPLIT SECTION: RESTAURANT MAP LOCATION & FOOD DELIVERY
+         ========================================== -->
+    <section class="split-services-section" style="background-color: var(--xff-coal); color: #ffffff; padding: 4.5rem 0; position: relative; border-top: none; border-bottom: none; margin-top: 0; margin-bottom: 0;">
+      <div class="container" style="position: relative;">
+        <div class="split-services-grid">
+          
+          <!-- Column 1 (Right in RTL): Restaurant Location on the Map -->
+          <div class="split-service-col is-map">
+            <div>
+              <!-- Map Illustration Card -->
+              <div class="map-illustration-card" style="margin-bottom: 1.5rem; border: 2.5px solid rgba(255, 255, 255, 0.22); border-radius: 12px; overflow: hidden; background: #13141f; box-shadow: 4px 4px 0px #000000; position: relative;">
+                <svg viewBox="0 0 540 260" width="100%" height="auto" style="display: block; width: 100%; aspect-ratio: 540/260;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="رسم توضيحي لخريطة موقع كودو كودو">
+                  <!-- City Grid Background -->
+                  <rect width="540" height="260" fill="#13141f" />
+                  
+                  <!-- City Blocks -->
+                  <rect x="20" y="20" width="110" height="60" rx="6" fill="#1c1e2b" opacity="0.75" />
+                  <rect x="150" y="20" width="150" height="60" rx="6" fill="#1c1e2b" opacity="0.75" />
+                  <rect x="320" y="20" width="200" height="60" rx="6" fill="#1c1e2b" opacity="0.75" />
+                  
+                  <rect x="20" y="100" width="110" height="70" rx="6" fill="#1c1e2b" opacity="0.75" />
+                  <rect x="150" y="100" width="100" height="70" rx="6" fill="#202334" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+                  <rect x="370" y="100" width="150" height="70" rx="6" fill="#1c1e2b" opacity="0.75" />
+                  
+                  <rect x="20" y="190" width="230" height="50" rx="6" fill="#1c1e2b" opacity="0.75" />
+                  <rect x="270" y="190" width="250" height="50" rx="6" fill="#1c1e2b" opacity="0.75" />
+                  
+                  <!-- Secondary Streets -->
+                  <line x1="0" y1="90" x2="540" y2="90" stroke="#292d3f" stroke-width="14" />
+                  <line x1="0" y1="180" x2="540" y2="180" stroke="#292d3f" stroke-width="14" />
+                  <line x1="140" y1="0" x2="140" y2="260" stroke="#292d3f" stroke-width="14" />
+                  <line x1="360" y1="0" x2="360" y2="260" stroke="#292d3f" stroke-width="14" />
+                  
+                  <!-- Main Avenue (Roosevelt / Main St) with center lane marks -->
+                  <line x1="260" y1="0" x2="260" y2="260" stroke="#363b52" stroke-width="22" />
+                  <line x1="260" y1="0" x2="260" y2="260" stroke="#ba121a" stroke-dasharray="8 8" stroke-width="2" opacity="0.8" />
+                  
+                  <line x1="0" y1="135" x2="540" y2="135" stroke="#363b52" stroke-width="20" />
+                  <line x1="0" y1="135" x2="540" y2="135" stroke="#fbbf24" stroke-dasharray="10 8" stroke-width="2" opacity="0.6" />
+                  
+                  <!-- Street Names -->
+                  <text x="278" y="45" font-family="'SF Mono', monospace" font-size="9" font-weight="700" fill="#94a3b8" letter-spacing="1">MAIN ST</text>
+                  <text x="278" y="225" font-family="'SF Mono', monospace" font-size="9" font-weight="700" fill="#94a3b8" letter-spacing="1">MAIN ST</text>
+                  <text x="50" y="130" font-family="'SF Mono', monospace" font-size="9" font-weight="700" fill="#94a3b8" letter-spacing="1">ROOSEVELT AVE</text>
+                  <text x="400" y="130" font-family="'SF Mono', monospace" font-size="9" font-weight="700" fill="#94a3b8" letter-spacing="1">41ST AVE</text>
+                  
+                  <!-- KUDO Radar Pulse Animation -->
+                  <circle cx="260" cy="135" r="38" fill="rgba(186, 18, 26, 0.2)" class="map-pulse-ring-outer" />
+                  <circle cx="260" cy="135" r="22" fill="rgba(186, 18, 26, 0.45)" class="map-pulse-ring-inner" />
+                  
+                  <!-- Pin Marker Base Shadow -->
+                  <ellipse cx="260" cy="144" rx="8" ry="3.5" fill="#000000" opacity="0.6" />
+                  
+                  <!-- Red Teardrop Location Pin -->
+                  <path d="M260 108 C250 108 242 116 242 126 C242 137 260 146 260 146 C260 146 278 137 278 126 C278 116 270 108 260 108 Z" fill="#ba121a" stroke="#ffffff" stroke-width="2.5" />
+                  <circle cx="260" cy="124" r="5" fill="#ffffff" />
+                  
+                  <!-- Pin Tooltip Callout -->
+                  <g transform="translate(180, 52)">
+                    <rect width="160" height="34" rx="6" fill="#141414" stroke="#ffffff" stroke-width="1.8" />
+                    <text x="80" y="21" font-family="'Cordale Arabic Bold', 'Cordale Arabic', sans-serif" font-size="12" font-weight="900" fill="#ffffff" text-anchor="middle">KUDO KUDO • الفرع الرئيسي</text>
+                    <polygon points="74,34 86,34 80,41" fill="#141414" stroke="#ffffff" stroke-width="1.8" />
+                    <polygon points="75,33 85,33 80,39" fill="#141414" />
+                  </g>
+                </svg>
+              </div>
+
+              <div style="display: flex; align-items: flex-start; gap: 0.6rem; color: #cbd5e1; font-size: 0.95rem; margin-bottom: 1.75rem;">
+                <i class="ph-bold ph-map-pin" style="color: var(--xff-red); font-size: 1.3rem; margin-top: 3px; flex-shrink: 0;"></i>
+                <div>
+                  <div style="font-weight: 800; color: #ffffff;">41-10 Main St, Flushing, NY 11355</div>
+                  <div style="color: #94a3b8; font-size: 0.85rem; margin-top: 2px;">ساعات العمل: 11:00 AM – 9:00 PM طوال أيام الأسبوع</div>
+                </div>
+              </div>
+            </div>
+
+            <div style="width: 100%; text-align: right; margin-top: 0.5rem;">
+              <a href="https://maps.google.com/?q=41-10+Main+St,+Flushing,+NY+11355" target="_blank" rel="noopener noreferrer" class="map-details-btn" style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 800; color: #ffffff; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0; transition: all 0.2s ease;">
+                فتح الموقع في خرائط جوجل <i class="ph-bold ph-arrow-square-out" style="font-size: 1.05rem; color: #ffffff;"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Thin White Line Down The Middle -->
+          <div class="split-middle-divider" aria-hidden="true"></div>
+
+          <!-- Column 2 (Left in RTL): Food Delivery Section -->
+          <div class="split-service-col is-delivery" style="display: flex; flex-direction: column; align-items: center; justify-content: space-between;">
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;">
+              <!-- Delivery Illustration with Black Fade Circles (Pond Rings Effect) -->
+              <div class="delivery-img-wrapper" style="position: relative; width: 100%; max-width: 400px; min-height: 250px; display: flex; align-items: center; justify-content: center; margin: 2rem auto 1.5rem auto; transform: translateX(-24px);">
+                <!-- Concentric black ripple rings behind delivery boxes -->
+                <div class="delivery-ripples" aria-hidden="true">
+                  <span class="ripple-ring ring-5"></span>
+                  <span class="ripple-ring ring-4"></span>
+                  <span class="ripple-ring ring-3"></span>
+                  <span class="ripple-ring ring-2"></span>
+                  <span class="ripple-ring ring-1"></span>
+                </div>
+
+                <!-- Curved Title Above Outermost Circle -->
+                <svg class="delivery-curved-text-svg" viewBox="0 0 400 400" aria-label="طلبات وأسعار التوصيل - Delivery Orders and Prices">
+                  <defs>
+                    <path id="deliveryTextArc" d="M 45,115 A 180,180 0 0,1 355,115" fill="none" />
+                  </defs>
+                  <text class="delivery-curved-text">
+                    <textPath href="#deliveryTextArc" xlink:href="#deliveryTextArc" startOffset="50%" text-anchor="middle">
+                      طلبات وأسعار التوصيل
+                    </textPath>
+                  </text>
+                </svg>
+
+                <img src="/assets/delivery-DX-Ysvt4.png" 
+                     alt="خدمة توصيل كودو كودو - KUDO KUDO Delivery" 
+                     class="delivery-featured-img" 
+                     id="deliveryFeaturedImg"
+                     onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='../public/images/delivery.png';}else if(this.dataset.tried==1){this.dataset.tried=2;this.src='./public/delivery.png';}else if(this.dataset.tried==2){this.dataset.tried=3;this.src='/images/delivery.png';}else if(this.dataset.tried==3){this.dataset.tried=4;this.src='delivery.png';}">
+              </div>
+            </div>
+
+            <div style="width: 100%; text-align: right; margin-top: 0.5rem;">
+              <a href="delivery.html" class="delivery-details-btn" style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 800; color: #ffffff; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0; transition: all 0.2s ease;">
+                تفاصيل طلب التوصيل <i class="ph-bold ph-arrow-left" style="font-size: 1.05rem; color: #ffffff;"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Wavy Border Transition (Black Section Bottom) -->
+    <div class="pattern-container is-dark-bottom" style="height: 36px; background-color: #ffffff; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 36' width='50' height='36' shape-rendering='geometricPrecision'%3E%3Crect width='50' height='36' fill='%23ffffff'/%3E%3Cpath d='M0 0 H50 V7 Q37.5 13 25 7 T0 7 Z' fill='%23141414'/%3E%3Cpath d='M-25 15 Q-12.5 21 0 15 T25 15 T50 15 T75 15' fill='none' stroke='%23141414' stroke-width='4'/%3E%3Cpath d='M-25 23 Q-12.5 29 0 23 T25 23 T50 23 T75 23' fill='none' stroke='%23141414' stroke-width='4'/%3E%3C/svg%3E&quot;); background-position: 0 0; background-repeat: repeat-x; background-size: 50px 36px; margin-top: -1px; margin-bottom: 0; transform: none;"></div>
+
+    <!-- ==========================================
+         RESTAURANT ABOUT / HERO RED CARD SECTION
+         ========================================== -->
+    <section class="restaurant-about-section" style="background-color: #ffffff; color: var(--xff-coal); padding: 3.5rem 0; position: relative; border-top: none; border-bottom: none; margin-top: 0; margin-bottom: 0;">
+      <div class="container">
+        <!-- Horizontal Rectangular Card in Hero Red (#ba121a) -->
+        <div class="restaurant-about-card">
+          <div class="restaurant-about-grid">
+            
+            <!-- Right Column in RTL: Signature Burger Image (brg.png) with Pond Ripple Rings -->
+            <div class="restaurant-about-img-col">
+              <div class="restaurant-about-img-wrap">
+                <!-- Concentric black ripple rings behind burger (pond rings effect) -->
+                <div class="restaurant-about-ripples" aria-hidden="true">
+                  <span class="ripple-ring ring-5"></span>
+                  <span class="ripple-ring ring-4"></span>
+                  <span class="ripple-ring ring-3"></span>
+                  <span class="ripple-ring ring-2"></span>
+                  <span class="ripple-ring ring-1"></span>
+                </div>
+                <img src="/assets/brg-BkOKt_Ry.png" 
+                     alt="برجر كودو كودو - KUDO KUDO Burger" 
+                     class="restaurant-about-img" 
+                     id="aboutBurgerImg"
+                     onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='../public/images/brg.png';}else if(this.dataset.tried==1){this.dataset.tried=2;this.src='./public/brg.png';}else if(this.dataset.tried==2){this.dataset.tried=3;this.src='/images/brg.png';}else if(this.dataset.tried==3){this.dataset.tried=4;this.src='brg.png';}">
+              </div>
+            </div>
+
+            <!-- Left Column in RTL: Restaurant Brand Story & Description -->
+            <div class="restaurant-about-text-col">
+              <h2 class="restaurant-about-title">
+                حكاية النكهة الأصيلة في كودو كودو
+              </h2>
+
+              <p class="restaurant-about-desc" style="margin-bottom: 0;">
+                في <strong>كودو كودو (KUDO KUDO)</strong>، نأخذكم في رحلة طهي فريدة تمزج بين عراقة الأطباق التاريخية لمدينة شيآن بمقاطعة شنشي، وابتكار أشهى برجر مقرمش وفطائر روجيامو الكلاسيكية المحضرة بأسرار التوابل العائلية المتقنة.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Wavy Border Transition (Footer Top) -->
+  <div class="pattern-container is-dark-top" style="height: 36px; background-color: #ffffff; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 36' width='50' height='36' shape-rendering='geometricPrecision'%3E%3Crect width='50' height='36' fill='%23ffffff'/%3E%3Cpath d='M-25 13 Q-12.5 7 0 13 T25 13 T50 13 T75 13' fill='none' stroke='%23141414' stroke-width='4'/%3E%3Cpath d='M-25 21 Q-12.5 15 0 21 T25 21 T50 21 T75 21' fill='none' stroke='%23141414' stroke-width='4'/%3E%3Cpath d='M0 36 H50 V29 Q37.5 23 25 29 T0 29 Z' fill='%23141414'/%3E%3C/svg%3E&quot;); background-position: 0 0; background-repeat: repeat-x; background-size: 50px 36px; margin-top: 0; margin-bottom: -1px; transform: none;"></div>
+
+  <!-- Global Footer -->
+  <footer class="xff-footer" style="margin-top: 0; border-top: none;">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Info -->
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+            <span class="chinese-seal" style="border-color: #ffffff; color: #ffffff; background: transparent; font-family: var(--font-display); font-size: 0.85rem; font-weight: 900;">KUDO</span>
+            <div style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 900; letter-spacing: 0.05em; text-transform: uppercase;">
+              KUDO KUDO
+            </div>
+          </div>
+          <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.7; margin-bottom: 1.25rem;">
+            المطعم الصيني التراثي الأول المتخصص في نودلز بيانغ بيانغ المسحوبة يدوياً وفطائر روجيامو المقرمشة بخلطات التوابل الأصلية من مدينة شيآن بمقاطعة شنشي.
+          </p>
+          <div style="display: flex; gap: 0.75rem;">
+            <a href="#" class="touch-target" style="width: 36px; height: 36px; min-width: 36px; min-height: 36px; border-radius: 4px; background-color: #262626; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">
+              <i class="ph-bold ph-instagram-logo"></i>
+            </a>
+            <a href="#" class="touch-target" style="width: 36px; height: 36px; min-width: 36px; min-height: 36px; border-radius: 4px; background-color: #262626; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">
+              <i class="ph-bold ph-twitter-logo"></i>
+            </a>
+            <a href="#" class="touch-target" style="width: 36px; height: 36px; min-width: 36px; min-height: 36px; border-radius: 4px; background-color: #262626; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">
+              <i class="ph-bold ph-tiktok-logo"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <div class="footer-title">صفحات الموقع</div>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">الصفحة الرئيسية</a></li>
+            <li><a href="menu.html" class="footer-link">قائمة الطعام الكاملة</a></li>
+            <li><a href="delivery.html" class="footer-link">خدمة وتفاصيل التوصيل</a></li>
+            <li><a href="contact.html" class="footer-link">التواصل والتموين</a></li>
+          </ul>
+        </div>
+
+        <!-- Series Codes -->
+        <div>
+          <div class="footer-title">رموز الأصناف</div>
+          <ul class="footer-links">
+            <li><a href="menu.html" class="footer-link">[ N ] نودلز مسحوبة يدوياً</a></li>
+            <li><a href="menu.html" class="footer-link">[ B ] برجر وفطائر روجيامو</a></li>
+            <li><a href="menu.html" class="footer-link">[ A ] ليانغ بي والمقبلات</a></li>
+            <li><a href="menu.html" class="footer-link">[ F ] زلابية وشوربات حارة</a></li>
+            <li><a href="menu.html" class="footer-link">[ D ] مشروبات الشاي والباشن</a></li>
+          </ul>
+        </div>
+
+        <!-- Hours & Location -->
+        <div>
+          <div class="footer-title">المقر الرئيسي</div>
+          <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.6; margin-bottom: 0.75rem;">
+            41-10 Main St, Flushing, NY 11355<br>
+            هاتف: +1 (212) 786-2068
+          </p>
+          <p style="font-size: 0.82rem; color: #a3a3a3;">
+            ساعات العمل: 11:00 AM – 9:00 PM يومياً
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 KUDO KUDO LLC. جميع الحقوق محفوظة.</div>
+        <div>تصميم متوافق هندسياً مع كافة معايير الويب ومتصفحات iOS 15.3.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts (Separated Modules) -->
+  <script src="./js/data/menu-data.js"></script>
+  <script src="./js/modules/cart.js"></script>
+  <script src="./js/modules/modal.js"></script>
+  <script src="./js/modules/navigation.js"></script>
+  <script src="./js/modules/search.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>

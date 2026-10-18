@@ -1,5 +1,5 @@
 /**
- * Xi'an Famous Foods - Product Detail Modal & Customization
+ * KUDO KUDO - Product Detail Modal & Customization
  * Separated Modal Logic
  */
 
@@ -18,7 +18,6 @@ window.XFF_MODAL = (function () {
 
     const modal = document.getElementById("itemModal");
     const skuBadge = document.getElementById("modalSkuBadge");
-    const chineseTitle = document.getElementById("modalChineseTitle");
     const itemTitle = document.getElementById("modalItemTitle");
     const itemEnTitle = document.getElementById("modalItemEnTitle");
     const itemImage = document.getElementById("modalItemImage");
@@ -29,7 +28,6 @@ window.XFF_MODAL = (function () {
     const itemNotes = document.getElementById("itemNotes");
 
     if (skuBadge) skuBadge.textContent = item.sku;
-    if (chineseTitle) chineseTitle.textContent = item.chineseName;
     if (itemTitle) itemTitle.textContent = item.name;
     if (itemEnTitle) itemEnTitle.textContent = item.englishName;
     if (itemImage) {

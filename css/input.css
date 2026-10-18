@@ -97,7 +97,7 @@
   --xff-chili: #e02424;
   --xff-coal: #141414;
   --xff-slate: #2d2d2d;
-  --xff-warm-bg: #faf6f0;
+  --xff-warm-bg: #f5f5f7;
   --xff-card-bg: #ffffff;
   --xff-border-warm: #e8e2d5;
   --xff-border-heavy: #181818;
@@ -284,7 +284,7 @@ input, select, textarea {
 
 /* Header & Nav */
 .xff-header {
-  background-color: rgba(250, 246, 240, 0.96);
+  background-color: rgba(245, 245, 247, 0.96);
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   border-bottom: 2px solid var(--xff-border-heavy);
@@ -555,7 +555,7 @@ input, select, textarea {
 
 /* Category Navigation */
 .category-nav-wrap {
-  background-color: rgba(250, 246, 240, 0.98);
+  background-color: rgba(245, 245, 247, 0.98);
   border-bottom: 1.5px solid var(--xff-border-warm);
   position: sticky;
   top: 72px;

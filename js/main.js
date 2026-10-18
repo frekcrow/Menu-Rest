@@ -1,11 +1,12 @@
 /**
- * Xi'an Famous Foods - Main Application Entry
+ * KUDO KUDO - Main Application Entry
  * Orchestrates modules across all pages
  */
 
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
+
   // 1. Initialize Global Mobile Drawer & Navigation
   if (window.XFF_UI && typeof window.XFF_UI.initDrawer === "function") {
     window.XFF_UI.initDrawer();
@@ -50,6 +51,60 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // Dishes Circular Carousel (if present)
+  const dishesTrack = document.getElementById("dishesTrack");
+  if (dishesTrack && !dishesTrack.dataset.carouselReady) {
+    dishesTrack.dataset.carouselReady = "true";
+    const prevBtn = document.querySelector(".dishes-carousel-arrow.is-prev");
+    const nextBtn = document.querySelector(".dishes-carousel-arrow.is-next");
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        dishesTrack.scrollBy({ left: 320, behavior: "smooth" });
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => {
+        dishesTrack.scrollBy({ left: -320, behavior: "smooth" });
+      });
+    }
+
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+    let hasDragged = false;
+
+    dishesTrack.addEventListener("mousedown", (e) => {
+      isDown = true;
+      hasDragged = false;
+      dishesTrack.classList.add("is-dragging");
+      startX = e.pageX - dishesTrack.offsetLeft;
+      scrollLeft = dishesTrack.scrollLeft;
+    });
+
+    window.addEventListener("mouseup", () => {
+      if (!isDown) return;
+      isDown = false;
+      dishesTrack.classList.remove("is-dragging");
+    });
+
+    dishesTrack.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - dishesTrack.offsetLeft;
+      const walk = (x - startX) * 1.4;
+      if (Math.abs(walk) > 6) hasDragged = true;
+      dishesTrack.scrollLeft = scrollLeft - walk;
+    });
+
+    const items = dishesTrack.querySelectorAll(".dish-circle-item");
+    items.forEach((item) => {
+      item.addEventListener("click", (e) => {
+        if (hasDragged) e.preventDefault();
+      });
+    });
+  }
+
   // -------------------------------------------------------------
   // 3. Menu Page Logic (if on menu.html or page with menuContainer)
   // -------------------------------------------------------------
@@ -86,7 +141,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div>
                       <div style="display: flex; align-items: center; gap: 0.4rem; margin-bottom: 2px;">
                         <span class="sku-badge">${item.sku}</span>
-                        <span style="font-family: var(--font-chinese); font-size: 0.95rem; font-weight: 700; color: var(--xff-red);">${item.chineseName}</span>
                       </div>
                       <h3 style="font-size: 1.05rem; font-weight: 800; line-height: 1.25; margin-bottom: 2px;">${item.name}</h3>
                       <div style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 700; color: #64748b; text-transform: uppercase;">

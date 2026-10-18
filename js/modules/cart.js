@@ -1,5 +1,5 @@
 /**
- * Xi'an Famous Foods - Cart State & Calculation Module
+ * KUDO KUDO - Cart State & Calculation Module
  * Separated Cart Logic
  */
 
@@ -35,7 +35,6 @@ window.XFF_CART = (function () {
         compositeKey: compositeKey,
         id: item.id,
         sku: item.sku,
-        chineseName: item.chineseName,
         name: item.name,
         price: item.price,
         image: item.image,

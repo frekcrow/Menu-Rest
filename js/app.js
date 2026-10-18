@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Xi'an Famous Foods (XFF) Menu Application
  * Pure Vanilla JavaScript - iOS 15.3 WebKit Compatible
  */
@@ -9,12 +9,11 @@
   // Authentic Xi'an Famous Foods Menu Dataset
   const MENU_ITEMS = [
     // -------------------------------------------------------------
-    // [ N Series ] HAND-RIPPED NOODLES (扯面系列)
+    // [ N Series ] HAND-RIPPED NOODLES
     // -------------------------------------------------------------
     {
       id: "N1",
       sku: "N1",
-      chineseName: "孜然羊肉扯面",
       englishName: "Spicy Cumin Lamb Hand-Ripped Noodles",
       name: "نودلز لحم الضأن بالكمون الحار (بيانغ بيانغ)",
       category: "noodles",
@@ -29,7 +28,6 @@
     {
       id: "N2",
       sku: "N2",
-      chineseName: "孜然牛肉扯面",
       englishName: "Spicy Cumin Beef Hand-Ripped Noodles",
       name: "نودلز لحم البقر بالكمون الحار",
       category: "noodles",
@@ -44,7 +42,6 @@
     {
       id: "N3",
       sku: "N3",
-      chineseName: "岐山臊子汤面",
       englishName: "Mt. Qi Savory Beef Hand-Ripped Noodles in Soup",
       name: "حساء نودلز جبل تشي بقطع اللحم والخل الأسود",
       category: "noodles",
@@ -59,7 +56,6 @@
     {
       id: "N9",
       sku: "N9",
-      chineseName: "炸酱干扯面",
       englishName: "Savory Zha Jiang Hand-Ripped Noodles",
       name: "نودلز تشا جيانغ بصلصة الفاصوليا واللحم المفروم",
       category: "noodles",
@@ -73,12 +69,11 @@
     },
 
     // -------------------------------------------------------------
-    // [ B Series ] ROUJIAMO BURGERS (夹馍系列)
+    // [ B Series ] ROUJIAMO BURGERS
     // -------------------------------------------------------------
     {
       id: "B1",
       sku: "B1",
-      chineseName: "腊汁牛肉夹馍",
       englishName: "Stewed Beef Roujiamo Burger",
       name: "برجر شيآن بلحم البقر المطهو ببطء (روجيامو)",
       category: "burgers",
@@ -93,7 +88,6 @@
     {
       id: "B2",
       sku: "B2",
-      chineseName: "孜然羊肉夹馍",
       englishName: "Spicy Cumin Lamb Roujiamo Burger",
       name: "برجر روجيامو لحم الضأن بالكمون الحار",
       category: "burgers",
@@ -107,12 +101,11 @@
     },
 
     // -------------------------------------------------------------
-    // [ A Series ] LIANG PI & COLD DISHES (凉皮凉菜)
+    // [ A Series ] LIANG PI & COLD DISHES
     // -------------------------------------------------------------
     {
       id: "A1",
       sku: "A1",
-      chineseName: "凉皮",
       englishName: "Liang Pi 'Cold-Skin' Noodles",
       name: "نودلز ليانغ بي الباردة بصلصة الخل وزيت الفلفل",
       category: "liangpi",
@@ -127,7 +120,6 @@
     {
       id: "A2",
       sku: "A2",
-      chineseName: "老虎菜",
       englishName: "Tiger Vegetable Salad",
       name: "سلطة النمر المنعشة بالفلفل والكزبرة",
       category: "liangpi",
@@ -142,7 +134,6 @@
     {
       id: "A3",
       sku: "A3",
-      chineseName: "蒜泥拍黄瓜",
       englishName: "Smashed Garlic Cucumbers",
       name: "خيار مكسور بصلصة الثوم والخل المعتق",
       category: "liangpi",
@@ -156,12 +147,11 @@
     },
 
     // -------------------------------------------------------------
-    // [ F Series ] DUMPLINGS & SOUPS (水饺泡馍)
+    // [ F Series ] DUMPLINGS & SOUPS
     // -------------------------------------------------------------
     {
       id: "F1",
       sku: "F1",
-      chineseName: "长安豆花",
       englishName: "Chang'An Spicy Tofu Custard",
       name: "حلوى التوفو الحارة الدافئة بطريقة تشانغ آن",
       category: "dumplings",
@@ -176,7 +166,6 @@
     {
       id: "F4",
       sku: "F4",
-      chineseName: "酸辣羊肉水饺",
       englishName: "Spicy & Sour Lamb Dumplings (8 pcs)",
       name: "زلابية لحم الضأن في حساء الخل وزيت الفلفل (8 قطع)",
       category: "dumplings",
@@ -190,12 +179,11 @@
     },
 
     // -------------------------------------------------------------
-    // [ D Series ] DRINKS & TEAS (特色饮品)
+    // [ D Series ] DRINKS & TEAS
     // -------------------------------------------------------------
     {
       id: "D1",
       sku: "D1",
-      chineseName: "山楂酸梅汤",
       englishName: "Sour Hawthorn & Plum Herbal Tea",
       name: "مشروب الزعرور والبرقوق المجفف (المهدئ للحرارة)",
       category: "drinks",
@@ -210,7 +198,6 @@
     {
       id: "D2",
       sku: "D2",
-      chineseName: "百香果茉莉绿茶",
       englishName: "Iced Jasmine Green Tea with Passion Fruit",
       name: "شاي الياسمين الأخضر المنعش بالباشن فروت",
       category: "drinks",
@@ -442,7 +429,6 @@
         compositeKey: compositeKey,
         id: item.id,
         sku: item.sku,
-        chineseName: item.chineseName,
         name: item.name,
         price: item.price,
         image: item.image,

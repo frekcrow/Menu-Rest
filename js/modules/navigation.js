@@ -1,5 +1,5 @@
 /**
- * Xi'an Famous Foods - Navigation & UI Controls
+ * KUDO KUDO - Navigation & UI Controls
  * Mobile drawer, Category tabs, Toast notifications
  */
 

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="تفاصيل خدمة توصيل الطلبات في كودو كودو KUDO KUDO - توصيل سريع، تغليف حراري محكم، ونودلز طازجة ساخنة">
+  <meta name="theme-color" content="#ba121a">
+  <title>KUDO KUDO | تفاصيل طلب التوصيل</title>
+
+  <!-- Brand Custom Fonts: Cordale Arabic (Regular & Bold) -->
+  <link rel="preload" href="./public/Cordale_Arabic_Trial_Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="./public/Cordale_Arabic_Trial_Bold.ttf" as="font" type="font/ttf" crossorigin>
+
+  <!-- Fonts: Barlow Condensed & SF Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=SF+Mono&display=swap" rel="stylesheet">
+
+  <!-- Phosphor Icons Web -->
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+
+  <!-- Modular Stylesheets -->
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/menu.css">
+  <link rel="stylesheet" href="./css/pages.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- Global Header Navigation -->
+  <header class="xff-header" style="border-bottom: none;">
+    <div class="container xff-nav-container">
+      <a href="index.html" class="xff-logo-link">
+        <span class="chinese-seal" style="font-family: var(--font-display); font-size: 0.85rem; font-weight: 900;">KUDO</span>
+        <div>
+          <div class="xff-logo-title">KUDO KUDO</div>
+          <div class="xff-logo-sub">كودو كودو • KUDO KUDO</div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="xff-desktop-nav" aria-label="القائمة الرئيسية">
+        <a href="index.html" class="nav-link">الرئيسية</a>
+        <a href="menu.html" class="nav-link">قائمة الطعام</a>
+        <a href="delivery.html" class="nav-link active">خدمة التوصيل</a>
+        <a href="contact.html" class="nav-link">التواصل والتموين</a>
+        <a href="menu.html" class="btn-xff-primary" style="padding: 0.45rem 1rem; font-size: 0.92rem; min-height: 38px;">
+          اطلب الآن <i class="ph-bold ph-arrow-left"></i>
+        </a>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="فتح القائمة">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-content">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; border-bottom: 2px solid var(--xff-border-heavy); padding-bottom: 1rem;">
+        <span class="chinese-seal" style="font-family: var(--font-display); font-size: 0.85rem; font-weight: 900;">KUDO</span>
+        <button id="closeMobileDrawer" class="touch-target" aria-label="إغلاق" style="font-size: 1.4rem; color: var(--xff-coal);">
+          <i class="ph-bold ph-x"></i>
+        </button>
+      </div>
+
+      <nav style="display: flex; flex-direction: column; gap: 0.5rem; flex: 1;">
+        <a href="index.html" class="mobile-nav-link">الرئيسية <i class="ph-bold ph-caret-left"></i></a>
+        <a href="menu.html" class="mobile-nav-link">قائمة الطعام <i class="ph-bold ph-caret-left"></i></a>
+        <a href="delivery.html" class="mobile-nav-link active">خدمة التوصيل <i class="ph-bold ph-caret-left"></i></a>
+        <a href="contact.html" class="mobile-nav-link">التواصل والتموين <i class="ph-bold ph-caret-left"></i></a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Delivery Hero Section -->
+  <section style="background-color: var(--xff-coal); color: #ffffff; padding: 3.5rem 0 3rem 0; position: relative;">
+    <div class="container" style="text-align: center; max-width: 760px; margin: 0 auto;">
+      <div style="display: inline-flex; align-items: center; justify-content: center; width: 72px; height: 72px; border-radius: 18px; background: linear-gradient(135deg, #ba121a 0%, #8b0d13 100%); border: 2px solid #ffffff; box-shadow: 4px 4px 0 #000000; font-size: 2.2rem; color: #ffffff; margin-bottom: 1.25rem;">
+        <i class="ph-fill ph-moped"></i>
+      </div>
+      <div style="display: flex; justify-content: center; margin-bottom: 0.5rem;">
+        <span class="chinese-seal" style="background: rgba(186, 18, 26, 0.3); border-color: var(--xff-red); color: #ff6b72;">FAST & FRESH DELIVERY</span>
+      </div>
+      <h1 style="font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 900; color: #ffffff; margin-bottom: 1rem;">
+        تفاصيل خدمة وتوصيل الطلبات
+      </h1>
+      <p style="font-size: 1.05rem; color: #cbd5e1; line-height: 1.7; max-width: 620px; margin: 0 auto 1.5rem auto;">
+        نضمن وصول أطباق كودو كودو الساخنة والنودلز المسحوبة يدوياً بأسرع وقت مع تقنية التغليف الحراري الذكي الذي يحافظ على قوام المرق والنودلز طازجاً كما لو كنت داخل المطعم.
+      </p>
+
+      <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 0.85rem;">
+        <span style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 9999px; padding: 0.4rem 1rem; font-size: 0.88rem; font-weight: 700;">
+          ⏱️ متوسط التوصيل: 25 - 40 دقيقة
+        </span>
+        <span style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 9999px; padding: 0.4rem 1rem; font-size: 0.88rem; font-weight: 700;">
+          🛵 رسوم التوصيل: 10 ر.س (مجاني فوق 120 ر.س)
+        </span>
+        <span style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 9999px; padding: 0.4rem 1rem; font-size: 0.88rem; font-weight: 700;">
+          🥡 تغليف حراري عازل منفصل
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wavy Divider -->
+  <div class="pattern-container is-dark-bottom" style="height: 36px; background-color: #ffffff; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 36' width='50' height='36' shape-rendering='geometricPrecision'%3E%3Crect width='50' height='36' fill='%23ffffff'/%3E%3Cpath d='M0 0 H50 V7 Q37.5 13 25 7 T0 7 Z' fill='%23141414'/%3E%3Cpath d='M-25 15 Q-12.5 21 0 15 T25 15 T50 15 T75 15' fill='none' stroke='%23141414' stroke-width='4'/%3E%3Cpath d='M-25 23 Q-12.5 29 0 23 T25 23 T50 23 T75 23' fill='none' stroke='%23141414' stroke-width='4'/%3E%3C/svg%3E&quot;); background-position: 0 0; background-repeat: repeat-x; background-size: 50px 36px; margin-top: -1px; margin-bottom: 0; transform: none;"></div>
+
+  <!-- Delivery Information Grid -->
+  <main class="container" style="padding-top: 3.5rem; padding-bottom: 4.5rem;">
+    <div style="display: grid; grid-template-columns: 1fr; gap: 2.5rem; margin-bottom: 3.5rem;">
+      
+      <!-- Steps Cards -->
+      <div>
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <h2 style="font-family: var(--font-display); font-size: 2rem; font-weight: 900; margin-bottom: 0.5rem;">
+            كيف يعمل نظام التوصيل في كودو كودو؟
+          </h2>
+          <p style="color: #64748b; font-size: 0.95rem;">خطوات بسيطة تضمن وصول طعامك بأعلى جودة وسخونة</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
+          <!-- Step 1 -->
+          <div class="form-card" style="text-align: center; padding: 1.75rem 1.25rem;">
+            <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--xff-red-light); color: var(--xff-red); border: 2px solid var(--xff-red); display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-weight: 900; font-size: 1.25rem; margin-bottom: 1rem;">
+              1
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 900; margin-bottom: 0.5rem;">اختر وجبتك المفضلة</h3>
+            <p style="font-size: 0.88rem; color: #475569; line-height: 1.6;">تصفح قائمة الطعام المتنوعة واختر أطباق النودلز، البرجر، والزلابية مع تحديد درجة الحرارة.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="form-card" style="text-align: center; padding: 1.75rem 1.25rem;">
+            <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--xff-red-light); color: var(--xff-red); border: 2px solid var(--xff-red); display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-weight: 900; font-size: 1.25rem; margin-bottom: 1rem;">
+              2
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 900; margin-bottom: 0.5rem;">تجهيز فوري بالمطبخ</h3>
+            <p style="font-size: 0.88rem; color: #475569; line-height: 1.6;">يقوم الطهاة بسحب النودلز وطهي اللحم طازجاً فور استلام الطلب مباشرة لمنع أي ركود.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="form-card" style="text-align: center; padding: 1.75rem 1.25rem;">
+            <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--xff-red-light); color: var(--xff-red); border: 2px solid var(--xff-red); display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-weight: 900; font-size: 1.25rem; margin-bottom: 1rem;">
+              3
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 900; margin-bottom: 0.5rem;">تغليف حراري مخصص</h3>
+            <p style="font-size: 0.88rem; color: #475569; line-height: 1.6;">نعتمد علب حرارية عازلة تفصل المرق والصلصات عن النودلز للحفاظ على قوامها المقرمش.</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="form-card" style="text-align: center; padding: 1.75rem 1.25rem;">
+            <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--xff-red-light); color: var(--xff-red); border: 2px solid var(--xff-red); display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-weight: 900; font-size: 1.25rem; margin-bottom: 1rem;">
+              4
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 900; margin-bottom: 0.5rem;">توصيل سريع لبابك</h3>
+            <p style="font-size: 0.88rem; color: #475569; line-height: 1.6;">ينطلق سائق التوصيل مباشرة إلى عنوانك مع تتبع دقيق وتواصل مباشر لحين الاستلام.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Delivery Address Form Card & Delivery FAQ -->
+      <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
+        
+        <!-- Address & Order Details Form -->
+        <div class="form-card" style="border: 3px solid var(--xff-border-heavy); box-shadow: 6px 6px 0 var(--xff-coal); border-radius: 10px; padding: 2.25rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; border-bottom: 2px solid var(--xff-border-warm); padding-bottom: 1rem;">
+            <div>
+              <span class="chinese-seal" style="margin-bottom: 0.4rem;">ORDER DETAILS</span>
+              <h2 style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 900; color: var(--xff-coal);">
+                تحديد بيانات وعنوان التوصيل
+              </h2>
+            </div>
+            <i class="ph-bold ph-navigation-arrow" style="font-size: 2rem; color: var(--xff-red);"></i>
+          </div>
+
+          <form id="deliveryOrderForm" onsubmit="event.preventDefault(); window.XFF_UI.showToast('تم حفظ تفاصيل التوصيل! يرجى اختيار الأصناف من القائمة.'); setTimeout(function(){ window.location.href='menu.html'; }, 1000);">
+            <div style="display: grid; grid-template-columns: 1fr; gap: 1.25rem;">
+              
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem;">
+                <div class="form-group">
+                  <label class="form-label" for="delName">الاسم الكامل *</label>
+                  <input type="text" id="delName" class="form-input" placeholder="مثال: محمد العمري" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="delPhone">رقم الجوال لتتبع الطلب *</label>
+                  <input type="tel" id="delPhone" class="form-input" placeholder="05xxxxxxxx" required>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem;">
+                <div class="form-group">
+                  <label class="form-label" for="delCity">المدينة والمنطقة *</label>
+                  <input type="text" id="delCity" class="form-input" placeholder="مثال: الرياض - حي الملقا" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="delStreet">الشارع ورقم المبنى *</label>
+                  <input type="text" id="delStreet" class="form-input" placeholder="شارع الأمير محمد بن سلمان، عمارة 12" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="delNotes">ملاحظات إضافية للمندوب (اختياري)</label>
+                <textarea id="delNotes" class="form-textarea" rows="3" placeholder="مثال: يرجى ترك الطلب عند الباب / فصل الصلصة عن النودلز / الاتصال عند الوصول"></textarea>
+              </div>
+
+              <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1rem; padding-top: 1.25rem; border-top: 1px dashed #e2e8f0;">
+                <div>
+                  <span style="font-family: var(--font-display); font-size: 0.92rem; font-weight: 800; color: #475569;">
+                    📍 التوصيل متاح الآن لجميع الأحياء المغطاة
+                  </span>
+                </div>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                  <button type="submit" class="btn-xff-primary" style="font-size: 1.05rem; padding: 0.75rem 1.75rem;">
+                    تأكيد والانتقال للقائمة للطلب <i class="ph-bold ph-arrow-left"></i>
+                  </button>
+                  <a href="menu.html" class="btn-xff-secondary" style="font-size: 1.05rem; padding: 0.75rem 1.5rem;">
+                    عرض المنيو مباشرة
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="xff-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+            <span class="chinese-seal" style="border-color: #ffffff; color: #ffffff; background: transparent; font-family: var(--font-display); font-size: 0.85rem; font-weight: 900;">KUDO</span>
+            <div style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 900; letter-spacing: 0.05em; text-transform: uppercase;">
+              KUDO KUDO
+            </div>
+          </div>
+          <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.7; margin-bottom: 1.25rem;">
+            المطعم الصيني التراثي الأول المتخصص في نودلز بيانغ بيانغ المسحوبة يدوياً وفطائر روجيامو المقرمشة بخلطات التوابل الأصلية من مدينة شيآن بمقاطعة شنشي.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-title">صفحات الموقع</div>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">الصفحة الرئيسية</a></li>
+            <li><a href="menu.html" class="footer-link">قائمة الطعام الكاملة</a></li>
+            <li><a href="delivery.html" class="footer-link">خدمة وتفاصيل التوصيل</a></li>
+            <li><a href="contact.html" class="footer-link">التواصل والتموين</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-title">رموز الأصناف</div>
+          <ul class="footer-links">
+            <li><a href="menu.html" class="footer-link">[ N ] نودلز مسحوبة يدوياً</a></li>
+            <li><a href="menu.html" class="footer-link">[ B ] برجر وفطائر روجيامو</a></li>
+            <li><a href="menu.html" class="footer-link">[ A ] ليانغ بي والمقبلات</a></li>
+            <li><a href="menu.html" class="footer-link">[ F ] زلابية وشوربات حارة</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-title">المقر الرئيسي</div>
+          <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.6; margin-bottom: 0.75rem;">
+            41-10 Main St, Flushing, NY 11355<br>
+            هاتف: +1 (212) 786-2068
+          </p>
+          <p style="font-size: 0.82rem; color: #a3a3a3;">
+            ساعات العمل: 11:00 AM – 9:00 PM يومياً
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 KUDO KUDO LLC. جميع الحقوق محفوظة.</div>
+        <div>تصميم متوافق هندسياً مع كافة معايير الويب ومتصفحات iOS 15.3.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./js/data/menu-data.js"></script>
+  <script src="./js/modules/cart.js"></script>
+  <script src="./js/modules/navigation.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
