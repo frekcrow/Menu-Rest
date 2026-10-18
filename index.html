@@ -21,6 +21,34 @@
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
 
+  <!-- Ping-Bold Font Preload & Definition -->
+  <link rel="preload" href="./public/Ping-Bold.otf" as="font" type="font/otf" crossorigin>
+  <style>
+    @font-face {
+      font-family: 'Ping-Bold';
+      src: url('./public/Ping-Bold.otf') format('opentype'),
+           url('/public/Ping-Bold.otf') format('opentype'),
+           url('./public/ping-bold.otf') format('opentype'),
+           url('Ping-Bold.otf') format('opentype'),
+           url('/Ping-Bold.otf') format('opentype'),
+           url('../public/Ping-Bold.otf') format('opentype');
+      font-weight: 700 900;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Ping';
+      src: url('./public/Ping-Bold.otf') format('opentype'),
+           url('/public/Ping-Bold.otf') format('opentype'),
+           url('./public/ping-bold.otf') format('opentype'),
+           url('Ping-Bold.otf') format('opentype'),
+           url('/Ping-Bold.otf') format('opentype');
+      font-weight: 700 900;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+
   <!-- Modular Stylesheets -->
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/components.css">
@@ -64,7 +92,7 @@
     <section class="hero-section hero-ad-section" style="background-color: var(--xff-red); color: #ffffff; margin-bottom: 0; position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 0;">
 
       <!-- Full Ad Banner Container with Overlaid Header Controls & CTA Buttons -->
-      <div class="hero-ad-banner" style="position: relative; width: 100%; min-height: 330px; height: 360px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; align-items: center; background-color: var(--xff-red);">
+      <div class="hero-ad-banner" style="position: relative; width: 100%; min-height: 400px; height: 440px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; align-items: center; background-color: var(--xff-red);">
         <!-- Full Ad Image -->
         <img src="./public/images/kudo-ad.webp" 
              alt="KUDO KUDO Burger & Fried Chicken" 
@@ -74,42 +102,50 @@
 
         <!-- Red Background Fade Overlay over Image -->
         <div class="hero-ad-banner-overlay" style="position: absolute; inset: 0; z-index: 2; pointer-events: none; background: linear-gradient(to bottom, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.1) 18%, rgba(186, 18, 26, 0) 32%, rgba(186, 18, 26, 0.45) 60%, rgba(186, 18, 26, 0.9) 85%, var(--xff-red) 100%);"></div>
-
         <!-- TOP: Controls & Lines placed directly over the image (No white rectangle!) -->
         <div class="hero-top-overlay" style="position: relative; z-index: 10; width: 100%; padding: 1rem 1.25rem 0 1.25rem;">
-          <!-- Single row at the SAME LEVEL: Hamburger (left), Two Red Lines (middle), (EN/AR) (right) -->
-          <div class="hero-controls-row" style="display: flex; align-items: center; justify-content: space-between; gap: 0.85rem; width: 100%; max-width: 1200px; margin: 0 auto; direction: ltr;">
+          <!-- Single row: Hamburger (left), Middle Column with Two Lines & Large Logo (middle), (EN/AR) (right) -->
+          <div class="hero-controls-row" style="display: flex; align-items: flex-start; justify-content: space-between; gap: 0.85rem; width: 100%; max-width: 1200px; margin: 0 auto; direction: ltr;">
             
             <!-- Left: Menu Button (Just 3 lines directly, NO surrounding box!) -->
-            <button type="button" class="mobile-menu-toggle kudo-raw-hamburger" id="mobileMenuToggle" aria-label="القائمة" style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px; background: transparent; border: none; cursor: pointer; padding: 4px 2px; box-shadow: none; flex-shrink: 0;">
+            <button type="button" class="mobile-menu-toggle kudo-raw-hamburger" id="mobileMenuToggle" aria-label="القائمة" style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px; background: transparent; border: none; cursor: pointer; padding: 4px 2px; box-shadow: none; flex-shrink: 0; margin-top: 3px;">
               <span style="display: block; width: 22px; height: 2.5px; background-color: var(--xff-coal); border-radius: 2px; box-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);"></span>
               <span style="display: block; width: 22px; height: 2.5px; background-color: var(--xff-coal); border-radius: 2px; box-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);"></span>
               <span style="display: block; width: 22px; height: 2.5px; background-color: var(--xff-coal); border-radius: 2px; box-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);"></span>
             </button>
 
-            <!-- Middle: Two thin horizontal red lines (bottom line shorter and thinner) -->
-            <div class="kudo-inline-red-lines kudo-inline-lines" style="flex: 1; display: flex; flex-direction: column; gap: 3px; justify-content: center; align-items: center;">
-              <div class="red-line line-top" style="width: 100%; height: 1px; background-color: var(--xff-red, #ba121a); box-shadow: 0 0.5px 1px rgba(255, 255, 255, 0.5);"></div>
-              <div class="red-line line-bottom" style="width: 60%; height: 1px; background-color: var(--xff-red, #ba121a); box-shadow: 0 0.5px 1px rgba(255, 255, 255, 0.5);"></div>
+            <!-- Middle: Two thin horizontal red lines AND directly under them the Logo! -->
+            <div class="hero-header-center" style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; margin-top: 8px;">
+              <!-- The Two Red Lines (at exact level of menu and lang buttons) -->
+              <div class="kudo-inline-red-lines kudo-inline-lines" style="width: 100%; max-width: 320px; display: flex; flex-direction: column; gap: 3px; justify-content: center; align-items: center;">
+                <div class="red-line line-top" style="width: 100%; height: 1px; background-color: var(--xff-red, #ba121a); box-shadow: 0 0.5px 1px rgba(255, 255, 255, 0.5);"></div>
+                <div class="red-line line-bottom" style="width: 60%; height: 1px; background-color: var(--xff-red, #ba121a); box-shadow: 0 0.5px 1px rgba(255, 255, 255, 0.5);"></div>
+              </div>
+
+              <!-- Directly Under the two lines: The Large Logo Image -->
+              <div class="hero-brand-title" style="text-align: center; width: 100%; margin-top: 0.65rem; display: flex; justify-content: center; align-items: center;">
+                <img src="./public/images/small-logo.png" 
+                     alt="KUDO KUDO" 
+                     class="hero-brand-logo" 
+                     style="height: clamp(125px, 25vw, 180px); width: auto; max-height: 195px; object-fit: contain; display: block; filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.5));"
+                     onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='small-logo.png';}else if(this.dataset.tried==1){this.dataset.tried=2;this.src='images/small-logo.png';}else if(this.dataset.tried==2){this.dataset.tried=3;this.src='./public/images/small-logo.webp';}else if(this.dataset.tried==3){this.dataset.tried=4;this.src='small-logo.webp';}" />
+              </div>
             </div>
 
             <!-- Right: Language Button (Just (EN/AR), NO surrounding box!) -->
-            <button type="button" class="kudo-raw-lang-btn" id="langSwitchBtn" aria-label="تغيير اللغة (EN/AR)" onclick="if(window.XFF_UI&&window.XFF_UI.showToast){window.XFF_UI.showToast('English language version coming soon / النسخة الإنجليزية قادمة قريباً');}else{alert('English language version coming soon');}" style="font-family: var(--font-display), sans-serif; font-size: 0.95rem; font-weight: 900; color: var(--xff-coal); text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85); background: transparent; border: none; cursor: pointer; padding: 4px 2px; box-shadow: none; white-space: nowrap; flex-shrink: 0; letter-spacing: 0.05em;">
+            <button type="button" class="kudo-raw-lang-btn" id="langSwitchBtn" aria-label="تغيير اللغة (EN/AR)" onclick="if(window.XFF_UI&&window.XFF_UI.showToast){window.XFF_UI.showToast('English language version coming soon / النسخة الإنجليزية قادمة قريباً');}else{alert('English language version coming soon');}" style="font-family: var(--font-display), sans-serif; font-size: 0.95rem; font-weight: 900; color: var(--xff-coal); text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85); background: transparent; border: none; cursor: pointer; padding: 4px 2px; box-shadow: none; white-space: nowrap; flex-shrink: 0; letter-spacing: 0.05em; margin-top: 2px;">
               (EN/AR)
             </button>
           </div>
-
-          <!-- Under the lines in the middle: KUDO KUDO, nothing else -->
-          <div class="hero-brand-title" style="text-align: center; width: 100%; margin-top: 0.35rem;">
-            <span style="font-family: var(--font-display); font-size: clamp(1.4rem, 4vw, 1.85rem); font-weight: 900; letter-spacing: 0.16em; color: var(--xff-coal); text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9); text-transform: uppercase; display: inline-block; line-height: 1.1;">
-              KUDO KUDO
-            </span>
-          </div>
         </div>
-
-        <!-- BOTTOM: Overlaid CTA Buttons above the image -->
-        <div class="hero-ad-banner-content" style="position: relative; z-index: 10; width: 100%; padding-bottom: 1.5rem; display: flex; flex-direction: column; align-items: center; text-align: center;">
-          <div class="hero-ctas" style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: center; gap: 0.75rem; width: 100%;">
+        <!-- BOTTOM: Overlaid Heading & CTA Buttons above the image -->
+        <div class="hero-ad-banner-content" style="position: relative; z-index: 10; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem 1.75rem 1.5rem; display: flex; flex-direction: column; align-items: flex-start; text-align: right; direction: rtl;">
+          <!-- Right-aligned Heading with Ping-Bold font -->
+          <h1 class="hero-slogan-heading" style="font-family: 'Ping-Bold', 'Ping', var(--font-display), sans-serif; font-size: clamp(1.6rem, 4.5vw, 2.35rem); font-weight: 900; color: #ffffff; text-align: right; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95), 0 4px 16px rgba(0, 0, 0, 0.8); margin-bottom: 0.85rem; line-height: 1.2; width: 100%; direction: rtl;">
+             قرمشة من عالم آخر
+في كل مكان معك
+          </h1>
+          <div class="hero-ctas" style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-items: center; gap: 0.75rem; width: auto;">
             <a href="menu.html" class="btn-xff-secondary hero-btn-compact" style="font-size: 0.92rem; padding: 0.55rem 1.15rem; white-space: nowrap; box-shadow: 0 4px 14px rgba(0,0,0,0.35);">
               <i class="ph-bold ph-bowl-food"></i> استعرض قائمة الوجبات
             </a>

@@ -1484,3 +1484,53 @@
   border-top: 1px dashed #e2e8f0;
   padding-top: 0.85rem;
 }
+
+
+.hero-brand-logo {
+  height: clamp(125px, 25vw, 180px) !important;
+  width: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.45)) !important;
+}
+
+
+@font-face {
+  font-family: 'Ping-Bold';
+  src: url('./public/Ping-Bold.otf') format('opentype'),
+       url('/public/Ping-Bold.otf') format('opentype'),
+       url('./public/ping-bold.otf') format('opentype'),
+       url('Ping-Bold.otf') format('opentype'),
+       url('/Ping-Bold.otf') format('opentype'),
+       url('../public/Ping-Bold.otf') format('opentype'),
+       url('./Ping-Bold.otf') format('opentype');
+  font-weight: 700 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ping';
+  src: url('./public/Ping-Bold.otf') format('opentype'),
+       url('/public/Ping-Bold.otf') format('opentype'),
+       url('./public/ping-bold.otf') format('opentype'),
+       url('Ping-Bold.otf') format('opentype'),
+       url('/Ping-Bold.otf') format('opentype'),
+       url('../public/Ping-Bold.otf') format('opentype');
+  font-weight: 700 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+.hero-slogan-heading {
+  font-family: 'Ping-Bold', 'Ping', var(--font-display), sans-serif !important;
+  font-size: clamp(1.6rem, 4.5vw, 2.35rem) !important;
+  font-weight: 900 !important;
+  color: #ffffff !important;
+  text-align: right !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95), 0 4px 16px rgba(0, 0, 0, 0.8) !important;
+  margin-bottom: 0.85rem !important;
+  line-height: 1.2 !important;
+  width: 100% !important;
+  direction: rtl !important;
+}
