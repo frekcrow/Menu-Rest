@@ -46,14 +46,13 @@
         <a href="index.html" class="nav-link">الرئيسية</a>
         <a href="menu.html" class="nav-link">قائمة الطعام</a>
         <a href="delivery.html" class="nav-link active">خدمة التوصيل</a>
-        <a href="contact.html" class="nav-link">التواصل والتموين</a>
-        <a href="menu.html" class="btn-xff-primary" style="padding: 0.45rem 1rem; font-size: 0.92rem; min-height: 38px;">
+        <a href="menu.html" class="btn-xff-primary" style="padding: 0.55rem 1.15rem; font-size: 0.95rem; min-height: 44px;">
           اطلب الآن <i class="ph-bold ph-arrow-left"></i>
         </a>
       </nav>
 
       <!-- Mobile Hamburger Button -->
-      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="فتح القائمة">
+      <button class="mobile-menu-toggle touch-target" id="mobileMenuToggle" aria-label="فتح القائمة">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
@@ -65,7 +64,9 @@
   <div class="mobile-drawer" id="mobileDrawer">
     <div class="mobile-drawer-content">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; border-bottom: 2px solid var(--xff-border-heavy); padding-bottom: 1rem;">
-        <span class="chinese-seal" style="font-family: var(--font-display); font-size: 0.85rem; font-weight: 900;">KUDO</span>
+        <a href="index.html" style="display: inline-flex; align-items: center; text-decoration: none;">
+          <img src="./public/images/small-logo.webp" alt="KUDO KUDO" style="height: 52px; width: auto; max-width: 140px; object-fit: contain; display: block;" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='./images/small-logo.webp';}else if(this.dataset.tried==1){this.dataset.tried=2;this.src='public/images/small-logo.webp';}" />
+        </a>
         <button id="closeMobileDrawer" class="touch-target" aria-label="إغلاق" style="font-size: 1.4rem; color: var(--xff-coal);">
           <i class="ph-bold ph-x"></i>
         </button>
@@ -75,7 +76,6 @@
         <a href="index.html" class="mobile-nav-link">الرئيسية <i class="ph-bold ph-caret-left"></i></a>
         <a href="menu.html" class="mobile-nav-link">قائمة الطعام <i class="ph-bold ph-caret-left"></i></a>
         <a href="delivery.html" class="mobile-nav-link active">خدمة التوصيل <i class="ph-bold ph-caret-left"></i></a>
-        <a href="contact.html" class="mobile-nav-link">التواصل والتموين <i class="ph-bold ph-caret-left"></i></a>
       </nav>
     </div>
   </div>
@@ -86,22 +86,16 @@
       <div style="display: inline-flex; align-items: center; justify-content: center; width: 72px; height: 72px; border-radius: 18px; background: linear-gradient(135deg, #ba121a 0%, #8b0d13 100%); border: 2px solid #ffffff; box-shadow: 4px 4px 0 #000000; font-size: 2.2rem; color: #ffffff; margin-bottom: 1.25rem;">
         <i class="ph-fill ph-moped"></i>
       </div>
-      <div style="display: flex; justify-content: center; margin-bottom: 0.5rem;">
-        <span class="chinese-seal" style="background: rgba(186, 18, 26, 0.3); border-color: var(--xff-red); color: #ff6b72;">FAST & FRESH DELIVERY</span>
-      </div>
       <h1 style="font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 900; color: #ffffff; margin-bottom: 1rem;">
         تفاصيل خدمة وتوصيل الطلبات
       </h1>
       <p style="font-size: 1.05rem; color: #cbd5e1; line-height: 1.7; max-width: 620px; margin: 0 auto 1.5rem auto;">
-        نضمن وصول أطباق كودو كودو الساخنة والنودلز المسحوبة يدوياً بأسرع وقت مع تقنية التغليف الحراري الذكي الذي يحافظ على قوام المرق والنودلز طازجاً كما لو كنت داخل المطعم.
+        نضمن وصول وجبات كودو كودو الساخنة والدجاج المقرمش، البرغر، والريزو بأسرع وقت مع تقنية التغليف الحراري الذكي الذي يحافظ على قرمشة الدجاج وسخونته كما لو كنت داخل المطعم.
       </p>
 
       <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 0.85rem;">
         <span style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 9999px; padding: 0.4rem 1rem; font-size: 0.88rem; font-weight: 700;">
           ⏱️ متوسط التوصيل: 25 - 40 دقيقة
-        </span>
-        <span style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 9999px; padding: 0.4rem 1rem; font-size: 0.88rem; font-weight: 700;">
-          🛵 رسوم التوصيل: 10 ر.س (مجاني فوق 120 ر.س)
         </span>
         <span style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 9999px; padding: 0.4rem 1rem; font-size: 0.88rem; font-weight: 700;">
           🥡 تغليف حراري عازل منفصل
@@ -113,127 +107,228 @@
   <!-- Wavy Divider -->
   <div class="pattern-container is-dark-bottom" style="height: 36px; background-color: #ffffff; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 36' width='50' height='36' shape-rendering='geometricPrecision'%3E%3Crect width='50' height='36' fill='%23ffffff'/%3E%3Cpath d='M0 0 H50 V7 Q37.5 13 25 7 T0 7 Z' fill='%23141414'/%3E%3Cpath d='M-25 15 Q-12.5 21 0 15 T25 15 T50 15 T75 15' fill='none' stroke='%23141414' stroke-width='4'/%3E%3Cpath d='M-25 23 Q-12.5 29 0 23 T25 23 T50 23 T75 23' fill='none' stroke='%23141414' stroke-width='4'/%3E%3C/svg%3E&quot;); background-position: 0 0; background-repeat: repeat-x; background-size: 50px 36px; margin-top: -1px; margin-bottom: 0; transform: none;"></div>
 
-  <!-- Delivery Information Grid -->
-  <main class="container" style="padding-top: 3.5rem; padding-bottom: 4.5rem;">
-    <div style="display: grid; grid-template-columns: 1fr; gap: 2.5rem; margin-bottom: 3.5rem;">
-      
-      <!-- Steps Cards -->
-      <div>
-        <div style="text-align: center; margin-bottom: 2rem;">
-          <h2 style="font-family: var(--font-display); font-size: 2rem; font-weight: 900; margin-bottom: 0.5rem;">
-            كيف يعمل نظام التوصيل في كودو كودو؟
-          </h2>
-          <p style="color: #64748b; font-size: 0.95rem;">خطوات بسيطة تضمن وصول طعامك بأعلى جودة وسخونة</p>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
-          <!-- Step 1 -->
-          <div class="form-card" style="text-align: center; padding: 1.75rem 1.25rem;">
-            <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--xff-red-light); color: var(--xff-red); border: 2px solid var(--xff-red); display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-weight: 900; font-size: 1.25rem; margin-bottom: 1rem;">
-              1
-            </div>
-            <h3 style="font-size: 1.15rem; font-weight: 900; margin-bottom: 0.5rem;">اختر وجبتك المفضلة</h3>
-            <p style="font-size: 0.88rem; color: #475569; line-height: 1.6;">تصفح قائمة الطعام المتنوعة واختر أطباق النودلز، البرجر، والزلابية مع تحديد درجة الحرارة.</p>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="form-card" style="text-align: center; padding: 1.75rem 1.25rem;">
-            <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--xff-red-light); color: var(--xff-red); border: 2px solid var(--xff-red); display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-weight: 900; font-size: 1.25rem; margin-bottom: 1rem;">
-              2
-            </div>
-            <h3 style="font-size: 1.15rem; font-weight: 900; margin-bottom: 0.5rem;">تجهيز فوري بالمطبخ</h3>
-            <p style="font-size: 0.88rem; color: #475569; line-height: 1.6;">يقوم الطهاة بسحب النودلز وطهي اللحم طازجاً فور استلام الطلب مباشرة لمنع أي ركود.</p>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="form-card" style="text-align: center; padding: 1.75rem 1.25rem;">
-            <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--xff-red-light); color: var(--xff-red); border: 2px solid var(--xff-red); display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-weight: 900; font-size: 1.25rem; margin-bottom: 1rem;">
-              3
-            </div>
-            <h3 style="font-size: 1.15rem; font-weight: 900; margin-bottom: 0.5rem;">تغليف حراري مخصص</h3>
-            <p style="font-size: 0.88rem; color: #475569; line-height: 1.6;">نعتمد علب حرارية عازلة تفصل المرق والصلصات عن النودلز للحفاظ على قوامها المقرمش.</p>
-          </div>
-
-          <!-- Step 4 -->
-          <div class="form-card" style="text-align: center; padding: 1.75rem 1.25rem;">
-            <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--xff-red-light); color: var(--xff-red); border: 2px solid var(--xff-red); display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-weight: 900; font-size: 1.25rem; margin-bottom: 1rem;">
-              4
-            </div>
-            <h3 style="font-size: 1.15rem; font-weight: 900; margin-bottom: 0.5rem;">توصيل سريع لبابك</h3>
-            <p style="font-size: 0.88rem; color: #475569; line-height: 1.6;">ينطلق سائق التوصيل مباشرة إلى عنوانك مع تتبع دقيق وتواصل مباشر لحين الاستلام.</p>
-          </div>
-        </div>
+  <!-- Delivery Pricing Table Section -->
+  <main class="container" style="padding-top: 3.5rem; padding-bottom: 4.5rem; max-width: 860px; margin: 0 auto;">
+    
+    <!-- Header & Live Search Filter -->
+    <div style="margin-bottom: 1.75rem;">
+      <div style="margin-bottom: 1.25rem;">
+        <h2 style="font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 900; color: var(--xff-coal); margin: 0;">
+          أسعار التوصيل حسب الوجهة
+        </h2>
+        <p style="color: #64748b; font-size: 0.95rem; margin: 0.4rem 0 0 0;">
+          تسعيرة رسمية وثابتة لكافة أحياء وشوارع مدينة الرمادي والمناطق المجاورة.
+        </p>
       </div>
 
-      <!-- Delivery Address Form Card & Delivery FAQ -->
-      <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
-        
-        <!-- Address & Order Details Form -->
-        <div class="form-card" style="border: 3px solid var(--xff-border-heavy); box-shadow: 6px 6px 0 var(--xff-coal); border-radius: 10px; padding: 2.25rem;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; border-bottom: 2px solid var(--xff-border-warm); padding-bottom: 1rem;">
-            <div>
-              <span class="chinese-seal" style="margin-bottom: 0.4rem;">ORDER DETAILS</span>
-              <h2 style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 900; color: var(--xff-coal);">
-                تحديد بيانات وعنوان التوصيل
-              </h2>
-            </div>
-            <i class="ph-bold ph-navigation-arrow" style="font-size: 2rem; color: var(--xff-red);"></i>
-          </div>
-
-          <form id="deliveryOrderForm" onsubmit="event.preventDefault(); window.XFF_UI.showToast('تم حفظ تفاصيل التوصيل! يرجى اختيار الأصناف من القائمة.'); setTimeout(function(){ window.location.href='menu.html'; }, 1000);">
-            <div style="display: grid; grid-template-columns: 1fr; gap: 1.25rem;">
-              
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem;">
-                <div class="form-group">
-                  <label class="form-label" for="delName">الاسم الكامل *</label>
-                  <input type="text" id="delName" class="form-input" placeholder="مثال: محمد العمري" required>
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="delPhone">رقم الجوال لتتبع الطلب *</label>
-                  <input type="tel" id="delPhone" class="form-input" placeholder="05xxxxxxxx" required>
-                </div>
-              </div>
-
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem;">
-                <div class="form-group">
-                  <label class="form-label" for="delCity">المدينة والمنطقة *</label>
-                  <input type="text" id="delCity" class="form-input" placeholder="مثال: الرياض - حي الملقا" required>
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="delStreet">الشارع ورقم المبنى *</label>
-                  <input type="text" id="delStreet" class="form-input" placeholder="شارع الأمير محمد بن سلمان، عمارة 12" required>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="delNotes">ملاحظات إضافية للمندوب (اختياري)</label>
-                <textarea id="delNotes" class="form-textarea" rows="3" placeholder="مثال: يرجى ترك الطلب عند الباب / فصل الصلصة عن النودلز / الاتصال عند الوصول"></textarea>
-              </div>
-
-              <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1rem; padding-top: 1.25rem; border-top: 1px dashed #e2e8f0;">
-                <div>
-                  <span style="font-family: var(--font-display); font-size: 0.92rem; font-weight: 800; color: #475569;">
-                    📍 التوصيل متاح الآن لجميع الأحياء المغطاة
-                  </span>
-                </div>
-                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                  <button type="submit" class="btn-xff-primary" style="font-size: 1.05rem; padding: 0.75rem 1.75rem;">
-                    تأكيد والانتقال للقائمة للطلب <i class="ph-bold ph-arrow-left"></i>
-                  </button>
-                  <a href="menu.html" class="btn-xff-secondary" style="font-size: 1.05rem; padding: 0.75rem 1.5rem;">
-                    عرض المنيو مباشرة
-                  </a>
-                </div>
-              </div>
-
-            </div>
-          </form>
-        </div>
-
+      <!-- Quick Search Bar -->
+      <div class="search-input-wrap" style="position: relative; width: 100%;">
+        <input type="text" id="destinationSearch" class="search-input" placeholder="ابحث عن منطقتك أو شارعك (مثال: حي الملعب، شارع 60، جويبة...)" aria-label="البحث عن الوجهة" style="background-color: #ffffff; border: 2px solid var(--xff-border-heavy); border-radius: 8px; padding: 0.75rem 2.75rem 0.75rem 1rem; width: 100%; font-size: 0.98rem; box-shadow: 2px 2px 0px rgba(0,0,0,0.06);">
+        <i class="ph ph-magnifying-glass search-icon" style="position: absolute; right: 0.9rem; top: 50%; transform: translateY(-50%); font-size: 1.25rem; color: #94a3b8; pointer-events: none;"></i>
       </div>
-
     </div>
+
+    <!-- Table Container -->
+    <div class="delivery-table-container" style="background-color: #ffffff; border: 2px solid var(--xff-border-heavy); border-radius: 10px; box-shadow: 4px 4px 0px rgba(20, 20, 20, 0.08); overflow: hidden; margin-bottom: 2.25rem;">
+      <table class="delivery-pricing-table" style="width: 100%; border-collapse: collapse; text-align: right;">
+        <thead>
+          <tr style="background-color: var(--xff-coal); color: #ffffff; border-bottom: 2px solid var(--xff-coal);">
+            <th scope="col" style="padding: 1.05rem 1.35rem; font-family: var(--font-display); font-size: 1.1rem; font-weight: 900; letter-spacing: 0.04em;">
+              Destination <span style="font-size: 0.82rem; font-weight: 700; opacity: 0.85; margin-right: 0.35rem;">(الوجهة)</span>
+            </th>
+            <th scope="col" style="padding: 1.05rem 1.35rem; font-family: var(--font-display); font-size: 1.1rem; font-weight: 900; letter-spacing: 0.04em; text-align: left;">
+              Delivery Price <span style="font-size: 0.82rem; font-weight: 700; opacity: 0.85; margin-right: 0.35rem;">(سعر التوصيل)</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody id="deliveryTableBody">
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #ffffff; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">جويبة</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">7,000 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #fafaf9; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">حي الضباط</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">2,000 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #ffffff; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">حي الاندلس</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">2,000 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #fafaf9; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">حي العادل</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">2,000 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #ffffff; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">شارع المستودع</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">2,000 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #fafaf9; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">شارع المعارض</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">2,000 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #ffffff; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">شارع الاعلام</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">2,000 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #fafaf9; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">شارع 30</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">2,000 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #ffffff; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">شارع 20</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">2,000 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #fafaf9; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">حي الملعب</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">2,000 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #ffffff; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">حي الجمهوري</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">2,000 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #fafaf9; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">الزراعة</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">3,000 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #ffffff; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">الخالدية</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">10,000 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #fafaf9; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">الخمسة كيلو</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">4,000 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #ffffff; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">الستة كيلو</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">4,500 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #fafaf9; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">السبعة كيلو</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">5,000 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #ffffff; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">الصوفية</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">3,500 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #fafaf9; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">شارع 40</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">4,000 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #ffffff; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">التأميم</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">3,000 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #fafaf9; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">السجارية</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">5,000 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #ffffff; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">حصيبة الشرقية</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">8,000 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #fafaf9; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">السدة</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">2,500 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #ffffff; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">الثيلة</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">2,000 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #fafaf9; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">حي الشركة</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">2,000 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #ffffff; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">شارع 17</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">2,000 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #fafaf9; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">شارع عمر</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">2,000 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #ffffff; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">شارع 60 قبل الجسر</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">2,000 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #fafaf9; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">شارع 60 بعد الجسر</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">2,500 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #ffffff; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">شارع 60 مقابل زراعة</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">2,500 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+          <tr class="destination-row" style="border-bottom: 1px solid #eef2f6; background-color: #fafaf9; transition: background-color 0.15s ease;">
+            <td style="padding: 0.9rem 1.35rem; font-weight: 800; color: var(--xff-coal); font-size: 1rem;"><span class="dest-name">الورار</span></td>
+            <td style="padding: 0.9rem 1.35rem; text-align: left; font-family: var(--font-mono); font-weight: 900; color: var(--xff-red); font-size: 1.08rem;">2,500 <small style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 800; color: #64748b;">د.ع</small></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- No Results Message -->
+      <div id="noDestinationFound" style="display: none; padding: 2.5rem 1rem; text-align: center; color: #64748b;">
+        <i class="ph ph-map-pin-line" style="font-size: 2.2rem; color: var(--xff-red); margin-bottom: 0.5rem; display: block;"></i>
+        <div style="font-weight: 800; font-size: 1.05rem; color: var(--xff-coal); margin-bottom: 0.25rem;">لم يتم العثور على الوجهة المدخلة</div>
+        <div style="font-size: 0.88rem;">يرجى التحقق من الاسم أو الاتصال مباشرة بالفرع لتحديد سعر التوصيل لعنوانك.</div>
+      </div>
+    </div>
+
+    <!-- Direct Order & Call Action Card -->
+    <div style="background-color: #ffffff; border: 2px solid var(--xff-border-heavy); border-radius: 10px; padding: 1.75rem 1.5rem; box-shadow: 4px 4px 0px rgba(0,0,0,0.06); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.25rem;">
+      <div>
+        <div style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 900; color: var(--xff-coal); margin-bottom: 0.25rem;">
+          جاهز لتثبيت طلبك الآن؟
+        </div>
+        <p style="font-size: 0.9rem; color: #64748b; margin: 0;">
+          تواصل مباشرة مع خدمة التوصيل في كودو كودو الرمادي عبر واتساب أو الهاتف.
+        </p>
+      </div>
+
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+        <a href="https://api.whatsapp.com/send/?phone=+9647839944994" target="_blank" rel="noopener noreferrer" class="btn-xff-primary" style="font-size: 0.95rem; padding: 0.65rem 1.35rem; min-height: 44px; display: inline-flex; align-items: center; gap: 0.45rem; background-color: #25D366; border-color: #128C7E; color: #ffffff;">
+          <i class="ph-bold ph-whatsapp-logo" style="font-size: 1.2rem;"></i> اطلب عبر واتساب
+        </a>
+        <a href="tel:+9647839944994" class="btn-xff-secondary" style="font-size: 0.95rem; padding: 0.65rem 1.35rem; min-height: 44px; display: inline-flex; align-items: center; gap: 0.45rem;">
+          <i class="ph-bold ph-phone" style="font-size: 1.1rem;"></i> +964 783 994 4994
+        </a>
+        <a href="menu.html" class="btn-xff-secondary" style="font-size: 0.95rem; padding: 0.65rem 1.2rem; min-height: 44px; display: inline-flex; align-items: center; gap: 0.45rem;">
+          <i class="ph-bold ph-bowl-food" style="font-size: 1.1rem;"></i> قائمة الطعام
+        </a>
+      </div>
+    </div>
+
   </main>
+
+  <script>
+    // Live Search Filter for Delivery Destinations
+    document.addEventListener("DOMContentLoaded", function() {
+      const searchInput = document.getElementById("destinationSearch");
+      const tableBody = document.getElementById("deliveryTableBody");
+      const noResults = document.getElementById("noDestinationFound");
+      if (!searchInput || !tableBody) return;
+
+      searchInput.addEventListener("input", function() {
+        const query = this.value.trim().toLowerCase();
+        const rows = tableBody.querySelectorAll(".destination-row");
+        let visibleCount = 0;
+
+        rows.forEach(function(row) {
+          const nameEl = row.querySelector(".dest-name");
+          const text = nameEl ? nameEl.textContent.toLowerCase() : "";
+          if (!query || text.includes(query)) {
+            row.style.display = "";
+            visibleCount++;
+          } else {
+            row.style.display = "none";
+          }
+        });
+
+        if (noResults) {
+          noResults.style.display = visibleCount === 0 ? "block" : "none";
+        }
+      });
+    });
+  </script>
 
   <!-- Global Footer -->
   <footer class="xff-footer">
@@ -247,8 +342,19 @@
             </div>
           </div>
           <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.7; margin-bottom: 1.25rem;">
-            المطعم الصيني التراثي الأول المتخصص في نودلز بيانغ بيانغ المسحوبة يدوياً وفطائر روجيامو المقرمشة بخلطات التوابل الأصلية من مدينة شيآن بمقاطعة شنشي.
+            مطعم كودو كودو الرمادي - بناية فود كورت. الوجهة الأولى لوجبات الدجاج المقرمش، البرغر الفاخر، سندويشات الراب الشهية، وأطباق الريزو بتتبيلاتنا الحصرية.
           </p>
+          <div style="display: flex; gap: 0.75rem;">
+            <a href="https://www.instagram.com/ramadi.kudo" target="_blank" rel="noopener noreferrer" class="touch-target" aria-label="Instagram" style="width: 36px; height: 36px; min-width: 36px; min-height: 36px; border-radius: 4px; background-color: #262626; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">
+              <i class="ph-bold ph-instagram-logo"></i>
+            </a>
+            <a href="https://www.facebook.com/share/1JRNwRMSq3/?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer" class="touch-target" aria-label="Facebook" style="width: 36px; height: 36px; min-width: 36px; min-height: 36px; border-radius: 4px; background-color: #262626; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">
+              <i class="ph-bold ph-facebook-logo"></i>
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=+9647839944994" target="_blank" rel="noopener noreferrer" class="touch-target" aria-label="WhatsApp" style="width: 36px; height: 36px; min-width: 36px; min-height: 36px; border-radius: 4px; background-color: #262626; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">
+              <i class="ph-bold ph-whatsapp-logo"></i>
+            </a>
+          </div>
         </div>
 
         <div>
@@ -257,28 +363,17 @@
             <li><a href="index.html" class="footer-link">الصفحة الرئيسية</a></li>
             <li><a href="menu.html" class="footer-link">قائمة الطعام الكاملة</a></li>
             <li><a href="delivery.html" class="footer-link">خدمة وتفاصيل التوصيل</a></li>
-            <li><a href="contact.html" class="footer-link">التواصل والتموين</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="footer-title">رموز الأصناف</div>
-          <ul class="footer-links">
-            <li><a href="menu.html" class="footer-link">[ N ] نودلز مسحوبة يدوياً</a></li>
-            <li><a href="menu.html" class="footer-link">[ B ] برجر وفطائر روجيامو</a></li>
-            <li><a href="menu.html" class="footer-link">[ A ] ليانغ بي والمقبلات</a></li>
-            <li><a href="menu.html" class="footer-link">[ F ] زلابية وشوربات حارة</a></li>
           </ul>
         </div>
 
         <div>
           <div class="footer-title">المقر الرئيسي</div>
           <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.6; margin-bottom: 0.75rem;">
-            الانبار - الرمادي - شارع الاسكان القديمة<br>
-            هاتف: +1 (212) 786-2068
+            الأنبار - الرمادي - بناية فود كورت - شارع المستودع<br>
+            هاتف / واتساب: +964 783 994 4994
           </p>
           <p style="font-size: 0.82rem; color: #a3a3a3;">
-            ساعات العمل: 11:00 AM – 9:00 PM يومياً
+            ساعات العمل: 11:00 AM – 2:00 AM يومياً
           </p>
         </div>
       </div>

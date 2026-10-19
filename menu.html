@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="KUDO KUDO - قائمة الطعام الكاملة للنودلز المسحوبة يدوياً وفطائر روجيامو">
+  <meta name="description" content="KUDO KUDO - قائمة الطعام الكاملة للنودلز وفطائر روجيامو">
   <meta name="theme-color" content="#ba121a">
   <title>KUDO KUDO | قائمة الطعام الكاملة</title>
 
@@ -28,73 +28,16 @@
   <link rel="stylesheet" href="./css/pages.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
-<body style="padding-bottom: calc(95px + var(--sab));">
+<body style="padding-bottom: calc(95px + var(--sab)); background-color: #ffffff;">
 
-  <!-- Global Header Navigation -->
-  <header class="xff-header">
-    <div class="container xff-nav-container">
-      <a href="index.html" class="xff-logo-link">
-        <span class="chinese-seal" style="font-family: var(--font-display); font-size: 0.85rem; font-weight: 900;">KUDO</span>
-        <div>
-          <div class="xff-logo-title">KUDO KUDO</div>
-          <div class="xff-logo-sub">قائمة الطعام الرقمية • طلبات الطاولة #14</div>
-        </div>
-      </a>
-
-      <!-- Desktop Navigation Links -->
-      <nav class="xff-desktop-nav" aria-label="القائمة الرئيسية">
-        <a href="index.html" class="nav-link">الرئيسية</a>
-        <a href="menu.html" class="nav-link active">قائمة الطعام</a>
-        <a href="delivery.html" class="nav-link">خدمة التوصيل</a>
-        <a href="contact.html" class="nav-link">التواصل والتموين</a>
-      </nav>
-
-      <!-- Mobile Hamburger Button -->
-      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="فتح القائمة">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
-    </div>
-
-    <!-- Search Input Bar inside Header -->
-    <div class="container" style="padding-bottom: 0.75rem;">
-      <div class="search-input-wrap">
-        <i class="ph-bold ph-magnifying-glass search-icon"></i>
-        <input type="search" id="searchInput" class="search-input" placeholder="ابحث برمز الصنف (N1, B2) أو اسم الوجبة... Search by SKU or name" autocomplete="off">
-      </div>
-    </div>
-
-    <!-- Sticky Category Chips Bar -->
-    <nav class="category-nav-wrap" aria-label="أقسام القائمة" style="overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch;">
-      <div class="container no-scrollbar" style="display: flex; gap: 0.5rem; padding-top: 0.65rem; padding-bottom: 0.65rem; overflow-x: auto;">
-        <button class="category-tab active" data-category="all">
-          <i class="ph-bold ph-squares-four"></i> [ ALL ] الكل
-        </button>
-        <button class="category-tab" data-category="noodles">
-          <i class="ph-bold ph-bowl-food"></i> [ N ] نودلز مسحوبة
-        </button>
-        <button class="category-tab" data-category="burgers">
-          <i class="ph-bold ph-hamburger"></i> [ B ] برجر روجيامو
-        </button>
-        <button class="category-tab" data-category="liangpi">
-          <i class="ph-bold ph-fork-knife"></i> [ A ] ليانغ بي ومقبلات
-        </button>
-        <button class="category-tab" data-category="dumplings">
-          <i class="ph-bold ph-cooking-pot"></i> [ F ] زلابية وشوربة
-        </button>
-        <button class="category-tab" data-category="drinks">
-          <i class="ph-bold ph-brandy"></i> [ D ] مشروبات الشاي
-        </button>
-      </div>
-    </nav>
-  </header>
 
   <!-- Mobile Drawer Menu -->
   <div class="mobile-drawer" id="mobileDrawer">
     <div class="mobile-drawer-content">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; border-bottom: 2px solid var(--xff-border-heavy); padding-bottom: 1rem;">
-        <span class="chinese-seal" style="font-family: var(--font-display); font-size: 0.85rem; font-weight: 900;">KUDO</span>
+        <a href="index.html" style="display: inline-flex; align-items: center; text-decoration: none;">
+          <img src="./public/images/small-logo.webp" alt="KUDO KUDO" style="height: 52px; width: auto; max-width: 140px; object-fit: contain; display: block;" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='./images/small-logo.webp';}else if(this.dataset.tried==1){this.dataset.tried=2;this.src='public/images/small-logo.webp';}" />
+        </a>
         <button id="closeMobileDrawer" class="touch-target" aria-label="إغلاق" style="font-size: 1.4rem; color: var(--xff-coal);">
           <i class="ph-bold ph-x"></i>
         </button>
@@ -104,78 +47,117 @@
         <a href="index.html" class="mobile-nav-link">الرئيسية <i class="ph-bold ph-caret-left"></i></a>
         <a href="menu.html" class="mobile-nav-link active">قائمة الطعام <i class="ph-bold ph-caret-left"></i></a>
         <a href="delivery.html" class="mobile-nav-link">خدمة التوصيل <i class="ph-bold ph-caret-left"></i></a>
-        <a href="contact.html" class="mobile-nav-link">التواصل والتموين <i class="ph-bold ph-caret-left"></i></a>
       </nav>
     </div>
   </div>
 
-  <!-- Main Menu Items Container -->
-  <main class="container" style="padding-top: 1.5rem;">
+  <!-- ==========================================
+       FIRST SECTION: Red Background Hero Header
+       Contains: Top Bar with small-logo.png & side menu button, Search Bar, Categories, Wavy bottom border
+       ========================================== -->
+  <section class="menu-hero-section" style="background-color: var(--xff-red); color: #ffffff; padding: calc(1.25rem + var(--sat, 0px)) 1.25rem 0.5rem 1.25rem; position: relative;">
+    <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0;">
+      
+      <!-- Top Bar: Sidebar menu button (left), Large Centered Logo (center), Cart button (right) -->
+      <div class="menu-top-bar" style="display: flex; align-items: center; justify-content: space-between; gap: 0.85rem; padding-bottom: 1.15rem; direction: ltr;">
+        
+        <!-- Left: Side Menu Button (Apple HIG 44pt touch target) -->
+        <button type="button" class="mobile-menu-toggle kudo-raw-hamburger touch-target" id="mobileMenuToggle" aria-label="القائمة" style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4.5px; background: transparent; border: none; cursor: pointer; min-width: 44px; min-height: 44px; padding: 10px 8px; box-shadow: none; flex-shrink: 0; margin: 0; -webkit-tap-highlight-color: transparent;">
+          <span style="display: block; width: 24px; height: 2.5px; background-color: #ffffff; border-radius: 2px; box-shadow: 0 1px 2px rgba(0,0,0,0.35);"></span>
+          <span style="display: block; width: 24px; height: 2.5px; background-color: #ffffff; border-radius: 2px; box-shadow: 0 1px 2px rgba(0,0,0,0.35);"></span>
+          <span style="display: block; width: 24px; height: 2.5px; background-color: #ffffff; border-radius: 2px; box-shadow: 0 1px 2px rgba(0,0,0,0.35);"></span>
+        </button>
+
+        <!-- Center: Large Logo (Placed directly in the center instead of the lines) -->
+        <a href="index.html" class="menu-logo-link" style="display: flex; align-items: center; justify-content: center; text-decoration: none; flex: 1; margin: 0 auto;">
+          <img src="./images/small-logo.png" 
+               alt="KUDO KUDO" 
+               class="menu-header-logo" 
+               style="height: clamp(80px, 18vw, 125px); width: auto; max-height: 135px; object-fit: contain; display: block; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.45));"
+               onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='./public/images/small-logo.png';}else if(this.dataset.tried==1){this.dataset.tried=2;this.src='./public/images/small-logo.webp';}else if(this.dataset.tried==2){this.dataset.tried=3;this.src='small-logo.png';}">
+        </a>
+
+        <!-- Right: Cart Shortcut Button (Apple HIG 44pt touch target) -->
+        <button type="button" id="openCartBtn" class="touch-target" aria-label="سلة الطلبات" style="background: transparent; border: none; color: #ffffff; font-size: 1.55rem; cursor: pointer; min-width: 44px; min-height: 44px; padding: 8px; display: inline-flex; align-items: center; justify-content: center; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3)); flex-shrink: 0; -webkit-tap-highlight-color: transparent;">
+          <i class="ph-bold ph-shopping-bag"></i>
+        </button>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="menu-search-wrap" style="width: 100%; padding-bottom: 1.25rem;">
+        <div class="search-input-wrap" style="position: relative; width: 100%;">
+          <i class="ph-bold ph-magnifying-glass search-icon" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); color: var(--xff-coal); font-size: 1.25rem; pointer-events: none; z-index: 2;"></i>
+          <input type="search" id="searchInput" class="search-input" placeholder="ابحث عن وجبة أو مشروب..." autocomplete="off" style="width: 100%; padding: 0.85rem 3rem 0.85rem 1rem; border-radius: 8px; border: 2px solid var(--xff-coal); background-color: #ffffff; color: var(--xff-coal); font-family: var(--font-body); font-size: 0.98rem; font-weight: 600; box-shadow: 3px 3px 0px var(--xff-coal); outline: none;">
+        </div>
+      </div>
+
+      <!-- Food Categories Chips (Clean names without letters) -->
+      <nav class="category-nav-wrap" aria-label="أقسام القائمة" style="overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; padding-bottom: 1.25rem; background: transparent; border-bottom: none; position: static;">
+        <div class="no-scrollbar" style="display: flex; gap: 0.65rem; overflow-x: auto; padding-bottom: 0.25rem;">
+          <button class="category-tab active" data-category="all">
+            <i class="ph-bold ph-squares-four"></i> الكل
+          </button>
+          <button class="category-tab" data-category="chicken">
+            <i class="ph-bold ph-bowl-food"></i> وجبات الدجاج
+          </button>
+          <button class="category-tab" data-category="tenders">
+            <i class="ph-bold ph-fire"></i> وجبات التندر
+          </button>
+          <button class="category-tab" data-category="burgers">
+            <i class="ph-bold ph-hamburger"></i> البرغر
+          </button>
+          <button class="category-tab" data-category="sandwiches">
+            <i class="ph-bold ph-sandwich"></i> السندويشات
+          </button>
+          <button class="category-tab" data-category="wraps">
+            <i class="ph-bold ph-arrows-clockwise"></i> سندويشات راب
+          </button>
+          <button class="category-tab" data-category="wings">
+            <i class="ph-bold ph-flame"></i> وجبات أجنحة
+          </button>
+          <button class="category-tab" data-category="boxes">
+            <i class="ph-bold ph-package"></i> البوكسات
+          </button>
+          <button class="category-tab" data-category="rizo">
+            <i class="ph-bold ph-cooking-pot"></i> الريزو
+          </button>
+          <button class="category-tab" data-category="sides">
+            <i class="ph-bold ph-sparkle"></i> أطباق إضافية
+          </button>
+          <button class="category-tab" data-category="kids">
+            <i class="ph-bold ph-baby"></i> وجبات الأطفال
+          </button>
+          <button class="category-tab" data-category="drinks">
+            <i class="ph-bold ph-brandy"></i> المشروبات
+          </button>
+          <button class="category-tab" data-category="sauces">
+            <i class="ph-bold ph-drop"></i> صوصات
+          </button>
+        </div>
+      </nav>
+
+    </div>
+  </section>
+
+  <!-- Wavy Border Transition (Bottom of Red Section, same as homepage) -->
+  <div class="pattern-container is-red-bottom" style="height: 36px; background-color: #ffffff; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 36' width='50' height='36' shape-rendering='geometricPrecision'%3E%3Crect width='50' height='36' fill='%23ffffff'/%3E%3Cpath d='M0 0 H50 V7 Q37.5 13 25 7 T0 7 Z' fill='%23ba121a'/%3E%3Cpath d='M-25 15 Q-12.5 21 0 15 T25 15 T50 15 T75 15' fill='none' stroke='%23ba121a' stroke-width='4'/%3E%3Cpath d='M-25 23 Q-12.5 29 0 23 T25 23 T50 23 T75 23' fill='none' stroke='%23ba121a' stroke-width='4'/%3E%3C/svg%3E&quot;); background-position: 0 0; background-repeat: repeat-x; background-size: 50px 36px; margin-top: -1px; margin-bottom: 0; transform: none;"></div>
+
+  <!-- Main Menu Items Single Flow (Full Width Alternating White & Black Bands with Wavy Lines) -->
+  <main class="menu-main-content" style="background-color: #ffffff; padding: 0; min-height: 50vh; width: 100%;">
 
     <!-- Search Empty Notice -->
-    <div id="noResults" style="display: none; text-align: center; padding: 3rem 1rem;">
+    <div id="noResults" style="display: none; text-align: center; padding: 4rem 1.25rem;">
       <i class="ph ph-magnifying-glass" style="font-size: 3.5rem; color: var(--xff-muted); display: block; margin-bottom: 0.5rem;"></i>
       <h3 style="font-family: var(--font-display); font-size: 1.35rem; color: var(--xff-coal); text-transform: uppercase;">لا توجد وجبات تطابق بحثك</h3>
-      <p style="font-size: 0.88rem; color: var(--xff-muted); margin-top: 0.25rem;">جرب كتابة رمز الصنف مثل (N1 أو B2) أو اسم الوجبة</p>
+      <p style="font-size: 0.88rem; color: var(--xff-muted); margin-top: 0.25rem;">جرب كتابة اسم الوجبة أو المشروب</p>
     </div>
 
-    <!-- Menu Sections -->
-    <div id="menuContainer" style="display: flex; flex-direction: column; gap: 2rem;">
-      
-      <!-- Noodles Section -->
-      <section class="menu-section" id="section-noodles" data-category-section="noodles">
-        <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.85rem; border-bottom: 2px solid var(--xff-border-heavy); padding-bottom: 0.4rem;">
-          <h2 style="font-family: var(--font-display); font-size: 1.45rem; font-weight: 900; text-transform: uppercase; display: flex; align-items: center; gap: 0.5rem;">
-            <span style="color: var(--xff-red);">[ N ]</span> نودلز مسحوبة يدوياً • Hand-Ripped Biang-Biang
-          </h2>
-        </div>
-        <div class="menu-grid" style="display: flex; flex-direction: column; gap: 0.85rem;"></div>
-      </section>
-
-      <!-- Burgers Section -->
-      <section class="menu-section" id="section-burgers" data-category-section="burgers">
-        <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.85rem; border-bottom: 2px solid var(--xff-border-heavy); padding-bottom: 0.4rem;">
-          <h2 style="font-family: var(--font-display); font-size: 1.45rem; font-weight: 900; text-transform: uppercase; display: flex; align-items: center; gap: 0.5rem;">
-            <span style="color: var(--xff-red);">[ B ]</span> برجر شيآن وفطائر روجيامو • Roujiamo Burgers
-          </h2>
-        </div>
-        <div class="menu-grid" style="display: flex; flex-direction: column; gap: 0.85rem;"></div>
-      </section>
-
-      <!-- Liang Pi Section -->
-      <section class="menu-section" id="section-liangpi" data-category-section="liangpi">
-        <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.85rem; border-bottom: 2px solid var(--xff-border-heavy); padding-bottom: 0.4rem;">
-          <h2 style="font-family: var(--font-display); font-size: 1.45rem; font-weight: 900; text-transform: uppercase; display: flex; align-items: center; gap: 0.5rem;">
-            <span style="color: var(--xff-red);">[ A ]</span> ليانغ بي والمقبلات الباردة • Cold-Skin & Appetizers
-          </h2>
-        </div>
-        <div class="menu-grid" style="display: flex; flex-direction: column; gap: 0.85rem;"></div>
-      </section>
-
-      <!-- Dumplings Section -->
-      <section class="menu-section" id="section-dumplings" data-category-section="dumplings">
-        <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.85rem; border-bottom: 2px solid var(--xff-border-heavy); padding-bottom: 0.4rem;">
-          <h2 style="font-family: var(--font-display); font-size: 1.45rem; font-weight: 900; text-transform: uppercase; display: flex; align-items: center; gap: 0.5rem;">
-            <span style="color: var(--xff-red);">[ F ]</span> زلابية وشوربات حامضة وحارة • Dumplings & Soups
-          </h2>
-        </div>
-        <div class="menu-grid" style="display: flex; flex-direction: column; gap: 0.85rem;"></div>
-      </section>
-
-      <!-- Drinks Section -->
-      <section class="menu-section" id="section-drinks" data-category-section="drinks">
-        <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.85rem; border-bottom: 2px solid var(--xff-border-heavy); padding-bottom: 0.4rem;">
-          <h2 style="font-family: var(--font-display); font-size: 1.45rem; font-weight: 900; text-transform: uppercase; display: flex; align-items: center; gap: 0.5rem;">
-            <span style="color: var(--xff-red);">[ D ]</span> مشروبات الشاي والباشن • Teas & Refreshers
-          </h2>
-        </div>
-        <div class="menu-grid" style="display: flex; flex-direction: column; gap: 0.85rem;"></div>
-      </section>
-    </div>
+    <!-- Dishes Continuous Flow Container -->
+    <div id="menuContainer" class="menu-strips-flow" style="display: flex; flex-direction: column; width: 100%;"></div>
   </main>
 
   <!-- Wavy Black Border (Above Footer) -->
-  <div class="pattern-container wavy-black-top" style="margin-top: 4rem;"></div>
+  <div class="pattern-container wavy-black-top" style="margin-top: 0;"></div>
 
   <!-- Global Footer -->
   <footer class="xff-footer">
@@ -190,8 +172,19 @@
             </div>
           </div>
           <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.7; margin-bottom: 1.25rem;">
-            المطعم الصيني التراثي الأول المتخصص في نودلز بيانغ بيانغ المسحوبة يدوياً وفطائر روجيامو المقرمشة بخلطات التوابل الأصلية من مدينة شيآن بمقاطعة شنشي.
+            مطعم كودو كودو الرمادي - بناية فود كورت. الوجهة الأولى لوجبات الدجاج المقرمش، البرغر الفاخر، سندويشات الراب الشهية، وأطباق الريزو بتتبيلاتنا الحصرية.
           </p>
+          <div style="display: flex; gap: 0.75rem;">
+            <a href="https://www.instagram.com/ramadi.kudo" target="_blank" rel="noopener noreferrer" class="touch-target" aria-label="Instagram" style="width: 36px; height: 36px; min-width: 36px; min-height: 36px; border-radius: 4px; background-color: #262626; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">
+              <i class="ph-bold ph-instagram-logo"></i>
+            </a>
+            <a href="https://www.facebook.com/share/1JRNwRMSq3/?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer" class="touch-target" aria-label="Facebook" style="width: 36px; height: 36px; min-width: 36px; min-height: 36px; border-radius: 4px; background-color: #262626; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">
+              <i class="ph-bold ph-facebook-logo"></i>
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=+9647839944994" target="_blank" rel="noopener noreferrer" class="touch-target" aria-label="WhatsApp" style="width: 36px; height: 36px; min-width: 36px; min-height: 36px; border-radius: 4px; background-color: #262626; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">
+              <i class="ph-bold ph-whatsapp-logo"></i>
+            </a>
+          </div>
         </div>
 
         <!-- Quick Links -->
@@ -201,19 +194,6 @@
             <li><a href="index.html" class="footer-link">الصفحة الرئيسية</a></li>
             <li><a href="menu.html" class="footer-link">قائمة الطعام الكاملة</a></li>
             <li><a href="delivery.html" class="footer-link">خدمة وتفاصيل التوصيل</a></li>
-            <li><a href="contact.html" class="footer-link">التواصل والتموين</a></li>
-          </ul>
-        </div>
-
-        <!-- Series Codes -->
-        <div>
-          <div class="footer-title">رموز الأصناف</div>
-          <ul class="footer-links">
-            <li><a href="menu.html" class="footer-link">[ N ] نودلز مسحوبة يدوياً</a></li>
-            <li><a href="menu.html" class="footer-link">[ B ] برجر وفطائر روجيامو</a></li>
-            <li><a href="menu.html" class="footer-link">[ A ] ليانغ بي والمقبلات</a></li>
-            <li><a href="menu.html" class="footer-link">[ F ] زلابية وشوربات حارة</a></li>
-            <li><a href="menu.html" class="footer-link">[ D ] مشروبات الشاي والباشن</a></li>
           </ul>
         </div>
 
@@ -221,11 +201,11 @@
         <div>
           <div class="footer-title">المقر الرئيسي</div>
           <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.6; margin-bottom: 0.75rem;">
-            الانبار - الرمادي - شارع الاسكان القديمة<br>
-            هاتف: +1 (212) 786-2068
+            الأنبار - الرمادي - بناية فود كورت - شارع المستودع<br>
+            هاتف / واتساب: +964 783 994 4994
           </p>
           <p style="font-size: 0.82rem; color: #a3a3a3;">
-            ساعات العمل: 11:00 AM – 9:00 PM يومياً
+            ساعات العمل: 11:00 AM – 2:00 AM يومياً
           </p>
         </div>
       </div>
@@ -250,7 +230,7 @@
       </div>
       <div>
         <div style="font-family: var(--font-display); font-size: 0.85rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; color: #cbd5e1;">ORDER TOTAL • الإجمالي</div>
-        <div style="font-family: var(--font-mono); font-size: 1.2rem; font-weight: 900; color: #ffffff;"><span id="cartTotalPrice">0</span> ر.س</div>
+        <div style="font-family: var(--font-mono); font-size: 1.2rem; font-weight: 900; color: #ffffff;"><span id="cartTotalPrice">0</span> د.ع</div>
       </div>
     </div>
 
@@ -275,7 +255,7 @@
           <div id="modalItemEnTitle" style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 800; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em;">English Title</div>
         </div>
 
-        <button id="closeItemModalBtn" class="touch-target" aria-label="إغلاق" style="border-radius: 6px; background-color: #ffffff; border: 2px solid var(--xff-border-heavy); color: var(--xff-coal); font-size: 1.1rem; width: 36px; height: 36px; min-width: 36px; min-height: 36px; box-shadow: 2px 2px 0px var(--xff-border-heavy); cursor: pointer;">
+        <button id="closeItemModalBtn" class="touch-target" aria-label="إغلاق" style="border-radius: 6px; background-color: #ffffff; border: 2px solid var(--xff-border-heavy); color: var(--xff-coal); font-size: 1.1rem; width: 44px; height: 44px; min-width: 44px; min-height: 44px; box-shadow: 2px 2px 0px var(--xff-border-heavy); cursor: pointer; display: inline-flex; align-items: center; justify-content: center; -webkit-tap-highlight-color: transparent;">
           <i class="ph-bold ph-x"></i>
         </button>
       </div>
@@ -333,7 +313,7 @@
         <div>
           <div style="font-family: var(--font-display); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--xff-muted);">PRICE • السعر</div>
           <div style="font-family: var(--font-mono); font-size: 1.45rem; font-weight: 900; color: var(--xff-red);">
-            <span id="modalTotalCalculated">0</span> ر.س
+            <span id="modalTotalCalculated">0</span> د.ع
           </div>
         </div>
 
@@ -363,7 +343,7 @@
         <h2 id="cartModalTitle" style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 900; text-transform: uppercase; display: flex; align-items: center; gap: 0.5rem;">
           <span style="color: var(--xff-red);"><i class="ph-bold ph-shopping-bag-open"></i></span> YOUR ORDER • سلة الطلبات
         </h2>
-        <button id="closeCartModalBtn" class="touch-target" aria-label="إغلاق" style="border-radius: 6px; background-color: #ffffff; border: 2px solid var(--xff-border-heavy); color: var(--xff-coal); font-size: 1.1rem; width: 36px; height: 36px; min-width: 36px; min-height: 36px; box-shadow: 2px 2px 0px var(--xff-border-heavy); cursor: pointer;">
+        <button id="closeCartModalBtn" class="touch-target" aria-label="إغلاق" style="border-radius: 6px; background-color: #ffffff; border: 2px solid var(--xff-border-heavy); color: var(--xff-coal); font-size: 1.1rem; width: 44px; height: 44px; min-width: 44px; min-height: 44px; box-shadow: 2px 2px 0px var(--xff-border-heavy); cursor: pointer; display: inline-flex; align-items: center; justify-content: center; -webkit-tap-highlight-color: transparent;">
           <i class="ph-bold ph-x"></i>
         </button>
       </div>
@@ -375,15 +355,15 @@
       <div style="background-color: #ffffff; border-radius: 8px; padding: 1rem; border: 2px solid var(--xff-border-heavy); box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.08); margin-bottom: 1.25rem;">
         <div style="display: flex; justify-content: space-between; font-size: 0.88rem; color: #64748b; margin-bottom: 0.4rem;">
           <span>المجموع الفرعي (Subtotal):</span>
-          <span style="font-family: var(--font-mono); font-weight: 700;"><span id="cartSubtotal">0</span> ر.س</span>
+          <span style="font-family: var(--font-mono); font-weight: 700;"><span id="cartSubtotal">0</span> د.ع</span>
         </div>
         <div style="display: flex; justify-content: space-between; font-size: 0.88rem; color: #64748b; margin-bottom: 0.4rem;">
           <span>ضريبة القيمة المضافة (15% VAT):</span>
-          <span style="font-family: var(--font-mono); font-weight: 700;"><span id="cartTax">0</span> ر.س</span>
+          <span style="font-family: var(--font-mono); font-weight: 700;"><span id="cartTax">0</span> د.ع</span>
         </div>
         <div style="display: flex; justify-content: space-between; font-size: 1.15rem; font-weight: 900; color: var(--xff-coal); padding-top: 0.65rem; border-top: 2px dashed #e2e8f0;">
           <span style="font-family: var(--font-display); text-transform: uppercase;">FINAL TOTAL • الإجمالي:</span>
-          <span style="font-family: var(--font-mono); color: var(--xff-red);"><span id="cartFinalTotal">0</span> ر.س</span>
+          <span style="font-family: var(--font-mono); color: var(--xff-red);"><span id="cartFinalTotal">0</span> د.ع</span>
         </div>
       </div>
 

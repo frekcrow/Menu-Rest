@@ -33,6 +33,12 @@ window.XFF_MODAL = (function () {
     if (itemImage) {
       itemImage.src = item.image;
       itemImage.alt = item.englishName;
+      itemImage.onerror = function () {
+        if (!this.dataset.fallback && item.remoteImage) {
+          this.dataset.fallback = "1";
+          this.src = item.remoteImage;
+        }
+      };
     }
     if (itemSpice) itemSpice.textContent = item.spiceLevel;
     if (itemCalories) itemCalories.innerHTML = `<i class="ph ph-fire"></i> ${item.calories} kcal`;
@@ -61,7 +67,7 @@ window.XFF_MODAL = (function () {
     const totalDisplay = document.getElementById("modalTotalCalculated");
 
     if (qtyDisplay) qtyDisplay.textContent = modalQty;
-    if (totalDisplay) totalDisplay.textContent = (selectedItem.price * modalQty);
+    if (totalDisplay) totalDisplay.textContent = (selectedItem.price * modalQty).toLocaleString();
   }
 
   function initListeners() {
@@ -99,6 +105,11 @@ window.XFF_MODAL = (function () {
           if (selectedRadio.value === "extra") spiceText = "حار جداً بزيت الفلفل (Extra Hot)";
         }
 
+        // Apple HIG Haptic Confirmation
+        if (typeof navigator !== "undefined" && navigator.vibrate) {
+          try { navigator.vibrate(15); } catch (e) {}
+        }
+
         window.XFF_CART.addToCart(selectedItem, modalQty, spiceText, notes);
         closeItemModal();
         window.XFF_UI.showToast(`تمت إضافة [${selectedItem.sku}] إلى طلبك!`);
@@ -111,11 +122,61 @@ window.XFF_MODAL = (function () {
         if (e.target === modal) closeItemModal();
       });
     }
+
+    // Apple HIG Native Swipe-to-Dismiss Gesture
+    const sheetEl = document.getElementById("modalSheet");
+    if (sheetEl) setupSwipeToDismiss(sheetEl, closeItemModal);
+  }
+
+  function setupSwipeToDismiss(sheetEl, closeFn) {
+    if (!sheetEl || sheetEl.dataset.swipeBound) return;
+    sheetEl.dataset.swipeBound = "true";
+
+    let startY = 0;
+    let currentY = 0;
+    let isDragging = false;
+
+    sheetEl.addEventListener("touchstart", (e) => {
+      if (sheetEl.scrollTop > 5) return;
+      startY = e.touches[0].clientY;
+      currentY = startY;
+      isDragging = true;
+      sheetEl.style.transition = "none";
+    }, { passive: true });
+
+    sheetEl.addEventListener("touchmove", (e) => {
+      if (!isDragging) return;
+      const touchY = e.touches[0].clientY;
+      const deltaY = touchY - startY;
+      if (deltaY > 0) {
+        currentY = touchY;
+        sheetEl.style.transform = `translateY(${deltaY}px)`;
+      } else {
+        sheetEl.style.transform = "translateY(0)";
+      }
+    }, { passive: true });
+
+    sheetEl.addEventListener("touchend", () => {
+      if (!isDragging) return;
+      isDragging = false;
+      const deltaY = currentY - startY;
+      sheetEl.style.transition = "transform 0.28s cubic-bezier(0.16, 1, 0.3, 1)";
+      if (deltaY > 90) {
+        sheetEl.style.transform = "translateY(100%)";
+        setTimeout(() => {
+          closeFn();
+          sheetEl.style.transform = "";
+        }, 220);
+      } else {
+        sheetEl.style.transform = "translateY(0)";
+      }
+    });
   }
 
   return {
     open: openItemModal,
     close: closeItemModal,
-    init: initListeners
+    init: initListeners,
+    setupSwipeToDismiss
   };
 })();

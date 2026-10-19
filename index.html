@@ -64,7 +64,9 @@
   <div class="mobile-drawer" id="mobileDrawer">
     <div class="mobile-drawer-content">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; border-bottom: 2px solid var(--xff-border-heavy); padding-bottom: 1rem;">
-        <span class="chinese-seal" style="font-family: var(--font-display); font-size: 0.85rem; font-weight: 900;">KUDO</span>
+        <a href="index.html" style="display: inline-flex; align-items: center; text-decoration: none;">
+          <img src="./public/images/small-logo.webp" alt="KUDO KUDO" style="height: 52px; width: auto; max-width: 140px; object-fit: contain; display: block;" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='./images/small-logo.webp';}else if(this.dataset.tried==1){this.dataset.tried=2;this.src='public/images/small-logo.webp';}" />
+        </a>
         <button id="closeMobileDrawer" class="touch-target" aria-label="إغلاق" style="font-size: 1.4rem; color: var(--xff-coal);">
           <i class="ph-bold ph-x"></i>
         </button>
@@ -74,7 +76,6 @@
         <a href="index.html" class="mobile-nav-link active">الرئيسية <i class="ph-bold ph-caret-left"></i></a>
         <a href="menu.html" class="mobile-nav-link">قائمة الطعام <i class="ph-bold ph-caret-left"></i></a>
         <a href="delivery.html" class="mobile-nav-link">خدمة التوصيل <i class="ph-bold ph-caret-left"></i></a>
-        <a href="contact.html" class="mobile-nav-link">التواصل والتموين <i class="ph-bold ph-caret-left"></i></a>
       </nav>
 
       <div style="margin-top: auto; padding-top: 1.5rem; border-top: 2px solid var(--xff-border-warm);">
@@ -102,55 +103,47 @@
 
         <!-- Red Background Fade Overlay over Image -->
         <div class="hero-ad-banner-overlay" style="position: absolute; inset: 0; z-index: 2; pointer-events: none; background: linear-gradient(to bottom, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.1) 18%, rgba(186, 18, 26, 0) 32%, rgba(186, 18, 26, 0.45) 60%, rgba(186, 18, 26, 0.9) 85%, var(--xff-red) 100%);"></div>
-        <!-- TOP: Controls & Lines placed directly over the image (No white rectangle!) -->
-        <div class="hero-top-overlay" style="position: relative; z-index: 10; width: 100%; padding: 1rem 1.25rem 0 1.25rem;">
-          <!-- Single row: Hamburger (left), Middle Column with Two Lines & Large Logo (middle), (EN/AR) (right) -->
-          <div class="hero-controls-row" style="display: flex; align-items: flex-start; justify-content: space-between; gap: 0.85rem; width: 100%; max-width: 1200px; margin: 0 auto; direction: ltr;">
+        <!-- TOP: Controls & Lines placed directly over the image (Apple HIG Safe Area & Touch Targets) -->
+        <div class="hero-top-overlay" style="position: relative; z-index: 10; width: 100%; padding: calc(0.85rem + var(--sat, 0px)) 1.25rem 0 1.25rem; box-sizing: border-box;">
+          <!-- Top Row: Sidebar button (left), Straight Lines (center), Language button (right) - at the same level -->
+          <div class="hero-controls-row" style="display: flex; align-items: center; justify-content: space-between; gap: 0.85rem; width: 100%; max-width: 1200px; margin: 0 auto; direction: ltr; box-sizing: border-box;">
             
-            <!-- Left: Menu Button (Just 3 lines directly, NO surrounding box!) -->
-            <button type="button" class="mobile-menu-toggle kudo-raw-hamburger" id="mobileMenuToggle" aria-label="القائمة" style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px; background: transparent; border: none; cursor: pointer; padding: 4px 2px; box-shadow: none; flex-shrink: 0; margin-top: 3px;">
-              <span style="display: block; width: 22px; height: 2.5px; background-color: var(--xff-coal); border-radius: 2px; box-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);"></span>
-              <span style="display: block; width: 22px; height: 2.5px; background-color: var(--xff-coal); border-radius: 2px; box-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);"></span>
-              <span style="display: block; width: 22px; height: 2.5px; background-color: var(--xff-coal); border-radius: 2px; box-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);"></span>
+            <!-- Left: Menu / Sidebar Button (Apple HIG 44x44pt Target) -->
+            <button type="button" class="mobile-menu-toggle kudo-raw-hamburger touch-target" id="mobileMenuToggle" aria-label="القائمة" style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px; background: transparent; border: none; cursor: pointer; min-width: 44px; min-height: 44px; padding: 10px 8px; box-shadow: none; flex-shrink: 0; margin: 0; -webkit-tap-highlight-color: transparent;">
+              <span style="display: block; width: 24px; height: 2.5px; background-color: #ffffff; border-radius: 2px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);"></span>
+              <span style="display: block; width: 24px; height: 2.5px; background-color: #ffffff; border-radius: 2px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);"></span>
+              <span style="display: block; width: 24px; height: 2.5px; background-color: #ffffff; border-radius: 2px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);"></span>
             </button>
 
-            <!-- Middle: Two thin horizontal red lines AND directly under them the Logo! -->
-            <div class="hero-header-center" style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; margin-top: 8px;">
-              <!-- The Two Red Lines (at exact level of menu and lang buttons) -->
-              <div class="kudo-inline-red-lines kudo-inline-lines" style="width: 100%; max-width: 320px; display: flex; flex-direction: column; gap: 3px; justify-content: center; align-items: center;">
-                <div class="red-line line-top" style="width: 100%; height: 1px; background-color: var(--xff-red, #ba121a); box-shadow: 0 0.5px 1px rgba(255, 255, 255, 0.5);"></div>
-                <div class="red-line line-bottom" style="width: 60%; height: 1px; background-color: var(--xff-red, #ba121a); box-shadow: 0 0.5px 1px rgba(255, 255, 255, 0.5);"></div>
-              </div>
-
-              <!-- Directly Under the two lines: The Large Logo Image -->
-              <div class="hero-brand-title" style="text-align: center; width: 100%; margin-top: 0.65rem; display: flex; justify-content: center; align-items: center;">
-                <img src="./public/images/small-logo.png" 
-                     alt="KUDO KUDO" 
-                     class="hero-brand-logo" 
-                     style="height: clamp(125px, 25vw, 180px); width: auto; max-height: 195px; object-fit: contain; display: block; filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.5));"
-                     onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='small-logo.png';}else if(this.dataset.tried==1){this.dataset.tried=2;this.src='images/small-logo.png';}else if(this.dataset.tried==2){this.dataset.tried=3;this.src='./public/images/small-logo.webp';}else if(this.dataset.tried==3){this.dataset.tried=4;this.src='small-logo.webp';}" />
-              </div>
+            <!-- Middle: Two thin horizontal red lines (at exact level of menu and lang buttons) -->
+            <div class="kudo-inline-red-lines kudo-inline-lines" style="flex: 1; max-width: 320px; display: flex; flex-direction: column; gap: 3px; justify-content: center; align-items: center; margin: 0 auto;">
+              <div class="red-line line-top" style="width: 100%; height: 1px; background-color: var(--xff-red, #ba121a); box-shadow: 0 0.5px 1px rgba(255, 255, 255, 0.5);"></div>
+              <div class="red-line line-bottom" style="width: 80%; height: 1px; background-color: var(--xff-red, #ba121a); box-shadow: 0 0.5px 1px rgba(255, 255, 255, 0.5);"></div>
             </div>
 
-            <!-- Right: Language Button (Just (EN/AR), NO surrounding box!) -->
-            <button type="button" class="kudo-raw-lang-btn" id="langSwitchBtn" aria-label="تغيير اللغة (EN/AR)" onclick="if(window.XFF_UI&&window.XFF_UI.showToast){window.XFF_UI.showToast('English language version coming soon / النسخة الإنجليزية قادمة قريباً');}else{alert('English language version coming soon');}" style="font-family: var(--font-display), sans-serif; font-size: 0.95rem; font-weight: 900; color: var(--xff-coal); text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85); background: transparent; border: none; cursor: pointer; padding: 4px 2px; box-shadow: none; white-space: nowrap; flex-shrink: 0; letter-spacing: 0.05em; margin-top: 2px;">
+            <!-- Right: Language Button (Apple HIG 44x44pt Target & High Contrast) -->
+            <button type="button" class="kudo-raw-lang-btn touch-target" id="langSwitchBtn" aria-label="تغيير اللغة (EN/AR)" onclick="if(window.XFF_UI&&window.XFF_UI.showToast){window.XFF_UI.showToast('English language version coming soon / النسخة الإنجليزية قادمة قريباً');}else{alert('English language version coming soon');}" style="font-family: var(--font-display), sans-serif; font-size: 0.95rem; font-weight: 900; color: #ffffff; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55); background: transparent; border: none; cursor: pointer; min-width: 44px; min-height: 44px; padding: 10px 8px; display: inline-flex; align-items: center; justify-content: center; box-shadow: none; white-space: nowrap; flex-shrink: 0; letter-spacing: 0.05em; margin: 0; line-height: 1; -webkit-tap-highlight-color: transparent;">
               (EN/AR)
             </button>
           </div>
+
+          <!-- Below the straight lines in the middle: Small Logo Image slightly raised -->
+          <div class="hero-brand-title" style="text-align: center; width: 100%; margin-top: 0.15rem; display: flex; justify-content: center; align-items: center;">
+            <img src="./public/images/small-logo.webp" 
+                 alt="KUDO KUDO" 
+                 class="hero-brand-logo" 
+                 style="height: clamp(125px, 25vw, 180px); width: auto; max-height: 195px; object-fit: contain; display: block; filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.5));"
+                 onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='/public/images/small-logo.webp';}else if(this.dataset.tried==1){this.dataset.tried=2;this.src='public/images/small-logo.webp';}else if(this.dataset.tried==2){this.dataset.tried=3;this.src='small-logo.webp';}else if(this.dataset.tried==3){this.dataset.tried=4;this.src='./public/images/small-logo.png';}" />
+          </div>
         </div>
-        <!-- BOTTOM: Overlaid Heading & CTA Buttons above the image -->
-        <div class="hero-ad-banner-content" style="position: relative; z-index: 10; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem 1.75rem 1.5rem; display: flex; flex-direction: column; align-items: flex-start; text-align: right; direction: rtl;">
-          <!-- Right-aligned Heading with Ping-Bold font -->
-          <h1 class="hero-slogan-heading" style="font-family: 'Ping-Bold', 'Ping', var(--font-display), sans-serif; font-size: clamp(1.6rem, 4.5vw, 2.35rem); font-weight: 900; color: #ffffff; text-align: right; text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95), 0 4px 16px rgba(0, 0, 0, 0.8); margin-bottom: 0.85rem; line-height: 1.2; width: 100%; direction: rtl;">
-             قرمشة من عالم آخر
-في كل مكان معك
-          </h1>
-          <div class="hero-ctas" style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-items: center; gap: 0.75rem; width: auto;">
-            <a href="menu.html" class="btn-xff-secondary hero-btn-compact" style="font-size: 0.92rem; padding: 0.55rem 1.15rem; white-space: nowrap; box-shadow: 0 4px 14px rgba(0,0,0,0.35);">
-              <i class="ph-bold ph-bowl-food"></i> استعرض قائمة الوجبات
+        <!-- BOTTOM: Overlaid CTA Buttons above the image (Centered with Normal Size & Safe Margins) -->
+        <div class="hero-ad-banner-content" style="position: relative; z-index: 10; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.25rem 1.75rem 1.25rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; direction: rtl; box-sizing: border-box;">
+          <div class="hero-ctas" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.85rem; width: auto; max-width: 100%; box-sizing: border-box;">
+            <a href="menu.html" class="btn-xff-secondary" style="font-size: 1.05rem; font-weight: 800; padding: 0.65rem 1.35rem; min-height: 44px; white-space: nowrap; border-radius: 6px; border: 2px solid var(--xff-border-heavy); box-shadow: 3px 3px 0 var(--xff-border-heavy), 0 4px 14px rgba(0,0,0,0.35); text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;">
+              <i class="ph-bold ph-bowl-food"></i> قائمة الطعام
             </a>
-            <a href="contact.html" class="btn-xff-secondary hero-btn-compact" style="font-size: 0.92rem; padding: 0.55rem 1.15rem; background-color: rgba(0, 0, 0, 0.35); color: #ffffff; border-color: #ffffff; white-space: nowrap; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); box-shadow: 0 4px 14px rgba(0,0,0,0.25);">
-              تواصل معنا <i class="ph-bold ph-chat-teardrop-dots"></i>
+            <a href="delivery.html" class="btn-xff-secondary" style="font-size: 1.05rem; font-weight: 800; padding: 0.65rem 1.35rem; min-height: 44px; background-color: rgba(20, 20, 20, 0.55); color: #ffffff; border-radius: 6px; border: 2px solid rgba(255, 255, 255, 0.95); white-space: nowrap; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.45), 0 4px 14px rgba(0,0,0,0.25); text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;">
+              خدمة التوصيل <i class="ph-bold ph-moped"></i>
             </a>
           </div>
         </div>
@@ -173,100 +166,100 @@
 
           <!-- Scrollable Track of Dish Circles -->
           <div class="dishes-carousel-track" id="dishesTrack">
-            <!-- 1. N1 Noodles -->
+            <!-- 1. وجبة دجاج 6 قطع -->
             <a href="menu.html" class="dish-circle-item">
               <div class="dish-circle-frame">
-                <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80" alt="نودلز بيانغ بيانغ لحم الضأن" class="dish-circle-img">
+                <img src="./images/dishes/36873.jpg" alt="وجبة دجاج 6 قطع" class="dish-circle-img" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='https://iqmenus.com/Images/B4h5lmMWQR0NDskQ.jpg';}">
               </div>
-              <span class="dish-circle-name">نودلز لحم الضأن بالكمون</span>
+              <span class="dish-circle-name">وجبة دجاج 6 قطع</span>
             </a>
 
-            <!-- 2. B1 Roujiamo Burger -->
+            <!-- 2. زنجر بوكس -->
             <a href="menu.html" class="dish-circle-item">
               <div class="dish-circle-frame">
-                <img src="https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=600&q=80" alt="برجر شيآن روجيامو" class="dish-circle-img">
+                <img src="./images/dishes/36907.jpg" alt="زنجر بوكس" class="dish-circle-img" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='https://iqmenus.com/Images/eRMH4Rys3AVKIzbq.jpg';}">
               </div>
-              <span class="dish-circle-name">برجر شيآن روجيامو</span>
+              <span class="dish-circle-name">زنجر بوكس</span>
             </a>
 
-            <!-- 3. F4 Lamb Dumplings -->
+            <!-- 3. برجر كلاسيك -->
             <a href="menu.html" class="dish-circle-item">
               <div class="dish-circle-frame">
-                <img src="https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?auto=format&fit=crop&w=600&q=80" alt="زلابية حارة بزيت الفلفل" class="dish-circle-img">
+                <img src="./images/dishes/36883.jpg" alt="برجر كلاسيك" class="dish-circle-img" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='https://iqmenus.com/Images/TXdJqLBklPSe13ng.jpg';}">
               </div>
-              <span class="dish-circle-name">زلابية لحم الضأن الحارة</span>
+              <span class="dish-circle-name">برجر كلاسيك</span>
             </a>
 
-            <!-- 4. A1 Liang Pi Noodles -->
+            <!-- 4. سندويش جكن لافينو -->
             <a href="menu.html" class="dish-circle-item">
               <div class="dish-circle-frame">
-                <img src="https://images.unsplash.com/photo-1548340748-6d2b7d7da280?auto=format&fit=crop&w=600&q=80" alt="نودلز ليانغ بي كولد-سكين" class="dish-circle-img">
+                <img src="./images/dishes/36888.jpg" alt="سندويش جكن لافينو" class="dish-circle-img" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='https://iqmenus.com/Images/vzB7jSDa36QfbJDt.jpg';}">
               </div>
-              <span class="dish-circle-name">نودلز ليانغ بي الباردة</span>
+              <span class="dish-circle-name">سندويش جكن لافينو</span>
             </a>
 
-            <!-- 5. N2 Beef Noodles -->
+            <!-- 5. ريزو كودو -->
             <a href="menu.html" class="dish-circle-item">
               <div class="dish-circle-frame">
-                <img src="https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&fit=crop&w=600&q=80" alt="نودلز لحم البقر بالكمون" class="dish-circle-img">
+                <img src="./images/dishes/36916.jpg" alt="ريزو كودو" class="dish-circle-img" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='https://iqmenus.com/Images/wvcMzLCKwhzAR3kc.jpg';}">
               </div>
-              <span class="dish-circle-name">نودلز لحم البقر بالكمون</span>
+              <span class="dish-circle-name">ريزو كودو الحصري</span>
             </a>
 
-            <!-- 6. N3 Mt. Qi Beef Soup -->
+            <!-- 6. فاستر تويستر -->
             <a href="menu.html" class="dish-circle-item">
               <div class="dish-circle-frame">
-                <img src="https://images.unsplash.com/photo-1617093727343-374698b1b08d?auto=format&fit=crop&w=600&q=80" alt="حساء نودلز جبل تشي" class="dish-circle-img">
+                <img src="./images/dishes/36897.jpg" alt="فاستر تويستر" class="dish-circle-img" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='https://iqmenus.com/Images/hgSpYC0zLbFsP1Vk.jpg';}">
               </div>
-              <span class="dish-circle-name">حساء نودلز جبل تشي</span>
+              <span class="dish-circle-name">فاستر تويستر</span>
             </a>
 
-            <!-- 7. B2 Spicy Lamb Roujiamo -->
+            <!-- 7. وجبة تندر دجاج 5 قطع -->
             <a href="menu.html" class="dish-circle-item">
               <div class="dish-circle-frame">
-                <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80" alt="برجر روجيامو لحم الضأن" class="dish-circle-img">
+                <img src="./images/dishes/36880.jpg" alt="وجبة تندر دجاج 5 قطع" class="dish-circle-img" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='https://iqmenus.com/Images/aivDQC6VrPhfqi8R.jpg';}">
               </div>
-              <span class="dish-circle-name">برجر روجيامو بالكمون</span>
+              <span class="dish-circle-name">وجبة تندر دجاج 5 قطع</span>
             </a>
 
-            <!-- 8. A2 Tiger Salad -->
+            <!-- 8. وجبة أجنحة باربكيو أو بافلو -->
             <a href="menu.html" class="dish-circle-item">
               <div class="dish-circle-frame">
-                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80" alt="سلطة النمر المنعشة" class="dish-circle-img">
+                <img src="./images/dishes/36905.jpg" alt="وجبة أجنحة باربكيو أو بافلو" class="dish-circle-img" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='https://iqmenus.com/Images/g7egeF5XfOLVDYfz.jpg';}">
               </div>
-              <span class="dish-circle-name">سلطة النمر الحارة</span>
+              <span class="dish-circle-name">وجبة أجنحة باربكيو</span>
             </a>
 
-            <!-- 9. A3 Smashed Garlic Cucumbers -->
+            <!-- 9. ميجا ماكس -->
             <a href="menu.html" class="dish-circle-item">
               <div class="dish-circle-frame">
-                <img src="https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&w=600&q=80" alt="خيار مكسور بالثوم" class="dish-circle-img">
+                <img src="./images/dishes/36881.jpg" alt="ميجا ماكس دجاج وتندر" class="dish-circle-img" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='https://iqmenus.com/Images/jN0wVyGUwp2EAZCF.jpg';}">
               </div>
-              <span class="dish-circle-name">خيار مكسور بالثوم</span>
+              <span class="dish-circle-name">ميجا ماكس</span>
             </a>
 
-            <!-- 10. F1 Spicy Tofu Custard -->
+            <!-- 10. تشيز تشكن فرايز -->
             <a href="menu.html" class="dish-circle-item">
               <div class="dish-circle-frame">
-                <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&q=80" alt="حلوى التوفو الحارة" class="dish-circle-img">
+                <img src="./images/dishes/40032.jpg" alt="تشيز تشكن فرايز" class="dish-circle-img" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='https://iqmenus.com/Images/9SgiKeFm9KRKUXl2.jpg';}">
               </div>
-              <span class="dish-circle-name">توفو تشانغ آن الحار</span>
+              <span class="dish-circle-name">تشيز تشكن فرايز</span>
             </a>
 
-            <!-- 11. N9 Zha Jiang Noodles -->
+            <!-- 11. دبل زنجر -->
             <a href="menu.html" class="dish-circle-item">
               <div class="dish-circle-frame">
-                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="نودلز تشا جيانغ" class="dish-circle-img">
+                <img src="./images/dishes/36892.jpg" alt="دبل زنجر سوبر" class="dish-circle-img" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='https://iqmenus.com/Images/VboTYpo1qSOfBYJX.jpg';}">
               </div>
-              <span class="dish-circle-name">نودلز تشا جيانغ الشهيرة</span>
+              <span class="dish-circle-name">دبل زنجر</span>
             </a>
 
-            <!-- 12. D2 Iced Passion Fruit Tea -->
+            <!-- 12. ماكسي بوكس -->
             <a href="menu.html" class="dish-circle-item">
               <div class="dish-circle-frame">
-                <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&q=80" alt="شاي الباشن فروت البارد" class="dish-circle-img">
+                <img src="./images/dishes/36908.jpg" alt="ماكسي بوكس" class="dish-circle-img" onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='https://iqmenus.com/Images/KJrcnFJTZLIYfrPd.jpg';}">
               </div>
-              <span class="dish-circle-name">شاي الباشن فروت المثلج</span>
+              <span class="dish-circle-name">ماكسي بوكس</span>
             </a>
           </div>
 
@@ -356,84 +349,42 @@
       <div class="container" style="position: relative;">
         <div class="split-services-grid">
           
-          <!-- Column 1 (Right in RTL): Restaurant Location on the Map -->
-          <div class="split-service-col is-map">
-            <div>
-              <!-- Map Illustration Card (Square & Enhanced Size) -->
-              <div class="map-illustration-card" style="aspect-ratio: 1 / 1; width: 100%; max-width: 320px; margin: 0 auto 1.25rem auto; border: 2.5px solid rgba(255, 255, 255, 0.22); border-radius: 14px; overflow: hidden; background: #13141f; box-shadow: 5px 5px 0px #000000; position: relative;">
-                <svg viewBox="0 0 440 440" width="100%" height="100%" style="display: block; width: 100%; height: 100%; aspect-ratio: 1 / 1;" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="رسم توضيحي لخريطة موقع كودو كودو">
-                  <!-- City Grid Background -->
-                  <rect width="440" height="440" fill="#13141f" />
-                  
-                  <!-- City Blocks Row 1 -->
-                  <rect x="15" y="15" width="95" height="72" rx="6" fill="#1c1e2b" opacity="0.75" />
-                  <rect x="125" y="15" width="175" height="72" rx="6" fill="#1c1e2b" opacity="0.75" />
-                  <rect x="315" y="15" width="110" height="72" rx="6" fill="#1c1e2b" opacity="0.75" />
-                  
-                  <!-- City Blocks Row 2 -->
-                  <rect x="15" y="102" width="95" height="92" rx="6" fill="#1c1e2b" opacity="0.75" />
-                  <rect x="125" y="102" width="80" height="92" rx="6" fill="#202334" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
-                  <rect x="235" y="102" width="95" height="92" rx="6" fill="#202334" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
-                  <rect x="345" y="102" width="80" height="92" rx="6" fill="#1c1e2b" opacity="0.75" />
-                  
-                  <!-- City Blocks Row 3 -->
-                  <rect x="15" y="235" width="95" height="92" rx="6" fill="#1c1e2b" opacity="0.75" />
-                  <rect x="125" y="235" width="80" height="92" rx="6" fill="#1c1e2b" opacity="0.75" />
-                  <rect x="235" y="235" width="95" height="92" rx="6" fill="#1c1e2b" opacity="0.75" />
-                  <rect x="345" y="235" width="80" height="92" rx="6" fill="#1c1e2b" opacity="0.75" />
-                  
-                  <!-- City Blocks Row 4 -->
-                  <rect x="15" y="342" width="190" height="82" rx="6" fill="#1c1e2b" opacity="0.75" />
-                  <rect x="220" y="342" width="205" height="82" rx="6" fill="#1c1e2b" opacity="0.75" />
-                  
-                  <!-- Secondary Streets -->
-                  <line x1="0" y1="95" x2="440" y2="95" stroke="#292d3f" stroke-width="14" />
-                  <line x1="0" y1="335" x2="440" y2="335" stroke="#292d3f" stroke-width="14" />
-                  <line x1="117" y1="0" x2="117" y2="440" stroke="#292d3f" stroke-width="14" />
-                  <line x1="337" y1="0" x2="337" y2="440" stroke="#292d3f" stroke-width="14" />
-                  
-                  <!-- Main Vertical Avenue -->
-                  <line x1="220" y1="0" x2="220" y2="440" stroke="#363b52" stroke-width="22" />
-                  <line x1="220" y1="0" x2="220" y2="440" stroke="#ba121a" stroke-dasharray="8 8" stroke-width="2.5" opacity="0.85" />
-                  
-                  <!-- Main Horizontal Avenue (شارع الإسكان القديمة) -->
-                  <line x1="0" y1="214" x2="440" y2="214" stroke="#363b52" stroke-width="22" />
-                  <line x1="0" y1="214" x2="440" y2="214" stroke="#fbbf24" stroke-dasharray="10 8" stroke-width="2.5" opacity="0.7" />
-                  
-                  <!-- Street Names -->
-                  <text x="236" y="55" font-family="'Cordale Arabic Bold', 'Cordale Arabic', sans-serif" font-size="10" font-weight="800" fill="#94a3b8">شارع الإسكان</text>
-                  <text x="236" y="395" font-family="'Cordale Arabic Bold', 'Cordale Arabic', sans-serif" font-size="10" font-weight="800" fill="#94a3b8">الرمادي</text>
-                  
-                  <!-- KUDO Radar Pulse Animation (Centered at 220, 214) -->
-                  <circle cx="220" cy="214" r="48" fill="rgba(186, 18, 26, 0.22)" class="map-pulse-ring-outer" />
-                  <circle cx="220" cy="214" r="28" fill="rgba(186, 18, 26, 0.45)" class="map-pulse-ring-inner" />
-                  
-                  <!-- Pin Marker Base Shadow -->
-                  <ellipse cx="220" cy="223" rx="9" ry="4" fill="#000000" opacity="0.65" />
-                  
-                  <!-- Red Teardrop Location Pin (Tip at 220, 225) -->
-                  <path d="M220 187 C210 187 202 195 202 205 C202 216 220 225 220 225 C220 225 238 216 238 205 C238 195 230 187 220 187 Z" fill="#ba121a" stroke="#ffffff" stroke-width="2.5" />
-                  <circle cx="220" cy="203" r="5" fill="#ffffff" />
-                  
-                  <!-- Pin Tooltip Callout -->
-                  <g transform="translate(140, 131)">
-                    <rect width="160" height="34" rx="6" fill="#141414" stroke="#ffffff" stroke-width="1.8" />
-                    <text x="80" y="21" font-family="'Cordale Arabic Bold', 'Cordale Arabic', sans-serif" font-size="12" font-weight="900" fill="#ffffff" text-anchor="middle">KUDO KUDO • الفرع الرئيسي</text>
-                    <polygon points="74,34 86,34 80,41" fill="#141414" stroke="#ffffff" stroke-width="1.8" />
-                    <polygon points="75,33 85,33 80,39" fill="#141414" />
-                  </g>
-                </svg>
-              </div>
+          <!-- Column 1 (Right in RTL): Restaurant Location Section -->
+          <div class="split-service-col is-map" style="display: flex; flex-direction: column; align-items: center; justify-content: space-between;">
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;">
+              <!-- Location Logo with White Fade Circles (Pond Rings Effect) -->
+              <div class="location-img-wrapper" style="position: relative; width: 100%; max-width: 400px; min-height: 250px; display: flex; align-items: center; justify-content: center; margin: 2rem auto 1.5rem auto;">
+                <!-- Concentric white ripple rings behind location logo (Pond rings with fade effect) -->
+                <div class="location-ripples" aria-hidden="true">
+                  <span class="loc-ripple-ring ring-5"></span>
+                  <span class="loc-ripple-ring ring-4"></span>
+                  <span class="loc-ripple-ring ring-3"></span>
+                  <span class="loc-ripple-ring ring-2"></span>
+                  <span class="loc-ripple-ring ring-1"></span>
+                </div>
 
-              <!-- Reduced Size Address Phrase Under Map Card -->
-              <div style="display: flex; align-items: center; justify-content: flex-start; gap: 0.45rem; color: #cbd5e1; margin-bottom: 1.5rem; width: 100%; max-width: 320px; margin-left: auto; margin-right: auto;">
-                <i class="ph-bold ph-map-pin" style="color: var(--xff-red); font-size: 1.05rem; flex-shrink: 0;"></i>
-                <div style="font-size: 0.82rem; font-weight: 700; color: #ffffff; letter-spacing: -0.01em;">الانبار - الرمادي - شارع الاسكان القديمة</div>
+                <!-- Curved Title Above Outermost Circle -->
+                <svg class="delivery-curved-text-svg" viewBox="0 0 400 400" aria-label="فرع الرمادي - Ramadi Branch">
+                  <defs>
+                    <path id="locationTextArc" d="M 25,80 A 200,200 0 0,1 375,80" fill="none" />
+                  </defs>
+                  <text class="delivery-curved-text" style="font-size: 23px; font-weight: 900; letter-spacing: 0.04em;">
+                    <textPath href="#locationTextArc" xlink:href="#locationTextArc" startOffset="50%" text-anchor="middle">
+                      فرع الرمادي
+                    </textPath>
+                  </text>
+                </svg>
+
+                <img src="./public/images/location-logo.png" 
+                     alt="موقع مطعم كودو كودو - KUDO KUDO Location" 
+                     class="location-featured-img" 
+                     id="locationFeaturedImg"
+                     onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src='./images/location-logo.png';}else if(this.dataset.tried==1){this.dataset.tried=2;this.src='public/images/location-logo.png';}else if(this.dataset.tried==2){this.dataset.tried=3;this.src='location-logo.png';}">
               </div>
             </div>
 
-            <div style="width: 100%; max-width: 320px; margin: 0.5rem auto 0 auto; text-align: right;">
-              <a href="https://maps.google.com/?q=الانبار+-+الرمادي+-+شارع+الاسكان+القديمة" target="_blank" rel="noopener noreferrer" class="map-details-btn" style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 800; color: #ffffff; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0; transition: all 0.2s ease;">
+            <div style="width: 100%; text-align: right; margin-top: 2.25rem;">
+              <a href="https://maps.google.com/?q=الرمادي+بناية+فود+كورت+كودو+كودو" target="_blank" rel="noopener noreferrer" class="map-details-btn" style="font-family: var(--font-display); font-size: 0.95rem; font-weight: 800; color: #ffffff; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0; transition: all 0.2s ease;">
                 فتح الموقع في خرائط جوجل <i class="ph-bold ph-arrow-square-out" style="font-size: 1.05rem; color: #ffffff;"></i>
               </a>
             </div>
@@ -525,7 +476,7 @@
               </h2>
 
               <p class="restaurant-about-desc" style="text-align: right; width: 100%; margin-right: 0; margin-left: 0; margin-bottom: 0;">
-                في <strong>كودو كودو (KUDO KUDO)</strong>، نأخذكم في رحلة طهي فريدة تمزج بين عراقة الأطباق التاريخية لمدينة شيآن بمقاطعة شنشي، وابتكار أشهى برجر مقرمش وفطائر روجيامو الكلاسيكية المحضرة بأسرار التوابل العائلية المتقنة.
+                في <strong>كودو كودو (KUDO KUDO)</strong>، نقدم لكم أشهى وجبات البروستد المقرمشة، قطع التندر الطرية، البرغر الفاخر المشوي، وسندويشات الراب المحمصة، مع تشكيلة أطباق الريزو الحصرية والصلصات الخاصة المحضرة يومياً في الرمادي - بناية فود كورت.
               </p>
             </div>
 
@@ -551,17 +502,17 @@
             </div>
           </div>
           <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.7; margin-bottom: 1.25rem;">
-            المطعم الصيني التراثي الأول المتخصص في نودلز بيانغ بيانغ المسحوبة يدوياً وفطائر روجيامو المقرمشة بخلطات التوابل الأصلية من مدينة شيآن بمقاطعة شنشي.
+            مطعم كودو كودو الرمادي - بناية فود كورت. الوجهة الأولى لوجبات الدجاج المقرمش، البرغر الفاخر، سندويشات الراب الشهية، وأطباق الريزو بتتبيلاتنا الحصرية.
           </p>
           <div style="display: flex; gap: 0.75rem;">
-            <a href="#" class="touch-target" style="width: 36px; height: 36px; min-width: 36px; min-height: 36px; border-radius: 4px; background-color: #262626; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">
+            <a href="https://www.instagram.com/ramadi.kudo" target="_blank" rel="noopener noreferrer" class="touch-target" aria-label="Instagram" style="width: 36px; height: 36px; min-width: 36px; min-height: 36px; border-radius: 4px; background-color: #262626; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">
               <i class="ph-bold ph-instagram-logo"></i>
             </a>
-            <a href="#" class="touch-target" style="width: 36px; height: 36px; min-width: 36px; min-height: 36px; border-radius: 4px; background-color: #262626; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">
-              <i class="ph-bold ph-twitter-logo"></i>
+            <a href="https://www.facebook.com/share/1JRNwRMSq3/?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer" class="touch-target" aria-label="Facebook" style="width: 36px; height: 36px; min-width: 36px; min-height: 36px; border-radius: 4px; background-color: #262626; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">
+              <i class="ph-bold ph-facebook-logo"></i>
             </a>
-            <a href="#" class="touch-target" style="width: 36px; height: 36px; min-width: 36px; min-height: 36px; border-radius: 4px; background-color: #262626; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">
-              <i class="ph-bold ph-tiktok-logo"></i>
+            <a href="https://api.whatsapp.com/send/?phone=+9647839944994" target="_blank" rel="noopener noreferrer" class="touch-target" aria-label="WhatsApp" style="width: 36px; height: 36px; min-width: 36px; min-height: 36px; border-radius: 4px; background-color: #262626; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.1rem;">
+              <i class="ph-bold ph-whatsapp-logo"></i>
             </a>
           </div>
         </div>
@@ -573,19 +524,6 @@
             <li><a href="index.html" class="footer-link">الصفحة الرئيسية</a></li>
             <li><a href="menu.html" class="footer-link">قائمة الطعام الكاملة</a></li>
             <li><a href="delivery.html" class="footer-link">خدمة وتفاصيل التوصيل</a></li>
-            <li><a href="contact.html" class="footer-link">التواصل والتموين</a></li>
-          </ul>
-        </div>
-
-        <!-- Series Codes -->
-        <div>
-          <div class="footer-title">رموز الأصناف</div>
-          <ul class="footer-links">
-            <li><a href="menu.html" class="footer-link">[ N ] نودلز مسحوبة يدوياً</a></li>
-            <li><a href="menu.html" class="footer-link">[ B ] برجر وفطائر روجيامو</a></li>
-            <li><a href="menu.html" class="footer-link">[ A ] ليانغ بي والمقبلات</a></li>
-            <li><a href="menu.html" class="footer-link">[ F ] زلابية وشوربات حارة</a></li>
-            <li><a href="menu.html" class="footer-link">[ D ] مشروبات الشاي والباشن</a></li>
           </ul>
         </div>
 
@@ -593,11 +531,11 @@
         <div>
           <div class="footer-title">المقر الرئيسي</div>
           <p style="font-size: 0.88rem; color: #94a3b8; line-height: 1.6; margin-bottom: 0.75rem;">
-            الانبار - الرمادي - شارع الاسكان القديمة<br>
-            هاتف: +1 (212) 786-2068
+            الأنبار - الرمادي - بناية فود كورت - شارع المستودع<br>
+            هاتف / واتساب: +964 783 994 4994
           </p>
           <p style="font-size: 0.82rem; color: #a3a3a3;">
-            ساعات العمل: 11:00 AM – 9:00 PM يومياً
+            ساعات العمل: 11:00 AM – 2:00 AM يومياً
           </p>
         </div>
       </div>

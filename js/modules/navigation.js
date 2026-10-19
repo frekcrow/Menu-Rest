@@ -48,6 +48,24 @@ window.XFF_UI = (function () {
           document.body.style.overflow = "";
         }
       });
+
+      // Apple HIG Swipe-to-dismiss for RTL drawer
+      const drawerContent = drawer.querySelector(".mobile-drawer-content");
+      if (drawerContent) {
+        let drawerStartX = 0;
+        drawerContent.addEventListener("touchstart", (e) => {
+          drawerStartX = e.touches[0].clientX;
+        }, { passive: true });
+
+        drawerContent.addEventListener("touchend", (e) => {
+          const deltaX = e.changedTouches[0].clientX - drawerStartX;
+          // In RTL layout with drawer on the right edge, swiping right dismisses
+          if (deltaX > 60) {
+            drawer.classList.remove("open");
+            document.body.style.overflow = "";
+          }
+        });
+      }
     }
   }
 
@@ -63,14 +81,10 @@ window.XFF_UI = (function () {
           onCategoryChange(cat);
         }
 
-        if (cat === "all") {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        } else {
-          const section = document.getElementById("section-" + cat);
-          if (section) {
-            const offset = section.getBoundingClientRect().top + window.pageYOffset - 140;
-            window.scrollTo({ top: offset, behavior: "smooth" });
-          }
+        const menuContainer = document.getElementById("menuContainer");
+        if (menuContainer) {
+          const offset = menuContainer.getBoundingClientRect().top + window.pageYOffset - 90;
+          window.scrollTo({ top: Math.max(0, offset), behavior: "smooth" });
         }
       });
     });

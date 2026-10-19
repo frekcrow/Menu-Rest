@@ -47,7 +47,10 @@ document.addEventListener("DOMContentLoaded", function () {
       if (window.XFF_MODAL) window.XFF_MODAL.close();
       if (window.XFF_CART) window.XFF_CART.closeCartModal();
       const drawer = document.getElementById("mobileDrawer");
-      if (drawer) drawer.classList.remove("open");
+      if (drawer) {
+        drawer.classList.remove("open");
+        document.body.style.overflow = "";
+      }
     }
   });
 
@@ -114,96 +117,74 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentSearch = "";
 
     function renderMenu() {
-      const categories = ["noodles", "burgers", "liangpi", "dumplings", "drinks"];
-      let anyMatches = false;
-
-      categories.forEach(cat => {
-        const section = document.getElementById("section-" + cat);
-        if (!section) return;
-
-        const grid = section.querySelector(".menu-grid");
-        if (!grid) return;
-
-        const filtered = window.XFF_SEARCH.filter(window.XFF_DATA.menu, currentSearch, currentCategory === "all" ? cat : currentCategory);
-
-        if (filtered.length > 0 && (currentCategory === "all" || currentCategory === cat)) {
-          anyMatches = true;
-          section.style.display = "block";
-          grid.innerHTML = filtered.map(item => `
-            <article class="product-card" data-item-id="${item.id}" role="button" tabindex="0">
-              <div class="product-card-thumb-wrap">
-                <img class="product-card-thumb" src="${item.image}" alt="${item.englishName}" loading="lazy" width="110" height="110">
-              </div>
-
-              <div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                  <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.25rem;">
-                    <div>
-                      <div style="display: flex; align-items: center; gap: 0.4rem; margin-bottom: 2px;">
-                        <span class="sku-badge">${item.sku}</span>
-                      </div>
-                      <h3 style="font-size: 1.05rem; font-weight: 800; line-height: 1.25; margin-bottom: 2px;">${item.name}</h3>
-                      <div style="font-family: var(--font-display); font-size: 0.82rem; font-weight: 700; color: #64748b; text-transform: uppercase;">
-                        ${item.englishName}
-                      </div>
-                    </div>
-
-                    <span class="chinese-seal" style="font-size: 0.72rem; padding: 0.1rem 0.35rem; white-space: nowrap;">${item.badge}</span>
-                  </div>
-
-                  <p style="font-size: 0.8rem; color: #475569; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-top: 0.35rem;">
-                    ${item.description}
-                  </p>
-                </div>
-
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 0.65rem; border-top: 1px dashed #e2e8f0; padding-top: 0.45rem;">
-                  <div style="display: flex; align-items: center; gap: 0.5rem;">
-                    <div>
-                      <span style="font-family: var(--font-mono); font-size: 1.25rem; font-weight: 900; color: var(--xff-coal);">${item.price}</span>
-                      <span style="font-size: 0.75rem; font-weight: 700; color: #64748b;">ر.س</span>
-                    </div>
-                    <span class="spice-meter">${item.spiceLevel}</span>
-                  </div>
-
-                  <button class="btn-add-mini add-direct-btn" data-item-id="${item.id}" aria-label="إضافة ${item.sku} إلى السلة">
-                    <i class="ph-bold ph-plus"></i>
-                  </button>
-                </div>
-              </div>
-            </article>
-          `).join("");
-        } else {
-          section.style.display = "none";
-          grid.innerHTML = "";
-        }
-      });
+      const filtered = window.XFF_SEARCH.filter(
+        window.XFF_DATA.menu,
+        currentSearch,
+        currentCategory
+      );
 
       const noResults = document.getElementById("noResults");
       if (noResults) {
-        noResults.style.display = anyMatches ? "none" : "block";
+        noResults.style.display = filtered.length === 0 ? "block" : "none";
       }
 
+      if (filtered.length === 0) {
+        menuContainer.innerHTML = "";
+        return;
+      }
+
+      let html = "";
+      filtered.forEach((item, index) => {
+        const isBlack = (index % 2 === 1);
+
+        if (!isBlack) {
+          html += `
+            <section class="dish-strip is-white" data-item-id="${item.id}" role="button" tabindex="0">
+              <div class="dish-strip-img-wrap">
+                <img src="${item.image}" alt="${item.name}" class="dish-strip-img" loading="lazy" onerror="if(!this.dataset.fallback && '${item.remoteImage}'){this.dataset.fallback='1';this.src='${item.remoteImage}';}">
+              </div>
+              <div class="container dish-strip-content">
+                <div class="dish-strip-info">
+                  <h3 class="dish-strip-title">${item.name}</h3>
+                  <div class="dish-strip-price">
+                    ${item.price.toLocaleString()} <small>د.ع</small>
+                  </div>
+                </div>
+              </div>
+            </section>
+          `;
+        } else {
+          html += `
+            <div class="dish-strip-block is-wavy-block">
+              <div class="pattern-container is-dark-top" aria-hidden="true"></div>
+              <section class="dish-strip is-white" data-item-id="${item.id}" role="button" tabindex="0">
+                <div class="dish-strip-img-wrap">
+                  <img src="${item.image}" alt="${item.name}" class="dish-strip-img" loading="lazy" onerror="if(!this.dataset.fallback && '${item.remoteImage}'){this.dataset.fallback='1';this.src='${item.remoteImage}';}">
+                </div>
+                <div class="container dish-strip-content">
+                  <div class="dish-strip-info">
+                    <h3 class="dish-strip-title">${item.name}</h3>
+                    <div class="dish-strip-price">
+                      ${item.price.toLocaleString()} <small>د.ع</small>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <div class="pattern-container is-dark-bottom" aria-hidden="true"></div>
+            </div>
+          `;
+        }
+      });
+
+      menuContainer.innerHTML = html;
       attachCardClicks();
     }
 
     function attachCardClicks() {
-      document.querySelectorAll(".product-card").forEach(card => {
-        card.addEventListener("click", (e) => {
-          if (e.target.closest(".add-direct-btn")) return;
+      document.querySelectorAll(".dish-strip, .dish-card-rect, .product-card").forEach(card => {
+        card.addEventListener("click", () => {
           const itemId = card.getAttribute("data-item-id");
-          window.XFF_MODAL.open(itemId);
-        });
-      });
-
-      document.querySelectorAll(".add-direct-btn").forEach(btn => {
-        btn.addEventListener("click", (e) => {
-          e.stopPropagation();
-          const itemId = btn.getAttribute("data-item-id");
-          const item = window.XFF_DATA.menu.find(i => i.id === itemId);
-          if (item) {
-            window.XFF_CART.addToCart(item, 1, "حرارة أصلية (Regular)", "");
-            window.XFF_UI.showToast(`تمت إضافة [${item.sku}] إلى طلبك!`);
-          }
+          if (window.XFF_MODAL) window.XFF_MODAL.open(itemId);
         });
       });
     }

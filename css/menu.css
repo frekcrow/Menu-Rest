@@ -3,48 +3,302 @@
    Card layout, category navigation, modals & cart
    ================================================== */
 
+/* Red Hero Section (Same style as homepage) */
+.menu-hero-section {
+  background-color: var(--xff-red);
+  color: #ffffff;
+  padding: 1rem 1.25rem 0.25rem 1.25rem;
+  position: relative;
+}
+
+.menu-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  direction: ltr;
+}
+
+.menu-logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.menu-header-logo {
+  height: clamp(80px, 18vw, 125px);
+  width: auto;
+  max-height: 135px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.45));
+}
+
+.menu-search-wrap {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
 /* Category Navigation Bar */
 .category-nav-wrap {
-  background-color: rgba(245, 245, 247, 0.98);
-  border-bottom: 1.5px solid var(--xff-border-warm);
-  position: sticky;
-  top: 72px;
+  background: transparent;
+  border-bottom: none;
+  position: static;
   z-index: 35;
 }
 
 .category-tab {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.5rem 0.95rem;
+  gap: 0.45rem;
+  padding: 0.55rem 1.15rem;
   border-radius: 6px;
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 0.98rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   white-space: nowrap;
-  color: var(--xff-slate);
-  background-color: #eee8dc;
-  border: 1.5px solid var(--xff-border-warm);
+  color: var(--xff-coal);
+  background-color: #ffffff;
+  border: 2px solid var(--xff-coal);
+  box-shadow: 2.5px 2.5px 0px var(--xff-coal);
   transition: all 0.15s ease-in-out;
-  min-height: 38px;
+  min-height: 44px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .category-tab.active {
   color: #ffffff;
-  background-color: var(--xff-red);
-  border-color: var(--xff-border-heavy);
-  box-shadow: 2px 2px 0px var(--xff-coal);
+  background-color: var(--xff-coal);
+  border-color: #ffffff;
+  box-shadow: 2.5px 2.5px 0px rgba(0, 0, 0, 0.4);
 }
 
 .category-tab:hover:not(.active) {
-  background-color: #e3dcce;
+  background-color: #f5f5f7;
+  transform: translate(-1px, -1px);
+}
+
+.category-tab:active {
+  transform: scale(0.95);
+}
+
+/* ==================================================
+   Rectangular Dish Presentation on Full-Width Backgrounds
+   No cards; text and edge image sit directly on alternating White & Black backgrounds
+   ================================================== */
+.menu-strips-flow {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dish-strip {
+  width: 100%;
+  position: relative;
+  min-height: 165px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: background-color 0.15s ease;
+}
+
+.dish-strip-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.85rem 1.25rem;
+  padding-left: clamp(200px, 30vw, 340px);
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+
+/* 1. White Dish Presentation */
+.dish-strip.is-white {
+  background-color: #ffffff;
   color: var(--xff-coal);
 }
 
-/* Product Card */
+.dish-strip.is-white:hover {
+  background-color: #fbfbf9;
+}
+
+.dish-strip.is-white .dish-strip-title {
+  color: var(--xff-coal);
+}
+
+.dish-strip.is-white .dish-strip-price {
+  color: var(--xff-red);
+}
+
+/* 2. Dish Presentation with Wavy Lines - White Backgrounds with Black Wavy Lines */
+.dish-strip-block.is-black,
+.dish-strip-block.is-wavy-block {
+  width: 100%;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.dish-strip-block.is-black .pattern-container.is-dark-top,
+.dish-strip-block.is-wavy-block .pattern-container.is-dark-top {
+  height: 36px;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 36' width='50' height='36' shape-rendering='geometricPrecision'%3E%3Crect width='50' height='36' fill='%23ffffff'/%3E%3Cpath d='M-25 7 Q-12.5 13 0 7 T25 7 T50 7 T75 7' fill='none' stroke='%23141414' stroke-width='4'/%3E%3Cpath d='M-25 15 Q-12.5 21 0 15 T25 15 T50 15 T75 15' fill='none' stroke='%23141414' stroke-width='4'/%3E%3Cpath d='M-25 23 Q-12.5 29 0 23 T25 23 T50 23 T75 23' fill='none' stroke='%23141414' stroke-width='4'/%3E%3C/svg%3E");
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  background-size: 50px 36px;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.dish-strip.is-black {
+  background-color: #ffffff;
+  color: var(--xff-coal);
+  position: relative;
+  z-index: 1;
+}
+
+.dish-strip.is-black:hover {
+  background-color: #fbfbf9;
+}
+
+.dish-strip.is-black .dish-strip-title {
+  color: var(--xff-coal);
+}
+
+.dish-strip.is-black .dish-strip-price {
+  color: var(--xff-red);
+}
+
+.dish-strip-block.is-black .pattern-container.is-dark-bottom,
+.dish-strip-block.is-wavy-block .pattern-container.is-dark-bottom {
+  height: 36px;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 36' width='50' height='36' shape-rendering='geometricPrecision'%3E%3Crect width='50' height='36' fill='%23ffffff'/%3E%3Cpath d='M-25 7 Q-12.5 13 0 7 T25 7 T50 7 T75 7' fill='none' stroke='%23141414' stroke-width='4'/%3E%3Cpath d='M-25 15 Q-12.5 21 0 15 T25 15 T50 15 T75 15' fill='none' stroke='%23141414' stroke-width='4'/%3E%3Cpath d='M-25 23 Q-12.5 29 0 23 T25 23 T50 23 T75 23' fill='none' stroke='%23141414' stroke-width='4'/%3E%3C/svg%3E");
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  background-size: 50px 36px;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Dish Strip Info & Typography */
+.dish-strip-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.45rem;
+  min-width: 0;
+  text-align: right;
+}
+
+.dish-strip-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2.6vw, 1.45rem);
+  font-weight: 900;
+  margin: 0;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+  max-width: clamp(180px, 24vw, 290px);
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+.dish-strip-price {
+  font-family: var(--font-mono);
+  font-size: clamp(1.25rem, 3.2vw, 1.55rem);
+  font-weight: 900;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  line-height: 1;
+}
+
+.dish-strip-price small {
+  font-size: 0.88rem;
+  font-weight: 800;
+  font-family: var(--font-display);
+}
+
+/* Dish Image at the Left Edge - Full-bleed left border alignment */
+.dish-strip-img-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: clamp(170px, 25vw, 300px);
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Reduced white fade: 85% solid crisp food image with subtle soft blend at the edge */
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%);
+}
+
+.dish-strip-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border: none !important;
+  box-shadow: none !important;
+  /* Wavy clip-path removed: clean rectangular image frame */
+  clip-path: none !important;
+  -webkit-clip-path: none !important;
+  transition: transform 0.3s ease;
+}
+
+.dish-strip:hover .dish-strip-img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 540px) {
+  .dish-strip {
+    min-height: 140px;
+  }
+  .dish-strip-content {
+    padding: 1.25rem 0.85rem;
+    padding-left: clamp(135px, 36vw, 175px);
+    gap: 0.75rem;
+  }
+  .dish-strip-img-wrap {
+    width: clamp(115px, 32vw, 150px);
+  }
+  .dish-strip-title {
+    font-size: 1.08rem;
+    line-height: 1.32;
+    max-width: clamp(130px, 44vw, 190px);
+  }
+  .dish-strip-price {
+    font-size: 1.2rem;
+  }
+}
+
+/* Legacy Product Card Fallback */
 .product-card {
   background-color: #ffffff;
   border-radius: 0.75rem;
@@ -178,10 +432,13 @@
   border-top-right-radius: 1.5rem;
   border-top: 3px solid var(--xff-border-heavy);
   padding: 1.25rem;
-  padding-bottom: calc(1.75rem + var(--sab));
+  padding-bottom: calc(1.75rem + var(--sab, 0px));
   max-height: 88vh;
   max-height: 88dvh;
   overflow-y: auto;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
   transform: translateY(100%);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -191,11 +448,23 @@
 }
 
 .sheet-handle {
-  width: 44px;
+  width: 48px;
   height: 5px;
   background-color: #cbd5e1;
   border-radius: 9999px;
   margin: 0 auto 1.25rem auto;
+  cursor: grab;
+  position: relative;
+  touch-action: none;
+}
+
+.sheet-handle::after {
+  content: "";
+  position: absolute;
+  top: -14px;
+  bottom: -14px;
+  left: -24px;
+  right: -24px;
 }
 
 /* Quantity Control */
@@ -211,22 +480,27 @@
 }
 
 .qty-btn {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
+  min-width: 44px;
+  min-height: 44px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 4px;
+  border-radius: 6px;
   background-color: #f1ede4;
   color: var(--xff-coal);
   font-family: var(--font-mono);
   font-weight: 900;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   border: 1px solid var(--xff-border-warm);
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.1s ease, background-color 0.15s ease;
 }
 
 .qty-btn:active {
+  transform: scale(0.92);
   background-color: var(--xff-coal);
   color: #ffffff;
 }
@@ -245,11 +519,12 @@
   background-color: #ffffff;
   color: var(--xff-coal);
   font-family: var(--font-body);
-  font-size: 0.95rem;
-  font-weight: 500;
+  font-size: 1rem; /* Minimum 16px to prevent iOS Safari auto-zoom */
+  min-height: 44px;
   outline: none;
   box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.08);
   transition: border-color 0.2s, box-shadow 0.2s;
+  -webkit-appearance: none;
 }
 
 .search-input:focus {

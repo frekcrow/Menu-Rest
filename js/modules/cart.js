@@ -50,6 +50,9 @@ window.XFF_CART = (function () {
 
   function updateCartItemQty(index, delta) {
     if (cart[index]) {
+      if (typeof navigator !== "undefined" && navigator.vibrate) {
+        try { navigator.vibrate(10); } catch (e) {}
+      }
       cart[index].qty += delta;
       if (cart[index].qty <= 0) {
         cart.splice(index, 1);
@@ -79,7 +82,7 @@ window.XFF_CART = (function () {
     if (totals.totalCount > 0) {
       cartBar.classList.remove("hidden");
       if (countBadge) countBadge.textContent = totals.totalCount;
-      if (totalDisplay) totalDisplay.textContent = totals.finalTotal;
+      if (totalDisplay) totalDisplay.textContent = totals.finalTotal.toLocaleString();
     } else {
       cartBar.classList.add("hidden");
       closeCartModal();
@@ -95,9 +98,9 @@ window.XFF_CART = (function () {
     if (!listEl) return;
 
     const totals = getCartTotals();
-    if (subtotalEl) subtotalEl.textContent = (totals.subtotal - totals.tax);
-    if (taxEl) taxEl.textContent = totals.tax;
-    if (finalTotalEl) finalTotalEl.textContent = totals.finalTotal;
+    if (subtotalEl) subtotalEl.textContent = (totals.subtotal - totals.tax).toLocaleString();
+    if (taxEl) taxEl.textContent = totals.tax.toLocaleString();
+    if (finalTotalEl) finalTotalEl.textContent = totals.finalTotal.toLocaleString();
 
     if (cart.length === 0) {
       listEl.innerHTML = `
@@ -121,7 +124,7 @@ window.XFF_CART = (function () {
               <span style="font-weight: 800; font-size: 0.95rem;">${item.name}</span>
             </div>
             <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--xff-red); font-weight: 800; margin-top: 2px;">
-              ${item.price * item.qty} ر.س <span style="font-weight: 400; color: #64748b;">(${item.price} × ${item.qty})</span>
+              ${(item.price * item.qty).toLocaleString()} د.ع <span style="font-weight: 400; color: #64748b;">(${item.price.toLocaleString()} × ${item.qty})</span>
             </div>
             <div style="font-size: 0.72rem; color: #475569; margin-top: 2px;">
               <span style="color: var(--xff-chili); font-weight: 700;">${item.spiceChoice}</span>
@@ -145,6 +148,12 @@ window.XFF_CART = (function () {
     renderCartModalList();
     modal.classList.add("active");
     document.body.style.overflow = "hidden";
+
+    // Apple HIG Native Swipe-to-Dismiss on Cart Sheet
+    const cartSheet = document.getElementById("cartSheet");
+    if (cartSheet && window.XFF_MODAL && window.XFF_MODAL.setupSwipeToDismiss) {
+      window.XFF_MODAL.setupSwipeToDismiss(cartSheet, closeCartModal);
+    }
   }
 
   function closeCartModal() {
